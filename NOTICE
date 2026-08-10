@@ -1,0 +1,15 @@
+GBI BoundaryBench
+
+Original software in this repository is licensed under Apache-2.0 as stated in `LICENSE`.
+
+Synthetic benchmark data, documentation, generated artifacts, and third-party material are governed by separate boundary files:
+
+- `DATA_LICENSE.md`
+- `DOCUMENTATION_LICENSE.md`
+- `THIRD_PARTY_NOTICES.md`
+
+This repository includes references to Synthea-generated synthetic data. Synthea is developed by The MITRE Corporation and is distributed upstream under Apache-2.0. The local benchmark artifacts are derived from an official Synthea sample-data alternative documented in `data/external/synthea_sample_data/PROVENANCE.md`.
+
+This benchmark is not a clinical system, medical device, certified terminology crosswalk, or autonomous EHR write-back service. It must not be used as evidence of clinical safety or production readiness.
+
+No notice or license grant covers excluded local files, credentials, private endpoints, confidential business materials, real PHI/PII, or third-party materials not expressly identified as redistributable.

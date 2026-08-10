@@ -1,0 +1,53 @@
+{
+  "$id": "https://gbi-boundarybench.local/schemas/model_request.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "allowed_actions": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "max_output_tokens": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "prompt": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "boundarybench.model_request.v1"
+    },
+    "seed": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "task_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "temperature": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_id",
+    "prompt",
+    "allowed_actions",
+    "seed",
+    "temperature",
+    "max_output_tokens",
+    "metadata"
+  ],
+  "title": "GBI BoundaryBench model request",
+  "type": "object"
+}

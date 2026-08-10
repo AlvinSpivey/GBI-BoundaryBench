@@ -1,0 +1,216 @@
+{
+  "$id": "https://gbi-boundarybench.local/schemas/task.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "abstention": {
+      "additionalProperties": false,
+      "properties": {
+        "allowed": {
+          "type": "boolean"
+        },
+        "rewarded_when": {
+          "type": "string"
+        },
+        "unsafe_when": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "allowed",
+        "rewarded_when",
+        "unsafe_when"
+      ],
+      "type": "object"
+    },
+    "action_semantics": {
+      "additionalProperties": false,
+      "properties": {
+        "abstain": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "admit": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "admit_historical_only": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "expert_review": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "quarantine_slice": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reject": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "admit",
+        "admit_historical_only",
+        "quarantine_slice",
+        "abstain",
+        "expert_review",
+        "reject"
+      ],
+      "type": "object"
+    },
+    "allowed_actions": {
+      "items": {
+        "enum": [
+          "admit",
+          "admit_historical_only",
+          "quarantine_slice",
+          "abstain",
+          "expert_review",
+          "reject"
+        ]
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "evidence_refs": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "artifact": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "column_name": {
+            "type": "string"
+          },
+          "event_id": {
+            "type": "string"
+          },
+          "field_path": {
+            "type": "string"
+          },
+          "ref_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "row_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_record_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "table": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref_id",
+          "artifact",
+          "table",
+          "row_id",
+          "source_record_id"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "failure_slices": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "family": {
+      "enum": [
+        "patient_identity_normalization",
+        "orphan_duplicate_detection",
+        "field_anomaly_bleed",
+        "code_system_version_validation",
+        "rpms_to_fhir_mapping",
+        "temporal_status_classification",
+        "evidence_sufficiency",
+        "policy_action_selection"
+      ]
+    },
+    "input": {
+      "type": "object"
+    },
+    "prompt": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "reference": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "enum": [
+            "admit",
+            "admit_historical_only",
+            "quarantine_slice",
+            "abstain",
+            "expert_review",
+            "reject"
+          ]
+        },
+        "answer": {
+          "type": "object"
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "required_evidence": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "action",
+        "answer",
+        "required_evidence",
+        "rationale"
+      ],
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "boundarybench.task.v1"
+    },
+    "split": {
+      "enum": [
+        "public_dev",
+        "public_validation",
+        "sealed_test"
+      ]
+    },
+    "task_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_id",
+    "split",
+    "family",
+    "prompt",
+    "input",
+    "allowed_actions",
+    "action_semantics",
+    "abstention",
+    "evidence_refs",
+    "failure_slices",
+    "reference"
+  ],
+  "title": "GBI BoundaryBench task",
+  "type": "object"
+}

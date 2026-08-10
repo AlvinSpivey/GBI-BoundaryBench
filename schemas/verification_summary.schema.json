@@ -1,0 +1,100 @@
+{
+  "$id": "https://gbi-boundarybench.local/schemas/verification_summary.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "abstention_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "coverage": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "diagnostics": {
+      "type": "object"
+    },
+    "false_accept_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "false_reject_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "isolation": {
+      "type": "object"
+    },
+    "invalid_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metrics_valid": {
+      "type": "boolean"
+    },
+    "parsed_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "passed_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "quarantine_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "result_file_errors": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "result_file_valid": {
+      "type": "boolean"
+    },
+    "schema_version": {
+      "const": "boundarybench.verification_summary.v1"
+    },
+    "score": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "selective_risk": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "task_count": {
+      "minimum": 0,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_count",
+    "parsed_count",
+    "passed_count",
+    "score",
+    "coverage",
+    "selective_risk",
+    "false_accept_count",
+    "false_reject_count",
+    "abstention_count",
+    "quarantine_count",
+    "result_file_errors",
+    "result_file_valid",
+    "metrics_valid",
+    "invalid_reason",
+    "isolation",
+    "diagnostics"
+  ],
+  "title": "GBI BoundaryBench verification summary",
+  "type": "object"
+}

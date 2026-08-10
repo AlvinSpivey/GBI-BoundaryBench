@@ -1,0 +1,45 @@
+{
+  "benchmark_contract": "benchmark-contract-v0.1",
+  "benchmark_contract_commit": "4e66210c1feb3bfff0f3e7e1fe3c4a3f899d77a3",
+  "execution_harness": "empirical-run-plan-v0.1.8",
+  "frozen_benchmark_sha256": "ae0f875ed40316a99b8fbddd1ee248296ace94431f0b3f1f05437ea906967c78",
+  "frozen_result": {
+    "accepted_outputs": 0,
+    "canonical_executions": 768,
+    "completed_executions": 768,
+    "coverage": 0.0,
+    "evidence_modes": [
+      "output_only",
+      "token_top_k",
+      "full_category_evidence"
+    ],
+    "heldout_tasks": 256,
+    "invalid_output_rate": 1.0,
+    "quarantined": 768,
+    "safe_parse_reject": 369,
+    "safe_schema_reject": 399,
+    "selective_risk": null
+  },
+  "model": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "pinned_revision": "cdbee75f17c01a7cc42f958dc650907174af0554"
+  },
+  "private_source_repository": "AlvinSpivey/GBI-DCSE",
+  "publication_scope": "application-facing public showcase; hidden held-out references, oracles, trusted verifier packages, raw held-out responses, and private Git history are intentionally excluded",
+  "raw_archive_sha256": "155c28cb104bc0c0923c16e3f2098a59707aadebc31596304afe073b1250eaf0",
+  "raw_freeze": "empirical-raw-v0.1",
+  "raw_freeze_commit": "7ed87ba68b715f60bdf88a8015aa2659313b5876",
+  "runner_commit": "5b717c9fff00c816946adf095a271cf05cc5b5f1",
+  "schema_version": "boundarybench.public_showcase_provenance.v1",
+  "scored_checksum_manifest_sha256": "4b04383b9874410ce7353623f697a10c7b46fbdcecfa7271f2b849c78720182b",
+  "scored_commit": "3bcb9dad9af04c1cfedb5b6f74aa40e36d9a0e13",
+  "scored_freeze": "empirical-scored-v0.1",
+  "withheld_from_public_repository": [
+    "held-out trusted references and answer keys",
+    "trusted verifier package contents",
+    "oracle outputs and hidden labels",
+    "raw held-out model responses",
+    "private audit/run logs",
+    "private Git history and governance tags"
+  ]
+}

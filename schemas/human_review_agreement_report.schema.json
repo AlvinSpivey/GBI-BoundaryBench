@@ -1,0 +1,66 @@
+{
+  "$id": "https://gbi-boundarybench.local/schemas/human_review_agreement_report.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "analysis_status": {
+      "enum": [
+        "NOT_RUN",
+        "COMPLETE"
+      ]
+    },
+    "decision_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "label_field": {
+      "type": "string"
+    },
+    "nominal_alpha": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "not_run_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pairwise": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "prevalence": {
+      "type": "object"
+    },
+    "reviewer_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "boundarybench.human_review_agreement_report.v1"
+    },
+    "task_count": {
+      "minimum": 0,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "schema_version",
+    "analysis_status",
+    "not_run_reason",
+    "label_field",
+    "decision_count",
+    "task_count",
+    "reviewer_count",
+    "pairwise",
+    "nominal_alpha",
+    "prevalence"
+  ],
+  "title": "GBI BoundaryBench human review agreement report",
+  "type": "object"
+}

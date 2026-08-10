@@ -1,0 +1,258 @@
+{
+  "$id": "https://gbi-boundarybench.local/schemas/model_response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "category_evidence": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "errors": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "parsed_json": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "provenance": {
+      "$id": "https://gbi-boundarybench.local/schemas/model_provenance.schema.json",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "access_mode": {
+          "enum": [
+            "open_weight_full_category",
+            "token_top_k",
+            "output_only",
+            "local_surrogate_probe"
+          ]
+        },
+        "access_time_utc": {
+          "type": "string"
+        },
+        "adapter_api_version": {
+          "type": "string"
+        },
+        "adapter_class": {
+          "type": "string"
+        },
+        "attempt_count": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "code_commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cost_usd": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "data_manifest_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "execution_status": {
+          "enum": [
+            "completed",
+            "mock_completed",
+            "failed"
+          ]
+        },
+        "external_request_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "is_mock": {
+          "type": "boolean"
+        },
+        "latency_ms": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "model_id": {
+          "type": "string"
+        },
+        "observed_evidence": {
+          "additionalProperties": false,
+          "properties": {
+            "full_category": {
+              "type": "boolean"
+            },
+            "output_text": {
+              "type": "boolean"
+            },
+            "token_top_k": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "full_category",
+            "token_top_k",
+            "output_text"
+          ],
+          "type": "object"
+        },
+        "prompt_sha256": {
+          "maxLength": 64,
+          "minLength": 64,
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "request_config_sha256": {
+          "maxLength": 64,
+          "minLength": 64,
+          "type": "string"
+        },
+        "retry_policy": {
+          "type": "object"
+        },
+        "runtime": {
+          "type": "object"
+        },
+        "schema_version": {
+          "const": "boundarybench.model_provenance.v1"
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "usage": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "adapter_api_version",
+        "provider",
+        "model_id",
+        "access_mode",
+        "adapter_class",
+        "access_time_utc",
+        "prompt_sha256",
+        "request_config_sha256",
+        "seed",
+        "code_commit",
+        "data_manifest_sha256",
+        "runtime",
+        "retry_policy",
+        "attempt_count",
+        "latency_ms",
+        "usage",
+        "cost_usd",
+        "external_request_id",
+        "is_mock",
+        "execution_status",
+        "observed_evidence"
+      ],
+      "title": "GBI BoundaryBench model provenance",
+      "type": "object"
+    },
+    "request": {
+      "$id": "https://gbi-boundarybench.local/schemas/model_request.schema.json",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "allowed_actions": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "max_output_tokens": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "prompt": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "boundarybench.model_request.v1"
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "task_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "temperature": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "task_id",
+        "prompt",
+        "allowed_actions",
+        "seed",
+        "temperature",
+        "max_output_tokens",
+        "metadata"
+      ],
+      "title": "GBI BoundaryBench model request",
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "boundarybench.model_response.v1"
+    },
+    "surrogate_report": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "text": {
+      "type": "string"
+    },
+    "token_top_k_evidence": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "request",
+    "text",
+    "parsed_json",
+    "category_evidence",
+    "token_top_k_evidence",
+    "surrogate_report",
+    "provenance",
+    "errors"
+  ],
+  "title": "GBI BoundaryBench model response",
+  "type": "object"
+}

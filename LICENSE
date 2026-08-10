@@ -1,0 +1,21 @@
+Apache-2.0 software license boundary
+
+Unless a more specific file-level notice says otherwise, original source code, scripts, schemas, tests, and CI configuration in this repository are licensed under the Apache License, Version 2.0.
+
+SPDX-License-Identifier: Apache-2.0
+
+The Apache License, Version 2.0 text is available at:
+
+https://www.apache.org/licenses/LICENSE-2.0
+
+Boundary:
+
+- Covered by this software license: project-authored Python code, release scripts, schemas, tests, CI configuration, and software documentation embedded in source files.
+- Not covered by this software license: synthetic benchmark data, third-party source data, manuscript/figures if added later, provider raw traces whose terms prohibit redistribution, credentials, private endpoints, confidential material, real PHI/PII, and any file that states a different license boundary.
+
+See also:
+
+- `DATA_LICENSE.md`
+- `DOCUMENTATION_LICENSE.md`
+- `NOTICE`
+- `THIRD_PARTY_NOTICES.md`

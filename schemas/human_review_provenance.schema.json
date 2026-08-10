@@ -1,0 +1,92 @@
+{
+  "$id": "https://gbi-boundarybench.local/schemas/human_review_provenance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "completed_at_utc": {
+      "type": "string"
+    },
+    "confidentiality_attestation": {
+      "type": "string"
+    },
+    "conflicts_disclosed": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "qualification_attestation": {
+      "type": "string"
+    },
+    "review_event_id": {
+      "type": "string"
+    },
+    "review_round": {
+      "type": "string"
+    },
+    "review_status": {
+      "enum": [
+        "NOT_RUN",
+        "SYNTHETIC_TEST_ONLY",
+        "COMPLETE"
+      ]
+    },
+    "reviewer_id": {
+      "type": "string"
+    },
+    "reviewer_role": {
+      "enum": [
+        "clinician_reviewer",
+        "terminology_specialist",
+        "health_informatics_reviewer",
+        "research_adjudicator",
+        "synthetic_test_reviewer",
+        "NOT_RUN"
+      ]
+    },
+    "schema_version": {
+      "const": "boundarybench.human_review_provenance.v1"
+    },
+    "source_artifacts": {
+      "items": {
+        "type": "string"
+      },
+      "type": [
+        "array",
+        "string"
+      ]
+    },
+    "started_at_utc": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "tool_version": {
+      "type": "string"
+    },
+    "visible_evidence_policy": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "review_event_id",
+    "review_status",
+    "task_id",
+    "reviewer_id",
+    "reviewer_role",
+    "review_round",
+    "source_artifacts",
+    "visible_evidence_policy",
+    "started_at_utc",
+    "completed_at_utc",
+    "qualification_attestation",
+    "confidentiality_attestation",
+    "conflicts_disclosed",
+    "tool_version",
+    "notes"
+  ],
+  "title": "GBI BoundaryBench human review provenance",
+  "type": "object"
+}

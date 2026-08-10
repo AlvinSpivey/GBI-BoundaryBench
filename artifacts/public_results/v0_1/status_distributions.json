@@ -1,0 +1,51 @@
+{
+  "canonical_runs": {
+    "full_category_evidence": {
+      "accepted_result_count": 0,
+      "parse_schema_status_distribution": {
+        "safe_parse_reject": 123,
+        "safe_schema_reject": 133
+      },
+      "result_included_count": 0,
+      "run_id": "heldout_full_category_evidence_run_001",
+      "run_status_distribution": {
+        "COMPLETED": 256
+      },
+      "verifier_grade_status_distribution": {
+        "safe_parse_reject": 256
+      }
+    },
+    "output_only": {
+      "accepted_result_count": 0,
+      "parse_schema_status_distribution": {
+        "safe_parse_reject": 123,
+        "safe_schema_reject": 133
+      },
+      "result_included_count": 0,
+      "run_id": "heldout_output_only_run_001",
+      "run_status_distribution": {
+        "COMPLETED": 256
+      },
+      "verifier_grade_status_distribution": {
+        "safe_parse_reject": 256
+      }
+    },
+    "token_top_k": {
+      "accepted_result_count": 0,
+      "parse_schema_status_distribution": {
+        "safe_parse_reject": 123,
+        "safe_schema_reject": 133
+      },
+      "result_included_count": 0,
+      "run_id": "heldout_token_top_k_run_002",
+      "run_status_distribution": {
+        "COMPLETED": 256
+      },
+      "verifier_grade_status_distribution": {
+        "safe_parse_reject": 256
+      }
+    }
+  },
+  "raw_freeze": "empirical-raw-v0.1",
+  "schema_version": "boundarybench.stage11_status_distributions.v1"
+}

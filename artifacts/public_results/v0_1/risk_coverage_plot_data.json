@@ -1,0 +1,7 @@
+{
+  "note": "selective_risk is undefined for zero coverage, so no risk-coverage points are plotted.",
+  "points": [],
+  "schema_version": "boundarybench.risk_coverage_plot_data.v1",
+  "source_report": "artifacts/public_results/v0_1/stage11_report.json",
+  "status": "NOT_RUN"
+}

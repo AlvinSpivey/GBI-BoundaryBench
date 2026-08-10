@@ -1,0 +1,297 @@
+{
+  "aggregate_metrics": {
+    "abstention_count": 0,
+    "abstention_rate": 0.0,
+    "benchmark_contract": "benchmark-contract-v0.1",
+    "canonical_execution_count": 768,
+    "canonical_execution_denominator_retained": true,
+    "canonical_result_count": 0,
+    "confidence_intervals": "NOT_RUN",
+    "coverage": 0.0,
+    "false_acceptance_count": 0,
+    "false_acceptance_rate": 0.0,
+    "false_rejection_count": 0,
+    "false_rejection_rate": 0.0,
+    "invalid_output_rate": 1.0,
+    "latency_ms_mean": 39412.90719842317,
+    "mode_count": 3,
+    "parsed_count": 0,
+    "quarantine_count": 768,
+    "quarantine_frequency": 1.0,
+    "raw_freeze": "empirical-raw-v0.1",
+    "repeat_run_stability": "NOT_RUN",
+    "reported_provider_cost_usd": "NOT_RUN",
+    "run_plan": "empirical-run-plan-v0.1.8",
+    "schema_version": "boundarybench.stage11_aggregate_metrics.v1",
+    "scoring_status": "COMPLETED",
+    "selective_risk": null,
+    "verified_completion": 0,
+    "verified_completion_rate": 0.0
+  },
+  "hand_authored_results": false,
+  "notes": [
+    "No model execution occurred during scoring.",
+    "No trusted per-task reference answers are included in this compact scored package.",
+    "All 768 canonical executions are retained in the evaluation denominator.",
+    "Existing Stage 10 empirical report code is not used as the scoring source; it summarizes immutable run records and requires run_* IDs for summary joins, while the frozen canonical IDs are heldout_*."
+  ],
+  "per_mode_metrics": [
+    {
+      "abstention_count": 0,
+      "abstention_rate": 0.0,
+      "accepted_result_count": 0,
+      "confidence_intervals": "NOT_RUN",
+      "coverage": 0.0,
+      "empirical_provenance_records": 256,
+      "evidence_mode": "output_only",
+      "evidence_mode_availability": {
+        "accepted_boundarybench_result_records": 0,
+        "canonical_execution_records": 256,
+        "supported_by_runtime": true
+      },
+      "exact_model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "false_acceptance_count": 0,
+      "false_acceptance_rate": 0.0,
+      "false_rejection_count": 0,
+      "false_rejection_rate": 0.0,
+      "family": "open_weight_family_a",
+      "invalid_output_rate": 1.0,
+      "invalid_reason": null,
+      "latency_ms": {
+        "count": 256,
+        "max": 68546.3827210001,
+        "mean": 30020.167785507823,
+        "min": 6506.018813000082
+      },
+      "metrics_valid": true,
+      "parse_schema_status_distribution": {
+        "safe_parse_reject": 123,
+        "safe_schema_reject": 133
+      },
+      "parsed_count": 0,
+      "provider": "open_weight_family_a",
+      "quarantine_count": 256,
+      "quarantine_frequency": 1.0,
+      "raw_response_files": 256,
+      "repeat_run_stability": "NOT_RUN",
+      "reported_provider_cost_usd": "NOT_RUN",
+      "result_file_errors": [],
+      "result_file_valid": true,
+      "result_included_count": 0,
+      "run_id": "heldout_output_only_run_001",
+      "run_status_distribution": {
+        "COMPLETED": 256
+      },
+      "schema_version": "boundarybench.stage11_per_mode_metrics.v1",
+      "score": 0,
+      "selective_risk": null,
+      "task_count": 256,
+      "token_usage_totals": {},
+      "verified_completion": 0,
+      "verified_completion_rate": 0.0,
+      "verifier_grade_status_distribution": {
+        "safe_parse_reject": 256
+      },
+      "verifier_observed_action_distribution": {
+        "reject": 256
+      },
+      "zero_result_condition": {
+        "results_jsonl_records": 0,
+        "runner_parse_status_distribution": {
+          "safe_parse_reject": 123,
+          "safe_schema_reject": 133
+        },
+        "verifier_interpretation": "empty results.jsonl; all held-out tasks scored as missing_result via the frozen verifier"
+      }
+    },
+    {
+      "abstention_count": 0,
+      "abstention_rate": 0.0,
+      "accepted_result_count": 0,
+      "confidence_intervals": "NOT_RUN",
+      "coverage": 0.0,
+      "empirical_provenance_records": 256,
+      "evidence_mode": "token_top_k",
+      "evidence_mode_availability": {
+        "accepted_boundarybench_result_records": 0,
+        "canonical_execution_records": 256,
+        "supported_by_runtime": true
+      },
+      "exact_model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "false_acceptance_count": 0,
+      "false_acceptance_rate": 0.0,
+      "false_rejection_count": 0,
+      "false_rejection_rate": 0.0,
+      "family": "open_weight_family_a",
+      "invalid_output_rate": 1.0,
+      "invalid_reason": null,
+      "latency_ms": {
+        "count": 256,
+        "max": 65750.11479300019,
+        "mean": 29993.4318047422,
+        "min": 6467.478026999743
+      },
+      "metrics_valid": true,
+      "parse_schema_status_distribution": {
+        "safe_parse_reject": 123,
+        "safe_schema_reject": 133
+      },
+      "parsed_count": 0,
+      "provider": "open_weight_family_a",
+      "quarantine_count": 256,
+      "quarantine_frequency": 1.0,
+      "raw_response_files": 256,
+      "repeat_run_stability": "NOT_RUN",
+      "reported_provider_cost_usd": "NOT_RUN",
+      "result_file_errors": [],
+      "result_file_valid": true,
+      "result_included_count": 0,
+      "run_id": "heldout_token_top_k_run_002",
+      "run_status_distribution": {
+        "COMPLETED": 256
+      },
+      "schema_version": "boundarybench.stage11_per_mode_metrics.v1",
+      "score": 0,
+      "selective_risk": null,
+      "task_count": 256,
+      "token_usage_totals": {},
+      "verified_completion": 0,
+      "verified_completion_rate": 0.0,
+      "verifier_grade_status_distribution": {
+        "safe_parse_reject": 256
+      },
+      "verifier_observed_action_distribution": {
+        "reject": 256
+      },
+      "zero_result_condition": {
+        "results_jsonl_records": 0,
+        "runner_parse_status_distribution": {
+          "safe_parse_reject": 123,
+          "safe_schema_reject": 133
+        },
+        "verifier_interpretation": "empty results.jsonl; all held-out tasks scored as missing_result via the frozen verifier"
+      }
+    },
+    {
+      "abstention_count": 0,
+      "abstention_rate": 0.0,
+      "accepted_result_count": 0,
+      "confidence_intervals": "NOT_RUN",
+      "coverage": 0.0,
+      "empirical_provenance_records": 256,
+      "evidence_mode": "full_category_evidence",
+      "evidence_mode_availability": {
+        "accepted_boundarybench_result_records": 0,
+        "canonical_execution_records": 256,
+        "supported_by_runtime": true
+      },
+      "exact_model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "false_acceptance_count": 0,
+      "false_acceptance_rate": 0.0,
+      "false_rejection_count": 0,
+      "false_rejection_rate": 0.0,
+      "family": "open_weight_family_a",
+      "invalid_output_rate": 1.0,
+      "invalid_reason": null,
+      "latency_ms": {
+        "count": 256,
+        "max": 139273.0283130004,
+        "mean": 58225.1220050195,
+        "min": 20295.11545800051
+      },
+      "metrics_valid": true,
+      "parse_schema_status_distribution": {
+        "safe_parse_reject": 123,
+        "safe_schema_reject": 133
+      },
+      "parsed_count": 0,
+      "provider": "open_weight_family_a",
+      "quarantine_count": 256,
+      "quarantine_frequency": 1.0,
+      "raw_response_files": 256,
+      "repeat_run_stability": "NOT_RUN",
+      "reported_provider_cost_usd": "NOT_RUN",
+      "result_file_errors": [],
+      "result_file_valid": true,
+      "result_included_count": 0,
+      "run_id": "heldout_full_category_evidence_run_001",
+      "run_status_distribution": {
+        "COMPLETED": 256
+      },
+      "schema_version": "boundarybench.stage11_per_mode_metrics.v1",
+      "score": 0,
+      "selective_risk": null,
+      "task_count": 256,
+      "token_usage_totals": {},
+      "verified_completion": 0,
+      "verified_completion_rate": 0.0,
+      "verifier_grade_status_distribution": {
+        "safe_parse_reject": 256
+      },
+      "verifier_observed_action_distribution": {
+        "reject": 256
+      },
+      "zero_result_condition": {
+        "results_jsonl_records": 0,
+        "runner_parse_status_distribution": {
+          "safe_parse_reject": 123,
+          "safe_schema_reject": 133
+        },
+        "verifier_interpretation": "empty results.jsonl; all held-out tasks scored as missing_result via the frozen verifier"
+      }
+    }
+  ],
+  "schema_version": "boundarybench.stage11_report.v1",
+  "source": "trusted verifier summaries plus frozen empirical provenance records",
+  "status_distributions": {
+    "canonical_runs": {
+      "full_category_evidence": {
+        "accepted_result_count": 0,
+        "parse_schema_status_distribution": {
+          "safe_parse_reject": 123,
+          "safe_schema_reject": 133
+        },
+        "result_included_count": 0,
+        "run_id": "heldout_full_category_evidence_run_001",
+        "run_status_distribution": {
+          "COMPLETED": 256
+        },
+        "verifier_grade_status_distribution": {
+          "safe_parse_reject": 256
+        }
+      },
+      "output_only": {
+        "accepted_result_count": 0,
+        "parse_schema_status_distribution": {
+          "safe_parse_reject": 123,
+          "safe_schema_reject": 133
+        },
+        "result_included_count": 0,
+        "run_id": "heldout_output_only_run_001",
+        "run_status_distribution": {
+          "COMPLETED": 256
+        },
+        "verifier_grade_status_distribution": {
+          "safe_parse_reject": 256
+        }
+      },
+      "token_top_k": {
+        "accepted_result_count": 0,
+        "parse_schema_status_distribution": {
+          "safe_parse_reject": 123,
+          "safe_schema_reject": 133
+        },
+        "result_included_count": 0,
+        "run_id": "heldout_token_top_k_run_002",
+        "run_status_distribution": {
+          "COMPLETED": 256
+        },
+        "verifier_grade_status_distribution": {
+          "safe_parse_reject": 256
+        }
+      }
+    },
+    "raw_freeze": "empirical-raw-v0.1",
+    "schema_version": "boundarybench.stage11_status_distributions.v1"
+  }
+}

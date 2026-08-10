@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use GBI BoundaryBench, cite this repository release."
+title: "GBI BoundaryBench"
+version: "0.1.0-rc1"
+date-released: "2026-08-07"
+abstract: "A synthetic research benchmark for legacy-EHR boundary validation with deterministic verification, abstention, evidence, and quarantine semantics."
+authors:
+  - name: "GBI BoundaryBench contributors"
+repository-code: "NOT_ASSIGNED"
+license: "Apache-2.0"
+keywords:
+  - synthetic health data
+  - benchmark
+  - legacy EHR
+  - FHIR
+  - verification
+  - abstention

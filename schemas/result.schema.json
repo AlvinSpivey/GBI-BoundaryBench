@@ -1,0 +1,47 @@
+{
+  "$id": "https://gbi-boundarybench.local/schemas/result.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "action": {
+      "enum": [
+        "admit",
+        "admit_historical_only",
+        "quarantine_slice",
+        "abstain",
+        "expert_review",
+        "reject"
+      ]
+    },
+    "answer": {
+      "type": "object"
+    },
+    "confidence": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "type": "number"
+    },
+    "evidence_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "boundarybench.result.v1"
+    },
+    "task_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_id",
+    "action",
+    "answer",
+    "evidence_refs"
+  ],
+  "title": "GBI BoundaryBench result",
+  "type": "object"
+}

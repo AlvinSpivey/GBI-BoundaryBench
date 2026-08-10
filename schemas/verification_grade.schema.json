@@ -1,0 +1,133 @@
+{
+  "$id": "https://gbi-boundarybench.local/schemas/verification_grade.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "criteria": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "details": {
+            "type": "object"
+          },
+          "errors": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "name": {
+            "enum": [
+              "schema",
+              "exact",
+              "graph",
+              "temporal",
+              "version",
+              "evidence"
+            ]
+          },
+          "passed": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "passed",
+          "status",
+          "errors",
+          "details"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "errors": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "expected_action": {
+      "type": "string"
+    },
+    "observed_action": {
+      "type": "string"
+    },
+    "parsed": {
+      "type": "boolean"
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "quarantine": {
+      "additionalProperties": false,
+      "properties": {
+        "closure_task_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "dependency_keys": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "local_slices": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "quarantined": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "quarantined",
+        "local_slices",
+        "dependency_keys",
+        "closure_task_ids",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "boundarybench.verification_grade.v1"
+    },
+    "score": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_id",
+    "parsed",
+    "passed",
+    "score",
+    "status",
+    "observed_action",
+    "expected_action",
+    "criteria",
+    "quarantine",
+    "errors"
+  ],
+  "title": "GBI BoundaryBench verification grade",
+  "type": "object"
+}

@@ -1,0 +1,120 @@
+{
+  "$id": "https://gbi-boundarybench.local/schemas/human_review_decision.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "accepted_claims": {
+      "items": {
+        "type": "string"
+      },
+      "type": [
+        "array",
+        "string"
+      ]
+    },
+    "confidence": {
+      "type": [
+        "number",
+        "string"
+      ]
+    },
+    "evidence_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": [
+        "array",
+        "string"
+      ]
+    },
+    "evidence_sufficiency": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "provenance_id": {
+      "type": "string"
+    },
+    "quarantined_slices": {
+      "items": {
+        "type": "string"
+      },
+      "type": [
+        "array",
+        "string"
+      ]
+    },
+    "rationale_codes": {
+      "items": {
+        "type": "string"
+      },
+      "type": [
+        "array",
+        "string"
+      ]
+    },
+    "review_status": {
+      "enum": [
+        "NOT_RUN",
+        "SYNTHETIC_TEST_ONLY",
+        "COMPLETE"
+      ]
+    },
+    "reviewer_id": {
+      "type": "string"
+    },
+    "reviewer_role": {
+      "enum": [
+        "clinician_reviewer",
+        "terminology_specialist",
+        "health_informatics_reviewer",
+        "research_adjudicator",
+        "synthetic_test_reviewer",
+        "NOT_RUN"
+      ]
+    },
+    "schema_version": {
+      "const": "boundarybench.human_review_decision.v1"
+    },
+    "selected_action": {
+      "enum": [
+        "admit",
+        "admit_historical_only",
+        "quarantine_slice",
+        "abstain",
+        "expert_review",
+        "reject",
+        "NOT_RUN"
+      ]
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "time_spent_seconds": {
+      "type": [
+        "number",
+        "string"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "review_status",
+    "task_id",
+    "reviewer_id",
+    "reviewer_role",
+    "selected_action",
+    "evidence_sufficiency",
+    "accepted_claims",
+    "quarantined_slices",
+    "evidence_refs",
+    "confidence",
+    "rationale_codes",
+    "time_spent_seconds",
+    "notes",
+    "provenance_id"
+  ],
+  "title": "GBI BoundaryBench human review decision",
+  "type": "object"
+}

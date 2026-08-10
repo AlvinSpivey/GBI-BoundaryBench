@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://boundarybench.local/schemas/empirical_result.schema.json",
+  "title": "BoundaryBench Stage 10 empirical result record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "task_id",
+    "run_id",
+    "run_status",
+    "model",
+    "prompt_hash",
+    "policy_hash",
+    "decoding_configuration",
+    "seed",
+    "evidence_mode",
+    "raw_output_path",
+    "raw_output_hash",
+    "latency_ms",
+    "token_usage",
+    "reported_provider_cost_usd",
+    "provider_request_id",
+    "parse_status",
+    "parse_errors",
+    "result_included",
+    "execution_device",
+    "execution_dtype",
+    "torch_version",
+    "transformers_version",
+    "accelerator_available",
+    "runner_commit",
+    "code_commit",
+    "benchmark_contract",
+    "input_manifest_hash",
+    "data_manifest_hash",
+    "freeze_manifest_hash",
+    "freeze_manifest_sha256",
+    "freeze_validation_mode",
+    "trusted_artifacts_present",
+    "unsupported_reason"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "boundarybench.empirical_result.v1"
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^run_[0-9]{3,}$"
+    },
+    "run_status": {
+      "enum": ["COMPLETED", "FAILED", "NOT_RUN", "NOT_AVAILABLE", "QUARANTINED"]
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["exact_model_id", "provider", "artifact_version_digest", "access_date", "family"],
+      "properties": {
+        "exact_model_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artifact_version_digest": {
+          "type": ["string", "null"]
+        },
+        "access_date": {
+          "type": "string"
+        },
+        "family": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "prompt_hash": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "policy_hash": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "decoding_configuration": {
+      "type": "object"
+    },
+    "seed": {
+      "type": ["integer", "null"]
+    },
+    "evidence_mode": {
+      "enum": ["full_category_evidence", "token_top_k", "output_only", "surrogate_probe"]
+    },
+    "raw_output_path": {
+      "type": "string"
+    },
+    "raw_output_hash": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "latency_ms": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "token_usage": {
+      "type": ["object", "null"]
+    },
+    "reported_provider_cost_usd": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "provider_request_id": {
+      "type": ["string", "null"]
+    },
+    "parse_status": {
+      "enum": ["valid_result", "safe_parse_reject", "safe_schema_reject", "NOT_RUN"]
+    },
+    "parse_errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "result_included": {
+      "type": "boolean"
+    },
+    "execution_device": {
+      "type": ["string", "null"]
+    },
+    "execution_dtype": {
+      "type": ["string", "null"]
+    },
+    "torch_version": {
+      "type": ["string", "null"]
+    },
+    "transformers_version": {
+      "type": ["string", "null"]
+    },
+    "accelerator_available": {
+      "type": "object"
+    },
+    "runner_commit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "code_commit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "benchmark_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tag", "commit"],
+      "properties": {
+        "tag": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "input_manifest_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "data_manifest_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "freeze_manifest_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "freeze_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "freeze_validation_mode": {
+      "enum": ["full", "execution_isolated"]
+    },
+    "trusted_artifacts_present": {
+      "type": ["boolean", "null"]
+    },
+    "unsupported_reason": {
+      "type": ["string", "null"]
+    }
+  }
+}

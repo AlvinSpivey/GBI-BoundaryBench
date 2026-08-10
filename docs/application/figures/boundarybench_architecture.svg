@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">GBI BoundaryBench verification architecture</title>
+  <desc id="desc">A model proposes a legacy-EHR transformation; a deterministic verifier controls whether the output becomes an admissible action, quarantine, review, abstention, or rejection.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="#FFFFFF"/>
+  <text x="600" y="54" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="30" font-weight="800" fill="#172033" text-anchor="middle">GBI BoundaryBench v0.1</text>
+  <text x="600" y="88" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="400" fill="#475569" text-anchor="middle">Model proposal is evidence; programmatic verification controls admissibility.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="150" width="260" height="108" rx="18" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="200" y="188" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="750" fill="#172033" text-anchor="middle">Legacy EHR boundary</text>
+    <text x="200" y="218" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="middle">Synthetic RPMS-shaped rows</text>
+    <text x="200" y="242" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="middle">messy enterprise records</text>
+
+    <rect x="470" y="150" width="260" height="108" rx="18" fill="#FEFCE8" stroke="#FACC15" stroke-width="2"/>
+    <text x="600" y="188" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="750" fill="#172033" text-anchor="middle">Model proposal</text>
+    <text x="600" y="218" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="middle">mapping / repair / trace</text>
+    <text x="600" y="242" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="middle">classification / abstention</text>
+
+    <rect x="870" y="150" width="260" height="108" rx="18" fill="#F0F9FF" stroke="#38BDF8" stroke-width="2"/>
+    <text x="1000" y="188" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="750" fill="#172033" text-anchor="middle">Programmatic verifier</text>
+    <text x="1000" y="218" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="middle">deterministic checks</text>
+    <text x="1000" y="242" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="middle">fail-closed policy</text>
+  </g>
+  <line x1="330" y1="204" x2="470" y2="204" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="730" y1="204" x2="870" y2="204" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <text x="600" y="292" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#0F3A5D" text-anchor="middle">Verification dimensions</text>
+  <rect x="388" y="300" width="160" height="48" rx="12" fill="#EEF6FF" stroke="#7AB7E8" stroke-width="2"/><text x="468" y="330" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="650" fill="#0F3A5D" text-anchor="middle">Identity</text><rect x="574" y="300" width="160" height="48" rx="12" fill="#EEF6FF" stroke="#7AB7E8" stroke-width="2"/><text x="654" y="330" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="650" fill="#0F3A5D" text-anchor="middle">Provenance</text><rect x="760" y="300" width="160" height="48" rx="12" fill="#EEF6FF" stroke="#7AB7E8" stroke-width="2"/><text x="840" y="330" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="650" fill="#0F3A5D" text-anchor="middle">Terminology / version</text><rect x="946" y="300" width="160" height="48" rx="12" fill="#EEF6FF" stroke="#7AB7E8" stroke-width="2"/><text x="1026" y="330" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="650" fill="#0F3A5D" text-anchor="middle">Temporal validity</text><rect x="388" y="376" width="160" height="48" rx="12" fill="#EEF6FF" stroke="#7AB7E8" stroke-width="2"/><text x="468" y="406" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="650" fill="#0F3A5D" text-anchor="middle">Evidence sufficiency</text><rect x="574" y="376" width="160" height="48" rx="12" fill="#EEF6FF" stroke="#7AB7E8" stroke-width="2"/><text x="654" y="406" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="650" fill="#0F3A5D" text-anchor="middle">Dependencies</text><rect x="760" y="376" width="160" height="48" rx="12" fill="#EEF6FF" stroke="#7AB7E8" stroke-width="2"/><text x="840" y="406" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="650" fill="#0F3A5D" text-anchor="middle">Policy</text>
+
+  <line x1="1000" y1="258" x2="1000" y2="380" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1000" y1="458" x2="1000" y2="565" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="600" y="585" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#172033" text-anchor="middle">Admissible actions and fail-closed outcomes</text>
+  <rect x="86" y="620" width="150" height="56" rx="14" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/><text x="161" y="654" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" font-weight="750" fill="#172033" text-anchor="middle">ADMIT</text><rect x="259" y="620" width="150" height="56" rx="14" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/><text x="334" y="654" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" font-weight="750" fill="#172033" text-anchor="middle">ADMIT HISTORICAL ONLY</text><rect x="432" y="620" width="150" height="56" rx="14" fill="#FFF7ED" stroke="#FB923C" stroke-width="2"/><text x="507" y="654" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" font-weight="750" fill="#172033" text-anchor="middle">QUARANTINE SLICE</text><rect x="605" y="620" width="150" height="56" rx="14" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/><text x="680" y="654" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" font-weight="750" fill="#172033" text-anchor="middle">ABSTAIN</text><rect x="778" y="620" width="150" height="56" rx="14" fill="#FFF7ED" stroke="#FB923C" stroke-width="2"/><text x="853" y="654" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" font-weight="750" fill="#172033" text-anchor="middle">EXPERT REVIEW</text><rect x="951" y="620" width="150" height="56" rx="14" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/><text x="1026" y="654" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" font-weight="750" fill="#172033" text-anchor="middle">REJECT</text>
+  <text x="600" y="720" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="middle">The verifier, not the model, decides whether a proposal becomes action, quarantine, review, abstention, or rejection.</text>
+</svg>
