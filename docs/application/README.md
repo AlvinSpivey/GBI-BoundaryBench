@@ -5,6 +5,7 @@ This directory contains the application-facing summary for GBI BoundaryBench v0.
 Start here:
 
 - Project summary: [`GBI_BOUNDARYBENCH_V0_1_SUMMARY.md`](GBI_BOUNDARYBENCH_V0_1_SUMMARY.md)
+- Enterprise portability: [`ENTERPRISE_PORTABILITY.md`](ENTERPRISE_PORTABILITY.md)
 - Application blurbs: [`APPLICATION_BLURBS.md`](APPLICATION_BLURBS.md)
 - Reproducibility summary: [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md)
 

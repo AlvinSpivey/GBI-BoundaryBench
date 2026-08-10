@@ -41,6 +41,7 @@ Start with:
 - Architecture figure: [`docs/application/figures/boundarybench_architecture.svg`](docs/application/figures/boundarybench_architecture.svg)
 - Empirical failure-flow figure: [`docs/application/figures/qwen_v0_1_failure_flow.svg`](docs/application/figures/qwen_v0_1_failure_flow.svg)
 - Application summary: [`docs/application/GBI_BOUNDARYBENCH_V0_1_SUMMARY.md`](docs/application/GBI_BOUNDARYBENCH_V0_1_SUMMARY.md)
+- Enterprise portability: [`docs/application/ENTERPRISE_PORTABILITY.md`](docs/application/ENTERPRISE_PORTABILITY.md)
 - Reproducibility summary: [`docs/application/REPRODUCIBILITY.md`](docs/application/REPRODUCIBILITY.md)
 - Benchmark card: [`docs/benchmark_card.md`](docs/benchmark_card.md)
 - Public aggregate results: [`artifacts/public_results/v0_1/`](artifacts/public_results/v0_1/)
@@ -54,6 +55,43 @@ Legacy EHR transformation is not just a text-generation problem. A system may ne
 - malformed or unsupported outputs fail closed;
 - correct abstention and localized quarantine are first-class outcomes;
 - every scored result is tied to immutable task, model, raw-output, and verifier provenance.
+
+## From healthcare benchmark to enterprise diagnostic evaluation
+
+BoundaryBench v0.1 is instantiated in legacy-EHR transformation, but the verification interface is intended to be domain-portable:
+
+```text
+MODEL / AGENT PROPOSAL
+      ↓
+TYPED EVIDENCE RECEIPT
+      ↓
+PROGRAMMATIC VERIFICATION
+      ↓
+VERSIONED ENTERPRISE POLICY
+      ↓
+ADMIT / QUARANTINE / REVIEW / REJECT
+```
+
+The verification architecture is portable; the task semantics, authoritative evidence, dependencies, and policy contract are domain-specific. An enterprise version of this pattern would run a versioned evaluation package locally against the customer’s actual model, agent, retrieval, data-interface, and policy stack. The point is customer-specific, in-situ empirical evaluation rather than relying only on generic leaderboard performance or proxy estimates.
+
+Operationally, the loop is:
+
+```text
+customer stack
+      ↓
+local diagnostic evaluation
+      ↓
+empirical failure surface
+      ↓
+failure slices
+      ↓
+expert data / graders / synthetic examples / retrieval changes /
+post-training environments
+      ↓
+re-evaluation
+```
+
+This can turn observed failures into a data-development roadmap without predetermining that any specific vendor, product, or training approach is the answer. Enterprise portability details are in [`docs/application/ENTERPRISE_PORTABILITY.md`](docs/application/ENTERPRISE_PORTABILITY.md).
 
 ## What BoundaryBench evaluates
 
