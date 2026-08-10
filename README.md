@@ -45,6 +45,26 @@ Start with:
 - Reproducibility summary: [`docs/application/REPRODUCIBILITY.md`](docs/application/REPRODUCIBILITY.md)
 - Benchmark card: [`docs/benchmark_card.md`](docs/benchmark_card.md)
 - Public aggregate results: [`artifacts/public_results/v0_1/`](artifacts/public_results/v0_1/)
+- Submitted research manuscript: [`paper/GBI_DCSE_manuscript.pdf`](paper/GBI_DCSE_manuscript.pdf)
+
+### Research manuscript
+
+**Logit-Boundary Geometric Belief Interfaces and Sparse Sheaf-Enclave Protocols** — Alvin Spivey & Thomas Huang
+
+Companion research manuscript underlying the GBI/DCSE verification architecture and BoundaryBench evaluation framework.
+
+**Status: submitted to arXiv; processing / identifier pending.**
+
+[Read the submitted manuscript](paper/GBI_DCSE_manuscript.pdf)
+
+The manuscript covers:
+
+- typed model-to-system evidence boundaries;
+- the versioned runtime admissibility policy `P`;
+- healthcare / financial / government domain portability;
+- pre-commit surgical quarantine and liveness;
+- deterministic human-review surfaces;
+- GBI BoundaryBench v0.1 empirical evaluation.
 
 ## Why this benchmark exists
 
