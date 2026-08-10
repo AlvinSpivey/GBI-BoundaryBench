@@ -19,5 +19,3 @@ The manuscript provides the mathematical and systems architecture underlying GBI
 This repository includes the submitted manuscript PDF only:
 
 - [`GBI_DCSE_manuscript.pdf`](GBI_DCSE_manuscript.pdf)
-
-It does not include TeX source, administrative arXiv files, private research history, trusted benchmark content, or raw held-out model outputs.
