@@ -53,7 +53,7 @@ Start with:
 
 Companion research manuscript underlying the GBI/DCSE verification architecture and BoundaryBench evaluation framework.
 
-**Status: submitted to arXiv; [processing / identifier](https://arxiv.org/abs/2608.10300).**
+**Status: submitted to arXiv: [processing / identifier](https://arxiv.org/abs/2608.10300).**
 
 [Read the submitted manuscript](paper/GBI_DCSE_manuscript.pdf)
 
