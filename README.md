@@ -49,11 +49,11 @@ Start with:
 
 ### Research manuscript
 
-**Logit-Boundary Geometric Belief Interfaces and Sparse Sheaf-Enclave Protocols** — Alvin Spivey & Thomas Huang
+**Logit-Boundary Geometric Belief Interfaces and Sparse Sheaf-Enclave Protocols** — Alvin Spivey & Yu Huang
 
 Companion research manuscript underlying the GBI/DCSE verification architecture and BoundaryBench evaluation framework.
 
-**Status: submitted to arXiv; processing / identifier pending.**
+**Status: submitted to arXiv; [processing / identifier](https://arxiv.org/abs/2608.10300).**
 
 [Read the submitted manuscript](paper/GBI_DCSE_manuscript.pdf)
 
