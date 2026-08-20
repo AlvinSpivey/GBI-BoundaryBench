@@ -4,7 +4,7 @@
 
 I realize applications of Topological Discovery have historically been hard to grasp. Hopefully this repository, explanations, and the following audio overview will be helpful as you review my work.
 
-https://github.com/user-attachments/assets/c2080b00-a803-4415-bedf-a44381df6b8f
+[Mathematical Gates for Safe Medical AI](https://github.com/user-attachments/assets/c2080b00-a803-4415-bedf-a44381df6b8f)
 
 <p align="center">
   <a href="https://github.com/AlvinSpivey/GBI-BoundaryBench/blob/1f34ed2d2ea685d5e5f5451fb09e0412d6aacd48/paper/audio/audio_overview_small.mp4">
