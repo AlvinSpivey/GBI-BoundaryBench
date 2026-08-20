@@ -3,11 +3,11 @@
 I realize applications of Topological Discovery have historically been hard to grasp.  Hopefully this repository, explanations, and the following audio overview will be helpful as you review my work.
 
 <p align="center">
-  <!-- Centered Video Player acting as an audio bar -->
-  <video src="https://github.com/AlvinSpivey/GBI-BoundaryBench/blob/51c0b82bfc689ee0d9ad24245e24e4c7f2e9c3b0/paper/audio/Strengthening_the_medical_AI_verification_paper.m4a" controls width="500"></video>
+  <!-- Native Gray Audio Player Utility -->
+  <audio src="https://githubusercontent.com" controls preload="metadata"></audio>
   <br><br>
-  <!-- Direct Download Utility Button -->
-  <a href="https://github.com/AlvinSpivey/GBI-BoundaryBench/blob/51c0b82bfc689ee0d9ad24245e24e4c7f2e9c3b0/paper/audio/Strengthening_the_medical_AI_verification_paper.m4a" download>
+  <!-- Direct Instant Download Trigger -->
+  <a href="https://githubusercontent.com" download>
     📥 <b>Click Here to Download Audio File Directly</b>
   </a>
 </p>
