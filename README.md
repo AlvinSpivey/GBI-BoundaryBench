@@ -3,7 +3,7 @@
 I realize applications of Topological Discovery have historically been hard to grasp.  Hopefully this repository, explanations, and the following audio overview will be helpful as you review my work.
 
 <p align="center">
-  <a href="https://github.com">
+  <a href="https://github.com/AlvinSpivey/GBI-BoundaryBench/blob/51c0b82bfc689ee0d9ad24245e24e4c7f2e9c3b0/paper/audio/Strengthening_the_medical_AI_verification_paper.m4a">
     <img src="https://shields.io" alt="Listen to Audio" width="400">
   </a>
 </p>
