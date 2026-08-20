@@ -1,5 +1,9 @@
 # GBI BoundaryBench / GBI-DCSE Research Program
 
+I realize applications of Topological Discovery have historically been hard to grasp.  Hopefully this repository, explanations, and the following audio overview will be helpful as you review my work.
+
+![Audio Overview](https://github.com/AlvinSpivey/GBI-BoundaryBench/blob/51c0b82bfc689ee0d9ad24245e24e4c7f2e9c3b0/paper/audio/Strengthening_the_medical_AI_verification_paper.m4a)
+
 ## A Paradigm Shift in Healthcare Interoperability: The GBI-DCSE Substrate for Full-Stack AI Verification
 
 The Geometric Belief Interface and Decentralized Cryptographic Sheaf-Enclave (GBI-DCSE) architecture establishes a rigorous formal substrate for clinical artificial intelligence, reclassifying interoperability as a "boundary problem". This framework necessitates a neuro-symbolic partition where the generative model functions as the *ars inveniendi* (discovery) and the substrate acts as the *ars iudicandi* (judgment). 
