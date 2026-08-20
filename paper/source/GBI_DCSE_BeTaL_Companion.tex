@@ -35,7 +35,7 @@
   linkcolor=navy,
   citecolor=teal,
   urlcolor=blue,
-  pdftitle={BeTaL-GBI: Dynamic Benchmark Tuning and Full-Stack Verification of Geometric Belief Interfaces},
+  pdftitle={BeTaL-GBI: Admission-Aware Benchmark Tuning and Full-Stack Verification of Geometric Belief Interfaces},
   pdfauthor={Alvin Spivey and Yu Huang}
 }
 
@@ -82,74 +82,137 @@
   \vspace{0.5em}\color{darkred}\hrule\end{minipage}\end{center}
 }
 
-\title{\textbf{BeTaL-GBI: Dynamic Benchmark Tuning and Full-Stack Verification of Geometric Belief Interfaces}\\[0.35em]
-\large A Companion Empirical Study of the Logit-Boundary Geometric Belief Interfaces and Sparse Sheaf-Enclave Protocols} %BoundaryBench v0.2, GBI v2, and GBI-DCSE v3}
+\title{\textbf{BeTaL-GBI: Admission-Aware Benchmark Tuning and Full-Stack Verification of Geometric Belief Interfaces}\\[0.35em]
+\large A Companion Empirical Study of BoundaryBench v0.2, GBI v2, and GBI-DCSE v3}
 \author{Alvin Spivey \& Yu Huang\\Light Imaging Technologies, Inc.\\\texttt{alvin@lightimagingtech.com}}
-\date{August 19, 2026}
+\date{August 20, 2026}
 
 \begin{document}
 \maketitle
 
-\begin{center}
-\begin{minipage}{0.94\linewidth}
-\small
-\textbf{Research scope.} This is a synthetic, non-clinical companion evaluation of the architecture introduced in the Geometric Boundary Interface, Decentralized Cryptographic Sheaf-Enclave (GBI-DCSE) manuscript. The original architecture paper is publicly available as arXiv:2608.10300v2 \cite{spivey2026gbi}. The BoundaryBench v0.2, GBI v2, and GBI-DCSE v3 discussed here execute no language model, no hosted model provider, no trusted execution environment (TEE), no live Byzantine-fault-tolerant (BFT) cluster, no live FHIR server, and no zero-knowledge prover. Results labeled ``synthetic,'' ``proxy,'' or ``model'' are not deployment claims. The v0.1 Qwen run is used only as a frozen empirical baseline.
-\end{minipage}
-\end{center}
-
 \begin{abstract}
-The first GBI BoundaryBench experiment established a narrow but important observation: successful model inference is not equivalent to an enterprise-admissible action. In a frozen evaluation of Qwen3-4B-Instruct-2507, 768 model executions completed, yet none crossed the benchmark's structured contract; 369 failed safe parsing and 399 failed schema validation, so every execution was quarantined. That result demonstrated fail-closed behavior under one model/configuration, but it also exposed a methodological limitation: zero admission makes downstream selectivity, benchmark difficulty, and runtime policy quality difficult or impossible to measure.
+A verification substrate is more credible when it can expose errors in claims about itself, not only errors in model output. In extending GBI-DCSE into executable claim-level verification, the v3 harness falsified a numerical implication in the original architecture manuscript: the previously reported Fisher-conditioning value \(\epsilon\approx0.066\) satisfies the declared \(\kappa_2\le10^4\) budget only on the slice \([\epsilon,3,4,5]\), whereas the full declared box \([\epsilon,20]^4\) requires \(\epsilon\approx0.326472\). The mismatch is preserved as an \texttt{ERRATUM} rather than silently retuned. This self-correction motivates the broader question of the paper: can an enterprise verification architecture distinguish interface failure, task competence, policy admissibility, and control-plane integrity while making unsupported claims auditable?
 
-This companion paper evaluates three successive refinements. First, \BeTaL-GBI v0.2 adapts Benchmark Tuning with an LLM-in-the-loop (BeTaL) to a versioned enterprise admission boundary. It parameterizes nine benchmark dimensions spanning eight task families, yielding a finite design space of 2,218,750,380 grid points. A central modification separates format admission from task performance: \(\rhatadm=N_{\mathrm{admitted}}/N\) and \(\rhattask=N_{\mathrm{verified}}/N_{\mathrm{admitted}}\), with task difficulty deliberately undefined below an admission floor. The frozen v0.1 boundary produces \(\rhatadm=0\) at every tested point and therefore correctly halts tuning as degenerate. After a declared schema-compliant repair, a model-free feedback search reaches a mean held-out target gap of 2.87\% across four target performance levels, versus 13.61\% and 11.46\% for two reimplemented non-feedback baselines. No language model is executed in this phase, so these results validate the benchmark-design harness rather than frontier-model behavior.
+The frozen BoundaryBench v0.1 experiment supplied the starting failure mode. Qwen3-4B-Instruct-2507 completed 768 held-out executions, but none crossed the structured contract: 369 failed safe parsing and 399 failed schema validation, so every execution was quarantined. That establishes fail-closed handling for one frozen model/configuration, not general protection from hallucination; zero admission also makes downstream selectivity and task difficulty unidentifiable.
 
-Second, GBI v2 replaces answer-key agreement as the runtime admission predicate with a reference-independent witness state \(W\) and executable policy \(P\). On 512 synthetic tasks, a declared 16-gate policy at predeclared strictness 0.6 detects all 116 injected severe contradictions and refuses none of 99 clean admissible records under the narrow predeclared denominator. A broader denominator yields 4.27\%, just above the manuscript's 4\% proposed target; both are reported. A confident-hallucinator surrogate makes 221 attempted over-admissions with zero silent promotions, while an evidence-forger surrogate is refused on all 512 cases. Deterministic format repair raises admission from 0 to 46.48\% without raising verified completion above zero, separating syntactic recovery from correctness. A genuine finite mapping-cone construction satisfies \(d^2=0\), localizes all eight agreement patterns as intended, and remains diagnostic-only with zero scoring weight.
+This companion study evaluates three successive refinements. First, \BeTaL-GBI v0.2 adapts Benchmark Tuning with an LLM-in-the-loop (BeTaL) to a versioned enterprise admission boundary. It parameterizes nine benchmark dimensions over a finite design space of 2,218,750,380 grid points and separates format admission from conditional task performance: \(\rhatadm=N_{\mathrm{admitted}}/N\) and \(\rhattask=N_{\mathrm{verified}}/N_{\mathrm{admitted}}\). Task difficulty is deliberately undefined below a 0.05 admission floor. After a declared schema-compliant repair restores admission, a model-free feedback search reaches a mean held-out target gap of 2.87\% across four target levels, versus 13.61\% and 11.46\% for two reimplemented non-feedback baselines. No language model is executed in this phase.
 
-Third, GBI-DCSE v3 expands evaluation from the GBI gate to the broader testable architecture. A machine-readable register maps 99 manuscript claims to evidence classes and resolvers: 95 of 96 testable registered claims meet their declared acceptance criteria, three are explicitly out of scope, and one numerical statement is classified as an erratum rather than hidden. The standalone v3 verifier executes 148 declared checks with zero failures. It exercises cryptographic Ed25519 signatures, ledger equivocation detection, seven attestation-failure classes, an exhaustive PBFT-style quorum model over 62 configurations, a sparse enclave-verification certificate rejecting nine forgery classes, atomic transaction rollback, hash-linked replayable receipts, and a synthetic sensitive-infrastructure instantiation. Eight domain-neutral modules are reused verbatim and four domain-specific objects are replaced; no architectural change is required. In that synthetic infrastructure population, all 265 declared severe contradictions are caught and zero of 175 fully clean records are falsely routed as conflicts.
+Second, GBI v2 replaces answer-key agreement as the runtime admission predicate with a reference-independent witness state \(W\) and executable policy \(P\). On 512 synthetic tasks, the declared 16-gate policy at strictness 0.6, selected by a predeclared rule, detects all 116 injected severe contradictions and refuses none of 99 clean admissible records under the narrow predeclared denominator; a broader denominator yields 5/117 = 4.27\%, and both are retained. A confident-hallucinator surrogate makes 221 attempted over-admissions with zero silent promotions, while an evidence-forger surrogate is refused on all 512 cases. Deterministic format repair raises admission from 0 to 46.48\% without raising verified completion above zero, separating syntactic recovery from substantive correctness.
 
-The study also falsifies one numerical bound in the architecture manuscript. The previously stated \(\epsilon\approx0.066\) Fisher-conditioning value is correct only for the one-dimensional slice \([\epsilon,3,4,5]\); it does not enforce the declared \(\kappa_2\le 10^4\) budget over \([\epsilon,20]^4\). The box-wide bound is \(\epsilon\approx0.326472\). We treat this correction as evidence for the claim-register method: a verification substrate should make its own failed assertions visible.
+Third, GBI-DCSE v3 maps 99 manuscript claims to machine-readable evidence classes and resolvers. Ninety-five of 96 testable registered claims meet their declared acceptance criteria, three claims remain explicitly out of scope, and the Fisher statement is retained as one erratum. The standalone verifier executes 148 declared checks with zero implementation failures; a check can pass by correctly reproducing a value, detecting a fault, or confirming an \texttt{ERRATUM}/\texttt{OUT OF SCOPE} classification, so 148/148 passing checks is not a claim that all 99 registered assertions are true. The harness also exercises signed-ledger behavior, attestation failure classes, a PBFT-style quorum model, sparse certificate forgery tests, atomic rollback, replayable receipts, and a second synthetic domain.
 
-Together these experiments support a more precise conclusion than ``the verifier is safe.'' GBI-DCSE is shown here to be a reproducible, selective, policy-versioned test and routing substrate under declared synthetic conditions. The evidence does not establish clinical safety, production readiness, completeness of the contradiction taxonomy, performance of a frontier model, or correctness of institutional policy. It does establish a progression from fail-closed formatting, to tunable benchmark design, to reference-independent admission, to explicit full-stack claim verification with auditable nonclaims.
+The resulting claim is deliberately bounded. Under the declared synthetic populations, GBI-DCSE behaves as a selective, policy-versioned, self-auditing test and routing substrate. BoundaryBench v0.2, GBI v2, and DCSE v3 execute no new language model and do not establish clinical safety, production readiness, correctness of institutional policy, or robustness to arbitrary adaptive attackers. Those system boundaries are stated once near the beginning and treated as part of the evaluation contract.
 \end{abstract}
 
 \tableofcontents
 \newpage
 
-\section{Why a companion evaluation was necessary}
+\section{From fail-closed containment to self-auditing verification}
+\label{sec:introduction}
 
 The architecture manuscript introduced the Geometric Belief Interface (GBI) and Decentralized Cryptographic Sheaf-Enclave (DCSE) as a boundary between untrusted discovery and governed enterprise action \cite{spivey2026gbi}. Its central design rule is that a model output is \emph{evidence, not authority}. A model, parser, or agent may propose a typed local state; deterministic checks over identity, provenance, terminology or schema version, temporal validity, dependencies, evidence, and policy determine what may proceed.
 
-BoundaryBench v0.1 translated that idea into a frozen empirical interface. The initial experiment was intentionally unforgiving: the held-out model host saw answer-key-free inputs, while a trusted verifier scored frozen outputs after execution. All 768 Qwen3-4B-Instruct-2507 executions completed, but zero model results satisfied the admissibility contract. The failure split was 369 safe parse rejects and 399 safe schema rejects. This is a meaningful systems observation: malformed or schema-invalid output was prevented from silently becoming downstream action. It is not a universal statement that arbitrary hallucinations are contained, nor does zero coverage establish low selective risk.
+The central methodological lesson of the companion study is stricter: the same discipline must apply to claims made by the verification system and its authors. A system that catches malformed model output but silently preserves a falsified numerical assumption has not completed the verification loop.
+
+\subsection{A verifier that falsified one of its own numerical claims}
+
+The strongest illustration emerged from the Fisher-conditioning check. The architecture paper reported \(\epsilon\approx0.066\) near the condition-number budget \(\kappa_2\le10^4\). V3 reproduced that value for the stated one-dimensional slice
+\[
+\alpha=(\epsilon,3,4,5),
+\]
+but then evaluated the stronger box-wide criterion that the manuscript itself prescribed. On \([\epsilon,20]^4\), the slice value permits a worst-corner condition number of approximately \(4.79\times10^5\), about 48 times the declared budget. Solving the declared box-wide criterion yields
+\[
+\epsilon_{\mathrm{box}}\approx0.326472.
+\]
+Rather than modifying the acceptance criterion after seeing the result, the claim register marks the original implication as \texttt{ERRATUM}, preserves the reproduced slice value, and records the corrected box-wide bound. Section~\ref{sec:fisher-erratum} gives the full calculation.
+
+\begin{claimbox}
+\textbf{Self-correction criterion.} A verification substrate should make its own failed assertions visible and attributable. In this study, the erratum is therefore a positive result about the \emph{claim-to-evidence process}, even though the underlying numerical assertion is a failed claim.
+\end{claimbox}
+
+\subsection{Operational stakes in the healthcare instantiation}
+
+The mathematical boundary becomes easier to interpret when tied to the type of governed state change it is meant to precede. Table~\ref{tab:clinical-cases} gives two \emph{synthetic policy-routing examples}. They are not treatment recommendations and the policies are illustrative; their purpose is to show what it means for \(W\) and \(P\) to control an EHR write rather than allowing a model score to act as authority.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Two synthetic healthcare boundary cases used to ground the abstract verification objects. Clinical facts cited here motivate the evidence fields; the GBI policy examples remain institution-specific and non-clinical.}
+\label{tab:clinical-cases}
+\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}p{0.18\linewidth} >{\RaggedRight\arraybackslash}p{0.27\linewidth} >{\RaggedRight\arraybackslash}p{0.28\linewidth} >{\RaggedRight\arraybackslash}X}
+\toprule
+Synthetic proposal & Authoritative context & Example policy action & What GBI does not decide\\
+\midrule
+Amoxicillin medication request with a record of serious penicillin/beta-lactam hypersensitivity & FHIR \code{AllergyIntolerance} is designed to represent patient-specific risk from substance exposure and can inform clinical decision support; current U.S. AMOXIL labeling lists a history of serious hypersensitivity to amoxicillin or other beta-lactams as a contraindication \cite{fhirAllergy,fdaAmoxil}. & A version-pinned local policy could refuse autonomous commit and require named clinical review or an authorized override with provenance. & It does not diagnose an allergy, select an alternative antibiotic, or determine patient-specific treatment.\\
+\addlinespace
+Metformin medication request with required renal-function evidence absent or stale & Current DailyMed labeling directs renal-function assessment before initiation and periodically thereafter, with explicit eGFR-related restrictions \cite{dailymedMetformin}. & If the institution's declared \(P\) requires qualifying renal context, missing evidence can route the proposed write to abstention, quarantine, or expert review until the required evidence is present. & It does not set an individualized dose, diagnose renal impairment, or independently decide whether metformin is clinically appropriate.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+These cases clarify the role of the geometry and cryptography later in the paper. The discovery system may emit a proposal; the verification substrate determines whether the proposal has the identity binding, evidence, version, provenance, dependency state, and authority required by the institution's policy before an atomic transaction is constructed. Geometry can diagnose inconsistency and cryptography can bind/replay the decision, but neither substitutes for clinical judgment.
+
+\subsection{Questions left by the frozen v0.1 experiment}
+
+BoundaryBench v0.1 translated the architecture into a frozen empirical interface. The held-out model host saw answer-key-free inputs, while a trusted verifier scored frozen outputs after execution. All 768 Qwen3-4B-Instruct-2507 executions completed, but zero model results satisfied the admissibility contract: 369 were safe parse rejects and 399 were safe schema rejects. The result shows that the observed malformed/schema-invalid proposals did not silently become downstream actions. It does not establish containment of arbitrary hallucinations, and zero coverage does not establish low selective risk.
 
 The zero-coverage result creates three scientific questions that v0.1 cannot answer:
-
 \begin{enumerate}
   \item \textbf{Can benchmark difficulty be tuned if the model never reaches the task-semantic layer?} A target-performance optimizer has no useful signal if every output dies at formatting.
   \item \textbf{Can the GBI gate be selective rather than merely fail closed?} A system that refuses everything catches every bad item vacuously but has no operational utility.
   \item \textbf{Do the broader DCSE claims survive executable scrutiny?} The original paper contains claims about ledger non-equivocation, attestation, BFT fallback, sparse enclave checks, transaction atomicity, receipts, and portability that v0.1 did not test.
 \end{enumerate}
 
+\subsection{System boundaries and non-goals}
+\label{sec:boundaries}
+
+Table~\ref{tab:system-boundaries} defines the evidentiary perimeter once. Later sections retain only local qualifiers that are necessary to interpret a particular result.
+
+\begin{table}[H]
+\centering
+\small
+\caption{System boundaries for the companion evaluation.}
+\label{tab:system-boundaries}
+\begin{tabularx}{\linewidth}{>{\bfseries\RaggedRight\arraybackslash}p{0.18\linewidth} >{\RaggedRight\arraybackslash}p{0.37\linewidth} >{\RaggedRight\arraybackslash}X}
+\toprule
+Boundary & Evaluated here & Not claimed\\
+\midrule
+Model behavior & Frozen v0.1 Qwen outputs are a historical empirical baseline; v0.2--v3 evaluate benchmark and verification machinery. & General hallucination containment, frontier-model capability, or new LLM performance in v0.2--v3.\\
+Clinical authority & Synthetic witness/policy states route proposed EHR actions and expose the reason for refusal/review. & Diagnosis, treatment recommendation, autonomous prescribing, clinical safety, medical-device validation, or replacement of clinician judgment.\\
+Policy authority & Deterministic execution, version binding, ablations, replay, and reference independence of the declared \(P\). & That an institution's policy is clinically, legally, or ethically correct; a verifier can faithfully execute a bad policy.\\
+Infrastructure & Software models/proxies exercise signatures, attestation checks, quorum arithmetic, certificates, rollback, receipts, and FHIR-like transaction semantics. & Live TEE attestation, a running BFT cluster, production FHIR integration, hardware-root security, or a zero-knowledge proof system.\\
+Mathematical diagnostics & Finite Boolean, Fisher, mapping-cone, and certificate properties under declared numerical tests. & Clinical truth from geometry; mapping-cone diagnostics have zero scoring weight.\\
+Portability & Code-level reuse is measured in a second synthetic sensitive-infrastructure instantiation. & Readiness for real healthcare, finance, government, or classified infrastructure without domain-specific authority and validation.\\
+Adversarial scope & Declared malformed, over-admitting, evidence-forging, policy-ablation, ledger, attestation, quorum, certificate, and transaction faults. & Completeness against adaptive attackers, side channels, compromised hardware roots, malicious authorities, or unmodeled policy/source-system failures.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
 This companion evaluation addresses those questions in three layers. Figure~\ref{fig:ladder} summarizes the progression.
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
 \begin{minipage}{0.92\linewidth}
 \color{navy}\hrule\vspace{0.6em}\color{black}
 \centering
 \textbf{Evaluation ladder}\\[0.7em]
-\begin{tabularx}{\linewidth}{>{\bfseries\RaggedRight\arraybackslash}p{0.22\linewidth} >{\RaggedRight\arraybackslash}X}
-BoundaryBench v0.1 & Frozen model execution asks whether outputs cross a structured admission contract. Result: 0/768 admitted, exposing a format/schema floor.\\[0.45em]
-BeTaL-GBI v0.2 & Parameterizes benchmark difficulty, separates admission from task performance, detects degenerate objectives, and measures search/reachability using declared surrogates.\\[0.45em]
-GBI v2 & Replaces answer-key agreement as the runtime gate with witness-grounded external validity and an executable versioned policy; evaluates selectivity, adversaries, liveness, and mathematical checks.\\[0.45em]
-GBI-DCSE v3 & Builds a claim register over the full architecture and tests ledger, attestation, consensus, sparse enclave certification, atomic rollback, receipts/replay, and cross-domain portability.\\
+% Note: 'l' ensures the first column expands to its longest entry without wrapping
+\begin{tabularx}{\linewidth}{>{\bfseries}l >{\RaggedRight\arraybackslash}X}
+BoundaryBench v0.1 & Frozen model execution asks whether outputs cross a structured admission contract. Result: 0/768 admitted, exposing a format/schema floor. \\[0.6em]  \vspace{-0.4em} \\
+BeTaL-GBI v0.2 & Parameterizes benchmark difficulty, separates admission from task performance, detects degenerate objectives, and measures search/reachability using declared surrogates. \\[0.6em]  \vspace{-0.4em} \\
+GBI v2 & Replaces answer-key agreement as the runtime gate with witness-grounded external validity and an executable versioned policy; evaluates selectivity, adversaries, liveness, and mathematical checks. \\[0.6em]  \vspace{-0.4em} \\
+GBI-DCSE v3 & Builds a claim register over the broader testable architecture and tests ledger, attestation, consensus, sparse enclave certification, atomic rollback, receipts/replay, and cross-domain portability.
 \end{tabularx}
 \vspace{0.5em}\color{navy}\hrule\color{black}
 \end{minipage}
-\caption{The experiments increase the scope of what is evaluated. They do not monotonically increase realism: v0.2-v3 are synthetic and execute no language model.}
+\caption{The experiments increase the scope of what is evaluated. They do not monotonically increase realism: v0.2--v3 are synthetic and execute no language model.}
 \label{fig:ladder}
-\end{figure}
+\end{table}
 
 \begin{claimbox}
-\textbf{Primary empirical claim of this companion paper.} Under the declared synthetic populations and executable policy, the later GBI/DCSE evaluations are non-vacuous: they permit eligible work, refuse declared severe contradictions, expose policy ablations, replay decisions from receipts, and classify unresolved claims as out of scope. This is stronger evidence about the \emph{verification substrate} than v0.1, but it is not new evidence about frontier-model capability because no language model is executed in v0.2-v3.
+\textbf{Primary empirical claim of this companion paper.} Under the declared synthetic populations and executable policy, the later GBI/DCSE evaluations are non-vacuous: they permit eligible work, refuse declared severe contradictions, expose policy ablations, replay decisions from receipts, and classify unsupported or falsified claims explicitly. This is stronger evidence about the \emph{verification substrate} than v0.1, but it is not new evidence about frontier-model capability because no language model is executed in v0.2--v3.
 \end{claimbox}
 
 \section{Objects, notation, and evaluation boundary}
@@ -167,6 +230,8 @@ A useful operational decomposition is
 P=(A,G,T,D,H,Q,R,\Lambda,E,F_b),
 \]
 with allowed actions \(A\), hard gates \(G\), thresholds and validity windows \(T\), dependencies \(D\), human authority \(H\), quarantine semantics \(Q\), recovery/escalation \(R\), liveness/degraded operation \(\Lambda\), signed exceptions \(E\), and failover \(F_b\). A policy instance is pinned by identifiers such as policy id, version, effective time, authority, and hash.
+
+Table~\ref{tab:clinical-cases} illustrates this object language operationally. In the allergy example, the candidate \(F\) is a proposed medication request, \(W\) includes the signed/versioned allergy and source evidence, \(V\) pins the terminology/schema bundle, and \(P\) specifies whether missing or conflicting evidence requires review rather than commit. In the renal-context example, \(P\) can require a current evidence predicate before the candidate crosses the write boundary. The clinical authority remains outside the mathematical object: \(P\) encodes a policy supplied by an authorized institution; GBI tests and executes that policy rather than inventing it.
 
 \subsection{External validity and benchmark truth are different}
 
@@ -425,14 +490,14 @@ Validity expired & 12 & Validity invalid & 12\\
 
 \subsection{Policy conformance and non-vacuity}
 
-The complete v2 policy contains 16 gates. Direct probes exercise each gate, and a clean witness is admitted as a non-vacuity control. Two intentionally defective policies are also evaluated:
+The declared v2 policy contains 16 gates. Direct probes exercise each gate, and a clean witness is admitted as a non-vacuity control. Two intentionally defective policies are also evaluated:
 
 \begin{itemize}
   \item an incomplete ablation omits two gates and incorrectly admits an unsigned-terminology probe;
   \item a score-only identity ablation omits ambiguity and unresolvable-identity gates and fails the corresponding probes.
 \end{itemize}
 
-This is a load-bearing test: if incomplete policies produced the same result as the complete policy, the positive score would say little about policy completeness.
+This is a load-bearing test: if the ablated policies produced the same result as the unablated declared policy, the positive score would say little about whether the omitted gates are load-bearing.
 
 \subsection{Adversaries that clear the format boundary}
 
@@ -456,7 +521,7 @@ The pair attacks independent dimensions. A gate that checked only action plausib
 
 \subsection{Clinical-style scorecard and denominator discipline}
 
-At a predeclared selection rule -- the largest strictness value satisfying both measurable Table 3 clinical targets -- the complete policy selects strictness 0.6.
+Under a predeclared selection rule -- the largest strictness value satisfying both measurable Table 3 clinical-style targets -- the declared policy selects strictness 0.6.
 
 \begin{table}[H]
 \centering
@@ -467,11 +532,11 @@ At a predeclared selection rule -- the largest strictness value satisfying both 
 \toprule
 Group & Measure & Result & Evidence class\\
 \midrule
-Mathematical & Spectral gap \(\lambda_1-\lambda_0\ge0.15\) on genuine cone Laplacians & 1.0000 (within floating point) & MEASURED\\
-Mathematical & Fisher condition number \(\le 10^4\) over corrected evidence box & 9998.3472 & MEASURED\\
-Systems & End-to-end enclave latency \(\le150\) ms & 0.0968 ms CPU-only software path & PARTIAL PROXY\\
-Systems & Attestation bootstrapping \(\le2.5\) s & not measured & OUT OF SCOPE\\
-Clinical-style & Severe contradiction sensitivity = 100\% & 116/116 & MEASURED SYNTH.\\
+Mathematical & Spectral gap \(\lambda_1-\lambda_0\ge0.15\) on genuine cone Laplacians & 1.0000 (within floating point) & MEASURED\\ [0.6em]  \vspace{-0.4em} \\
+Mathematical & Fisher condition number \(\le 10^4\) over corrected evidence box & 9998.3472 & MEASURED\\ [0.6em]  \vspace{-0.4em} \\
+Systems & End-to-end enclave latency \(\le150\) ms & 0.0968 ms CPU-only software path & PARTIAL PROXY\\ [0.6em]  \vspace{-0.4em} \\
+Systems & Attestation bootstrapping \(\le2.5\) s & not measured & OUT OF SCOPE\\ [0.6em]  \vspace{-0.4em} \\
+Clinical-style & Severe contradiction sensitivity = 100\% & 116/116 & MEASURED SYNTH.\\ [0.6em] \vspace{-0.4em}  \\
 Clinical-style & False conflict adjudication \(\le4\%\) & 0/99 = 0.0\% narrow & MEASURED SYNTH.\\
 \bottomrule
 \end{tabularx}
@@ -490,7 +555,7 @@ The false-conflict result has a denominator sensitivity that must not be hidden.
 
 \subsection{Strictness and the visible operating boundary}
 
-The complete policy satisfies the two narrow clinical-style targets from strictness 0.0 through 0.6. At strictness 0.7, the clean-record false-conflict rate rises to 18.18\%, so the selection rule has an observable boundary rather than choosing an arbitrary round number. The policy ablations fail in diagnostically different ways.
+The declared policy satisfies the two narrow clinical-style targets from strictness 0.0 through 0.6. At strictness 0.7, the clean-record false-conflict rate rises to 18.18\%, so the selection rule has an observable boundary rather than choosing an arbitrary round number. The policy ablations fail in diagnostically different ways.
 
 This is the desired behavior for a benchmarked enterprise policy: strictness should expose a tradeoff, and an operating point should be derived from a declared rule rather than selected after viewing the result.
 
@@ -530,6 +595,7 @@ GBI v2 expands the architecture manuscript's proposed Appendix B.1 checks:
 For the cone suite, the worst symmetry residual is 0, the numerical minimum eigenvalue is approximately \(-5.39\times10^{-32}\), and the worst energy rotation drift is approximately \(1.11\times10^{-15}\), all consistent with floating-point error.
 
 \subsection{The one-dimensional bound was not a box-wide guarantee}
+\label{sec:fisher-erratum}
 
 The architecture manuscript observed that, along the slice
 \[
@@ -592,7 +658,7 @@ Testable claims & 96\\
 Testable claims met & \textbf{95}\\
 Testable claims unmet & 1 (erratum)\\
 Explicitly out of scope & 3\\
-Independent verification checks & \textbf{148}\\
+Declared verification checks & \textbf{148}\\
 Verification failures & \textbf{0}\\
 \bottomrule
 \end{tabular}
@@ -609,6 +675,8 @@ The evidence-class distribution is 16 REPRODUCED, 51 MEASURED, 5 MEASURED SYNTH.
 
 The register's own integrity is tested. A non-out-of-scope claim may not silently resolve to a missing value, out-of-scope claims may not be reported as met, identifiers must be unique, and counts must reconcile. The only unmet testable claim is the Fisher-bound erratum described above.
 
+The two headline counts answer different questions. ``95/96 testable claims met'' scores the registered scientific/system assertions against their declared criteria. ``148/148 verifier checks passed'' scores whether the verification harness correctly reproduced values, exercised faults, enforced scope classifications, and detected expected failures. A check that correctly identifies the Fisher statement as an \texttt{ERRATUM} is therefore a passing verifier check, not evidence that the original Fisher statement was correct.
+
 \subsection{Appendix A and previously untested GBI claims}
 
 The v3 evaluator ports and independently recomputes the numerical appendix rather than merely comparing serialized values. Eleven self-check assertions pass and 21 published numerical values reproduce. Examples include
@@ -616,6 +684,7 @@ The v3 evaluator ports and independently recomputes the numerical appendix rathe
 H=1.701632,\qquad J=1.028000,\qquad K_O=1.922661,
 \]
 and the moderate-interior Fisher condition number \(\kappa_2\approx20.457\). The trigamma approximation agrees with an independent series/asymptotic implementation to a maximum error of approximately \(2.49\times10^{-9}\).
+\newpage
 
 Additional checks cover claims that the original executable appendix did not implement:
 
@@ -730,13 +799,13 @@ A deliberate human-factors design choice is tested structurally: model confidenc
 The finite cone-certificate implementation accepts honest certificates for both vanishing and non-vanishing \(H^1\) and rejects false cohomology claims. The public input digest binds the policy version, so a certificate cannot be replayed unchanged across policies.
 
 Zero knowledge is deliberately not implemented or claimed. A binding, blinded commitment and finite verification predicate establish prerequisites for future ZK work, but they are not a zero-knowledge proof system. This is one of the three v3 OUT OF SCOPE claims.
+\newpage
 
-\section{Cross-domain portability}
+\section{Cross-domain portability: measured code reuse, not semantic equivalence}
 
 \subsection{What changes and what remains invariant}
 
 The architecture manuscript argues that GBI/DCSE can be specialized to healthcare, financial services, and government/mission systems by changing domain semantics while retaining the verification contract \cite{spivey2026gbi}. V3 tests this proposition by instantiating a synthetic sensitive-infrastructure domain.
-\\ \\ \\
 Eight modules are reused verbatim:
 \begin{center}
 \code{crypto}, \code{ledger}, \code{attestation}, \code{consensus}, \code{enclave}, \code{transaction}, \code{receipts}, \code{cone\_certificate}.
@@ -772,9 +841,6 @@ Unrelated records & unchanged\\
 The resulting action distribution is 175 release-verified, 54 release-historical-only, 157 reject, 78 quarantine-record, 44 analyst-review, and 4 abstain.
 
 The defensible interpretation is that the same systems modules can act as a router/triage substrate when the witness schema and policy are rewritten for a new domain. The result does not establish readiness for classified, financial, clinical, or other real infrastructure. No real assets, operators, locations, telemetry, authoritative registries, or reviewed handling-caveat policies are present.
-\\ \\ \\
-\\ \\ \\
-\\ \\ \\
 \section{What changed from v0.1 to v3}
 
 The four stages answer different questions and should not be merged into one headline score.
@@ -802,25 +868,15 @@ v3 & Do the broader testable manuscript claims have executable evidence? & 95/96
 
 A key methodological shift is visible across the sequence. V0.1 measures the \emph{model-to-contract boundary}. V0.2 measures the \emph{benchmark-design environment}. V2 measures the \emph{reference-independent policy gate}. V3 measures the \emph{claim-to-evidence relationship of the full architecture}. A mature evaluation program needs all four views.
 
-\section{Threat model and nonclaims}
+\section{Threat model and residual exclusions}
+\label{sec:threat-model}
 
-\begin{scopebox}
-\textbf{The following claims are not supported by this paper.}
-\begin{itemize}
-  \item GBI/DCSE does not make a weak or strong language model unable to hallucinate.
-  \item V0.1 does not prove containment against arbitrary hallucinations; it demonstrates fail-closed handling of the observed parse/schema failures in one frozen Qwen run.
-  \item V0.2, v2, and v3 execute no language model and therefore provide no new model-performance result.
-  \item Synthetic 100\% sensitivity does not prove 100\% real-world sensitivity; the contradiction classes are declared and incomplete by construction.
-  \item The 0.0\% narrow false-conflict rate is denominator-dependent; the broader v2 rate is 4.27\%.
-  \item No TEE, live BFT cluster, FHIR server, hardware root of trust, or zero-knowledge proof system is present.
-  \item No clinical validation, medical-device validation, security accreditation, or operational infrastructure certification is performed.
-  \item Mapping-cone energies remain diagnostic-only and have zero scoring weight.
-  \item A valid ledger proves recorded provenance/non-equivocation properties, not the truth of identity or source data.
-  \item A policy engine can faithfully execute a bad institutional policy. Governance quality remains external to the verifier.
-\end{itemize}
-\end{scopebox}
+The definitive evidentiary perimeter is Table~\ref{tab:system-boundaries}; it is not re-litigated in every technical section. Within that perimeter, the implemented threat model is \emph{bounded adversarial and integrity testing of a declared verification substrate}. The evaluated attacks include malformed emissions, format-valid over-admission attempts, forged evidence references, policy ablations, ledger faults, attestation faults, quorum failures, certificate forgeries, replay/tamper attempts, and invalid entries in an otherwise atomic transaction.
 
-The current threat model is therefore best described as \emph{bounded adversarial and integrity testing of a declared verification substrate}. It includes malformed emissions, over-admission attempts, forged evidence references, policy ablations, ledger faults, attestation faults, quorum failures, certificate forgeries, and bad atomic transaction entries. It excludes adaptive attackers with access to undisclosed implementation details, real side channels, compromised hardware roots, malicious institutional authorities, incomplete source systems, and unmodeled policy semantics.
+Three residual categories are especially important for further review. First, the adversaries are declared and non-adaptive; they do not search the implementation for unknown policy gaps or exploit side channels. Second, the systems tests assume the integrity of roots that are only modeled here, including institutional authority, key provisioning, and hardware trust. Third, the verifier can only enforce predicates represented in \(W\), \(V\), and \(P\); incomplete source systems or omitted policy semantics remain external failure modes.
+
+These exclusions do not weaken the reported synthetic results; they define the conditions under which those results are valid and the experiments required to extend them. Section~\ref{sec:introduction} therefore treats scope as part of the evaluation contract rather than as a sequence of defensive footnotes.
+\newpage
 
 \section{Relation to benchmark and runtime-verification literature}
 
@@ -883,6 +939,12 @@ That form is especially useful when a model, evaluator, policy, and source syste
 
 \section{Discussion}
 
+\subsection{Self-falsification is an acceptance test, not a blemish}
+
+The Fisher correction provides the clearest reason to treat the claim register as part of the scientific contribution. A conventional validation appendix can become confirmatory if its tests are written only to reproduce numbers already believed to be correct. Here, the stronger box-wide test contradicts a published numerical implication, and the reporting machinery is required to preserve that contradiction as an \texttt{ERRATUM}. This separates two forms of success that are often conflated: \emph{a claim can fail while the verification process succeeds}.
+
+That distinction also prevents a superficially perfect score from obscuring the result. The paper reports 95/96 testable claim criteria met and 148/148 verifier checks passing because the latter includes correct detection and classification of the failed Fisher claim. A reviewer can therefore audit not only the positive claims but the process by which a negative result remains visible.
+
 \subsection{What is genuinely stronger than the first experiment}
 
 The most important improvement is not that a larger number of tests passes. It is that the later evaluation can distinguish useful operation from refusal.
@@ -913,7 +975,7 @@ These experiments would transform the current result from a synthetic control-pl
 
 \section{Conclusion}
 
-The BoundaryBench sequence exposes an evaluation lesson that generalizes beyond EHR interoperability. A frontier model can fail before semantic scoring; a verifier can appear perfect by refusing everything; a benchmark optimizer can report a gap for an unreachable target; and a research paper can carry a numerical claim that its own stronger validation criterion disproves. Each failure requires a different control.
+The strongest result in this study is not a perfect pass rate. It is that the evaluation stack can represent different kinds of failure without converting them into the same flattering score. A model can fail before semantic scoring; a verifier can appear perfect by refusing everything; a benchmark optimizer can chase an unidentifiable or unreachable target; and a research paper can carry a numerical claim that its own stronger validation criterion disproves. In the last case, the correct system behavior is to preserve the erratum, not to make the dashboard green.
 
 BeTaL-GBI v0.2 adds an admissibility-aware tuning objective and demonstrates model-free dynamic benchmark search over a 2.2-billion-point design grid. GBI v2 replaces answer-key runtime decisions with witness-grounded policy, restores non-vacuous selectivity, catches all declared severe injections under its selected policy, exposes denominator sensitivity, and blocks two distinct synthetic adversaries without silent promotion. GBI-DCSE v3 converts the full architecture into a 99-claim executable register, meets the declared acceptance criteria for 95 of 96 testable registered claims, leaves three claims explicitly out of scope, discovers one numerical erratum, and passes 148 declared verification checks. It further demonstrates signed-ledger behavior, attestation fail-closed logic, a tight modeled BFT fault boundary, a load-bearing sparse certificate, atomic rollback, receipt replay, and code-level portability to a second synthetic domain.
 
@@ -934,11 +996,9 @@ The search does not enumerate this grid. Phase 1 follows a monotone dial and Pha
 
 \section{GBI v2 gate interpretation}
 
-The complete policy is deliberately external-validity oriented. A decision is a function of declared witness evidence, policy version, validity, dependencies, identity state, and provenance. Benchmark reference actions remain useful for evaluation but are not a deployment primitive.
+The declared policy is deliberately external-validity oriented. A decision is a function of declared witness evidence, policy version, validity, dependencies, identity state, and provenance. Benchmark reference actions remain useful for evaluation but are not a deployment primitive.
 
 For injected records, the original reference action may become stale by construction. This explains why all 396 non-injected records can agree with their references while aggregate agreement is lower. A correct post-injection refusal can disagree with the pre-injection reference without being an implementation error. The paper therefore reports witness-grounded verdicts and reference agreement separately.
-\\ \\ \\
-\\ \\ \\
 \section{V3 out-of-scope claims}
 
 Three claims remain explicitly out of scope:
@@ -948,32 +1008,12 @@ Three claims remain explicitly out of scope:
 \toprule
 Claim & Why out of scope & What is established instead\\
 \midrule
-C-9.16 & No zero-knowledge proof system is present. & Finite certificate predicate, public-input binding, and a blinded binding commitment.\\
-C-B1.7 & Retrospective clinical playback requires a preregistered cohort and expert adjudication. & Receipt-driven replay reproduces 14/14 synthetic decisions.\\
+C-9.16 & No zero-knowledge proof system is present. & Finite certificate predicate, public-input binding, and a blinded binding commitment.\\[0.6em]  \vspace{-0.4em} \\
+C-B1.7 & Retrospective clinical playback requires a preregistered cohort and expert adjudication. & Receipt-driven replay reproduces 14/14 synthetic decisions.\\[0.6em]  \vspace{-0.4em} \\
 C-B2.4 & Attestation bootstrapping target requires real TEE quote generation and an attestation-service handshake. & Software verification path is measured only as a proxy and is not promoted to the hardware target.\\
 \bottomrule
 \end{longtable}
 
-\section{V3 systems verification checklist}
-
-The standalone 148-check verifier evaluates through distinct declared assertions, among other items:
-\begin{itemize}
-  \item Appendix A self-checks and numerical reproduction;
-  \item Section 2 softmax, quotient, affine, and dynamic examples;
-  \item Section 3 Boolean semantics and Section 4 operational probes;
-  \item dynamic evidence registry behavior;
-  \item ledger fault detection and cryptographic Ed25519 signature verification;
-  \item attestation failure cases;
-  \item PBFT-style quorum arithmetic and fault-bound tightness;
-  \item sparse enclave certificate forgeries and load-bearing spectral moments;
-  \item transaction-store identity before/after forced rollback;
-  \item receipt chain, tamper detection, and deterministic replay;
-  \item cone-certificate truth and the explicit absence of ZK;
-  \item infrastructure-domain denominators and module reuse;
-  \item claim-register integrity and complete section coverage;
-  \item declared scope/nonclaims; and
-  \item exact SHA-256 artifact-manifest coverage.
-\end{itemize}
 \newpage
 \begin{thebibliography}{99}
 
@@ -981,7 +1021,7 @@ The standalone 148-check verifier evaluates through distinct declared assertions
 A. Spivey and Y. Huang,
 ``Logit-Boundary Geometric Belief Interfaces and Sparse Sheaf-Enclave Protocols: A Self-Contained Substrate for Secure Network Electronic Health Record (EHR) Interoperability,''
 \emph{arXiv preprint arXiv:2608.10300}, v2, 2026.
-\url{https://arxiv.org/abs/2608.10300}. DOI: \url{https://doi.org/10.48550/arXiv.2608.10300}.
+\url{https://arxiv.org/abs/2608.10300}; version-specific link: \url{https://arxiv.org/abs/2608.10300v2}. DOI: \url{https://doi.org/10.48550/arXiv.2608.10300}.
 Public benchmark materials: \url{https://github.com/AlvinSpivey/GBI-BoundaryBench}.
 
 \bibitem{dsouza2025betal}
@@ -1042,6 +1082,25 @@ RFC 8032, January 2017.
 HL7 International,
 ``FHIR Release 4: RESTful API,''
 \url{https://hl7.org/fhir/R4/http.html}.
+
+
+\bibitem{fhirAllergy}
+HL7 International,
+``FHIR Release 4: AllergyIntolerance,''
+FHIR v4.0.1 (R4), Patient Care Work Group.
+\url{https://hl7.org/fhir/R4/allergyintolerance.html}.
+
+\bibitem{fdaAmoxil}
+U.S. Food and Drug Administration,
+``AMOXIL (amoxicillin) Prescribing Information,''
+NDA 050542/S-032, revised May 2024.
+\url{https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/050542s032lbl.pdf}.
+
+\bibitem{dailymedMetformin}
+U.S. National Library of Medicine, DailyMed,
+``Metformin Hydrochloride tablet, coated: Prescribing Information,''
+current label accessed August 20, 2026.
+\url{https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4d4021ba-4b28-6b81-e063-6294a90a5ea7}.
 
 \end{thebibliography}
 
