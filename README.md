@@ -4,7 +4,6 @@
 
 I realize applications of Topological Discovery have historically been hard to grasp. Hopefully this repository, explanations, and the following audio overview will be helpful as you review my work.
 
-🎧 Mathematical Gates for Safe Medical AI
 https://github.com/user-attachments/assets/c2080b00-a803-4415-bedf-a44381df6b8f
 
 <p align="center">
