@@ -4,9 +4,11 @@
 
 I realize applications of Topological Discovery have historically been hard to grasp. Hopefully this repository, explanations, and the following audio overview will be helpful as you review my work.
 
+https://github.com/user-attachments/assets/3b032028-0262-4a67-ba40-087d6134be66
+
 <p align="center">
   <a href="https://raw.githubusercontent.com/AlvinSpivey/GBI-BoundaryBench/13c8cd501544cc79c1a6cb2edca2068559146ddc/paper/audio/audio_overview.mp4">
-    <img src="https://img.shields.io/badge/▶%20Listen-Audio%20Overview%20(.mp4)-blue?style=for-the-badge" alt="Listen to Audio" width="300">
+    <img src="https://img.shields.io/badge/▶%20Listen-Audio%20Overview%20(.mp4)-blue?style=for-the-badge" alt="Download Uncompressed Audio" width="300">
   </a>
 </p>
 
