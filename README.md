@@ -1,10 +1,12 @@
+
+
 # GBI BoundaryBench / GBI-DCSE Research Program
 
-I realize applications of Topological Discovery have historically been hard to grasp.  Hopefully this repository, explanations, and the following audio overview will be helpful as you review my work.
+I realize applications of Topological Discovery have historically been hard to grasp. Hopefully this repository, explanations, and the following audio overview will be helpful as you review my work.
 
 <p align="center">
-  <a href="https://github.com/AlvinSpivey/GBI-BoundaryBench/blob/51c0b82bfc689ee0d9ad24245e24e4c7f2e9c3b0/paper/audio/Strengthening_the_medical_AI_verification_paper.m4a">
-    <img src="https://shields.io" alt="Listen to Audio" width="400">
+  <a href="https://raw.githubusercontent.com/AlvinSpivey/GBI-BoundaryBench/13c8cd501544cc79c1a6cb2edca2068559146ddc/paper/audio/audio_overview.mp4">
+    <img src="https://img.shields.io/badge/▶%20Listen-Audio%20Overview%20(.mp4)-blue?style=for-the-badge" alt="Listen to Audio" width="300">
   </a>
 </p>
 
