@@ -3,19 +3,10 @@
 I realize applications of Topological Discovery have historically been hard to grasp.  Hopefully this repository, explanations, and the following audio overview will be helpful as you review my work.
 
 <p align="center">
-  <!-- Fake interactive player card linked to the audio track -->
-  <a href="https://githubusercontent.com">
-    <img src="https://macrumors.com" alt="Play Audio Overview" width="450">
-  </a>
-  <br>
-  <!-- Direct Download Utility Button -->
-  <a href="https://githubusercontent.com" download>
-    📥 <b>Click Here to Download Audio File Directly</b>
+  <a href="https://github.com">
+    <img src="https://shields.io" alt="Listen to Audio" width="400">
   </a>
 </p>
-
----
-
 
 ---
 
