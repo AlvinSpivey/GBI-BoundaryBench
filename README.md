@@ -2,43 +2,54 @@
 
 ## A Paradigm Shift in Healthcare Interoperability: The GBI-DCSE Substrate for Full-Stack AI Verification
 
-The Geometric Belief Interface and Decentralized Cryptographic Sheaf-Enclave (GBI-DCSE) architecture establishes a rigorous formal substrate for clinical artificial intelligence, reclassifying interoperability as a "boundary problem." This framework necessitates a neuro-symbolic partition where the generative model functions as the ars inveniendi (discovery) and the substrate acts as the ars iudicandi (judgment). By treating model outputs as evidence rather than authority, the architecture enables a verifiable transition from the "fail-closed" zero-coverage baseline of BoundaryBench v0.1 to the full-stack architectural claims of GBI-DCSE v3. The GBI-DCSE protocol enforces a selective, policy-versioned routing substrate that utilizes homological algebra to isolate clinical contradictions through "Surgical Quarantine" without compromising the atomicity of enterprise workflows.
+The Geometric Belief Interface and Decentralized Cryptographic Sheaf-Enclave (GBI-DCSE) architecture establishes a rigorous formal substrate for clinical artificial intelligence, reclassifying interoperability as a "boundary problem". This framework necessitates a neuro-symbolic partition where the generative model functions as the *ars inveniendi* (discovery) and the substrate acts as the *ars iudicandi* (judgment). 
 
-1. The Crisis of Unverified Model Autonomy in Clinical Systems
+By treating model outputs as evidence rather than authority, the architecture enables a verifiable transition from the "fail-closed" zero-coverage baseline of BoundaryBench v0.1 to the full-stack architectural claims of GBI-DCSE v3. The GBI-DCSE protocol enforces a selective, policy-versioned routing substrate that utilizes homological algebra to isolate clinical contradictions through "Surgical Quarantine" without compromising the atomicity of enterprise workflows.
+
+### 1. The Crisis of Unverified Model Autonomy in Clinical Systems
 
 Strategic healthcare informatics is currently threatened by "silent promotion"—the precarious phenomenon where unverified Large Language Model (LLM) outputs are elevated to authoritative clinical actions without passing through a deterministic judgment layer. Current "accuracy" metrics are fundamentally insufficient for enterprise safety; they provide a surface-level measure of linguistic fluency while ignoring the structural admissibility required for clinical state updates. A model may exhibit high confidence yet propose actions entirely unsupported by the authoritative witness record.
 
-The necessity of a formal verification layer was demonstrated by the BoundaryBench v0.1 results. In a frozen evaluation of the Qwen3-4B-Instruct-2507 model, 768 model executions were completed, yet zero results crossed the admission contract. These failures were precisely factored: 369 safe parse rejects and 399 schema validation rejects. This "zero-coverage" result serves as a critical baseline, proving that successful inference is not synonymous with an enterprise-admissible action. Furthermore, the v0.2 "Benchmark Tuning" phase confirmed that without repairing this interface floor, any attempt to tune task difficulty remains "degenerate," as the semantic layer is never reached.
+The necessity of a formal verification layer was demonstrated by the BoundaryBench v0.1 results. In a frozen evaluation of the Qwen3-4B-Instruct-2507 model, 768 model executions were completed, yet zero results crossed the admission contract. These failures were precisely factored: 369 safe parse rejects and 399 schema validation rejects. 
+
+This "zero-coverage" result serves as a critical baseline, proving that successful inference is not synonymous with an enterprise-admissible action. Furthermore, the v0.2 "Benchmark Tuning" phase confirmed that without repairing this interface floor, any attempt to tune task difficulty remains "degenerate," as the semantic layer is never reached.
 
 The zero-coverage baseline raises three core scientific questions for the field of medical informatics:
 
-* Benchmark Difficulty: Can difficulty be meaningfully parameterized if model outputs consistently fail the "fail-closed" requirements of structured clinical contracts?
-* Gate Selectivity: Can a verification substrate move beyond vacuous refusal to a state of high selectivity, permitting eligible work while quarantining contradictions?
-* Architectural Scrutiny: Do the broader systems-level claims—such as ledger non-equivocation, TEE-assisted attestation, and sparse certificate verification—survive executable scrutiny?
+*   **Benchmark Difficulty:** Can difficulty be meaningfully parameterized if model outputs consistently fail the "fail-closed" requirements of structured clinical contracts?
+*   **Gate Selectivity:** Can a verification substrate move beyond vacuous refusal to a state of high selectivity, permitting eligible work while quarantining contradictions?
+*   **Architectural Scrutiny:** Do the broader systems-level claims—such as ledger non-equivocation, TEE-assisted attestation, and sparse certificate verification—survive executable scrutiny?
 
 The mathematical resolution to these questions is found in the Logit-Boundary Geometric Belief Interface (GBI).
 
-2. The GBI Paradigm: From Language Generation to Boundary Semantics
+### 2. The GBI Paradigm: From Language Generation to Boundary Semantics
 
-The GBI paradigm shifts clinical AI integration from the interpretation of natural language to the enforcement of a finite "Boundary Algebra." In this framework, the logit layer is treated as a numerical proposal over a finite set of categorical decisions (e.g., {exact, conflict, unmapped}). This "Logit Boundary" transforms a non-deterministic linguistic problem into a manageable interface for deterministic judgment, ensuring that no free-form clinical assertion can directly become a database update.
+The GBI paradigm shifts clinical AI integration from the interpretation of natural language to the enforcement of a finite "Boundary Algebra". In this framework, the logit layer is treated as a numerical proposal over a finite set of categorical decisions (e.g., $\{\text{exact}, \text{conflict}, \text{unmapped}\}$). This "Logit Boundary" transforms a non-deterministic linguistic problem into a manageable interface for deterministic judgment, ensuring that no free-form clinical assertion can directly become a database update.
 
 To ensure clinical safety, the GBI factors system failure across four discrete layers:
 
-The GBI Factorization of Failure
+#### The GBI Factorization of Failure
 
-Verification Layer	Operational Objective
-Interface/Format Admission	Ensures outputs are safely parsable and satisfy schema contracts before semantic evaluation.
-Task-Semantic Correctness	Measures the accuracy of the proposed clinical action among successfully admitted outputs.
-Evidence/Policy Admissibility	Evaluates whether the proposal is authorized by versioned institutional policy and authoritative witnesses.
-Systems Integrity	Verifies the control plane, including identity, provenance, and TEE-assisted cryptographic signatures.
+| Verification Layer | Operational Objective |
+| :--- | :--- |
+| **Interface/Format Admission** | Ensures outputs are safely parsable and satisfy schema contracts before semantic evaluation. |
+| **Task-Semantic Correctness** | Measures the accuracy of the proposed clinical action among successfully admitted outputs. |
+| **Evidence/Policy Admissibility** | Evaluates whether the proposal is authorized by versioned institutional policy and authoritative witnesses. |
+| **Systems Integrity** | Verifies the control plane, including identity, provenance, and TEE-assisted cryptographic signatures. |
 
-Central to this interface is the Dirichlet Evidence registry. By enforcing a fixed "Evidence Box" where \alpha_i \in [\epsilon, A] (with A=20 as the ceiling in v3 testing), the system prevents boundary singularities that lead to numerical instability. This ensures the Dirichlet Fisher metric remains well-conditioned, preventing "stiff" optimization where nearly excluded categories cause singular behavior. These local categorical decisions are synthesized into a global structure via the Distributed Cryptographic Sheaf-Enclave (DCSE) protocol.
+Central to this interface is the Dirichlet Evidence registry. By enforcing a fixed "Evidence Box" where:
 
-3. DCSE: The Distributed Trust Substrate
+$$\alpha_i \in [\epsilon, A]$$
+
+(with $A=20$ as the ceiling in v3 testing), the system prevents boundary singularities that lead to numerical instability. This ensures the Dirichlet Fisher metric remains well-conditioned, preventing "stiff" optimization where nearly excluded categories cause singular behavior. These local categorical decisions are synthesized into a global structure via the Distributed Cryptographic Sheaf-Enclave (DCSE) protocol.
+
+### 3. DCSE: The Distributed Trust Substrate
 
 Clinical safety mandates a decentralized approach to verification, moving away from centralized gating toward a non-equivocation profile assisted by Trusted Execution Environments (TEEs). The DCSE protocol ensures that actions are tied to a verifiable history, preventing the system from providing conflicting accounts of the same clinical event.
 
-The Identity/Provenance Ledger is the load-bearing foundation of this architecture. While it does not prove "clinical truth" in a medical sense, it provides a non-equivocation guarantee by proving the provenance of the decision process. To maintain efficiency, the DCSE utilizes Sparse Enclave Certificates. By offloading dense linear algebra (e.g., SVD) to the host while keeping small deterministic checks inside the enclave, the system achieves a 14,741\times efficiency gain. Crucially, the enclave utilizes spectral moments to detect forged certificates; residual checks alone would accept a forged kernel, whereas spectral moments catch the forgery, making them empirically load-bearing rather than ornamental.
+The Identity/Provenance Ledger is the load-bearing foundation of this architecture. While it does not prove "clinical truth" in a medical sense, it provides a non-equivocation guarantee by proving the provenance of the decision process. 
+
+To maintain efficiency, the DCSE utilizes Sparse Enclave Certificates. By offloading dense linear algebra (e.g., SVD) to the host while keeping small deterministic checks inside the enclave, the system achieves a $14,741\times$ efficiency gain. Crucially, the enclave utilizes spectral moments to detect forged certificates; residual checks alone would accept a forged kernel, whereas spectral moments catch the forgery, making them empirically load-bearing rather than ornamental.
 
 The attestation model handles seven distinct fault classes to maintain a "fail-closed" posture:
 
@@ -52,30 +63,33 @@ The attestation model handles seven distinct fault classes to maintain a "fail-c
 
 By halting authoritative writes when these faults are detected, the system prevents unverified platforms from updating the clinical state.
 
-4. Clinical Impact: Solving the "Allergy-Medication" and "Renal-Context" Obstructions
+### 4. Clinical Impact: Solving the "Allergy-Medication" and "Renal-Context" Obstructions
 
-High-value healthcare requires "Surgical Quarantine"—the ability to isolate specific clinical "stalks" (e.g., a single MedicationRequest) without halting the entire transaction. This isolation occurs at the stalk-level before the construction of a FHIR Transaction Bundle, thereby preserving the atomicity of the final commit.
+High-value healthcare requires "Surgical Quarantine"—the ability to isolate specific clinical "stalks" (e.g., a single `MedicationRequest`) without halting the entire transaction. This isolation occurs at the stalk-level before the construction of a FHIR Transaction Bundle, thereby preserving the atomicity of the final commit.
 
-Scenario Evaluations
+#### Scenario Evaluations
 
-* Penicillin/Amoxicillin Conflict: When a model proposes an amoxicillin order for a patient with a confirmed penicillin allergy, the GBI gate identifies a "confirmed-conflict" status. By validating against version-pinned terminology, the system triggers a business-rule OperationOutcome(severity=error, code=business-rule), effectively blocking the clinical write-back.
-* Metformin/Renal Context: If policy requires eGFR lab results for a metformin order, the GBI treats the "absence of evidence" as a hard gate. The system refuses to authorize the write, converting a hallucinated appropriateness into a documented abstention.
+*   **Penicillin/Amoxicillin Conflict:** When a model proposes an amoxicillin order for a patient with a confirmed penicillin allergy, the GBI gate identifies a "confirmed-conflict" status. By validating against version-pinned terminology, the system triggers a business-rule `OperationOutcome(severity=error, code=business-rule)`, effectively blocking the clinical write-back.
+*   **Metformin/Renal Context:** If policy requires eGFR lab results for a metformin order, the GBI treats the "absence of evidence" as a hard gate. The system refuses to authorize the write, converting a hallucinated appropriateness into a documented abstention.
 
-This localization is enabled by Sheaf-based localization and the calculation of Mapping-Cone Trace Energy (E_\sigma). Per Proposition 7.1, E_\sigma is the metric of choice due to its basis-invariance; the diagnostic remains valid regardless of the orthogonal rotation of the obstruction subspace. This provides a physically meaningful localization of inconsistency, transforming the benchmark into a diagnostic loop for institutional policy.
+This localization is enabled by Sheaf-based localization and the calculation of Mapping-Cone Trace Energy ($E_\sigma$). Per Proposition 7.1, $E_\sigma$ is the metric of choice due to its basis-invariance; the diagnostic remains valid regardless of the orthogonal rotation of the obstruction subspace. This provides a physically meaningful localization of inconsistency, transforming the benchmark into a diagnostic loop for institutional policy.
 
-5. The Claim-Register Methodology: A New Standard for Research Integrity
+### 5. The Claim-Register Methodology: A New Standard for Research Integrity
 
 The GBI-DCSE v3 evaluation establishes a new standard for research integrity via a machine-readable Claim Register, enumerating explicit claims, auditable "nonclaims," and "out-of-scope" declarations. A load-bearing result of v3 is the portability test to the "sensitive-infrastructure" domain, where eight modules (including crypto, ledger, and transaction modules) were reused verbatim, proving the architecture's "Full-Stack" applicability across divergent domains.
 
-The methodology also facilitated the discovery of the Fisher-bound Erratum. The evaluation revealed that the previously stated numerical bound (\epsilon \approx 0.066) was only correct for a specific one-dimensional slice and did not satisfy the \kappa_2 \leq 10^4 budget over the entire evidence box; the corrected box-wide bound was found to be \epsilon_{box} \approx 0.326472. This ability of the substrate to expose its own mathematical defects marks a paradigm shift in scientific transparency.
+The methodology also facilitated the discovery of the Fisher-bound Erratum. The evaluation revealed that the previously stated numerical bound ($\epsilon \approx 0.066$) was only correct for a specific one-dimensional slice and did not satisfy the $\kappa_2 \leq 10^4$ budget over the entire evidence box; the corrected box-wide bound was found to be:
+
+$$\epsilon_{\text{box}} \approx 0.326472$$
+
+This ability of the substrate to expose its own mathematical defects marks a paradigm shift in scientific transparency.
 
 The v3 results are summarized as follows:
+* **95 of 96** testable claims were met in the 99-row register.
+* **3 claims** were declared out of scope (requiring hardware not present in synthetic tests).
+* **1 claim** was corrected as an erratum.
 
-* 95 of 96 testable claims were met in the 99-row register.
-* 3 claims were declared out of scope (requiring hardware not present in synthetic tests).
-* 1 claim was corrected as an erratum.
-
-The Evaluation Ladder The progression from the zero-coverage failures of v0.1, through the benchmark tuning of v0.2, to the architectural verification of v3, establishes GBI-DCSE as a reproducible and selective routing substrate. The core finding is that model output is evidence, not authority. While the substrate does not eliminate internal model hallucinations, it successfully contains them, providing a certificate-producing check at the model-to-system boundary that is ready for the next phase of frontier-model evaluation.
+The progression from the zero-coverage failures of v0.1, through the benchmark tuning of v0.2, to the architectural verification of v3, establishes GBI-DCSE as a reproducible and selective routing substrate. The core finding is that model output is evidence, not authority. While the substrate does not eliminate internal model hallucinations, it successfully contains them, providing a certificate-producing check at the model-to-system boundary that is ready for the next phase of frontier-model evaluation.
 
 ## Programmatic verification of model-to-enterprise boundaries
 
