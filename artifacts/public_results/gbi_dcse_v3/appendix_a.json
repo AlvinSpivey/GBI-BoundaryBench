@@ -1,0 +1,339 @@
+{
+  "report": {
+    "all_agree": true,
+    "appendix_a_version": "gbi-appendix-a-port-v3.0",
+    "comparisons_agreeing": 21,
+    "comparisons_run": 21,
+    "condensed_probe": {
+      "converges": true,
+      "eventually_constant": false,
+      "final_term": 0.05,
+      "sequence_length": 20,
+      "tail_variation": 0.012499999999999997,
+      "witnesses_nonzero_cokernel": true
+    },
+    "hyperellipsoid_certificate": {
+      "axis_eccentricity_H": 1.7016317340117195,
+      "jacobian_J": 1.028,
+      "outer_distortion_K_O": 1.9226608214731098,
+      "singular_values": [
+        1.254966,
+        1.110695,
+        0.737507
+      ]
+    },
+    "ktabular": 1.5,
+    "local_status_entropy_bits": 1.6276575936849544,
+    "local_status_posterior_mean": [
+      0.0476,
+      0.6667,
+      0.0476,
+      0.0476,
+      0.1429,
+      0.0476
+    ],
+    "manuscript_comparisons": [
+      {
+        "agrees": true,
+        "computed": 1.2549659148479608,
+        "published": 1.254966,
+        "quantity": "singular_value_1",
+        "relative_error_pct": 6.785206865968231e-06
+      },
+      {
+        "agrees": true,
+        "computed": 1.1106950336524595,
+        "published": 1.110695,
+        "quantity": "singular_value_2",
+        "relative_error_pct": 3.0298560348000467e-06
+      },
+      {
+        "agrees": true,
+        "computed": 0.7375073523630687,
+        "published": 0.737507,
+        "quantity": "singular_value_3",
+        "relative_error_pct": 4.777758973446949e-05
+      },
+      {
+        "agrees": true,
+        "computed": 1.7016317340117195,
+        "published": 1.701632,
+        "quantity": "axis_eccentricity_H",
+        "relative_error_pct": 1.5631363333098745e-05
+      },
+      {
+        "agrees": true,
+        "computed": 1.028,
+        "published": 1.028,
+        "quantity": "jacobian_J",
+        "relative_error_pct": 0.0
+      },
+      {
+        "agrees": true,
+        "computed": 1.9226608214731098,
+        "published": 1.922661,
+        "quantity": "outer_distortion_K_O",
+        "relative_error_pct": 9.285406536043427e-06
+      },
+      {
+        "agrees": true,
+        "computed": 0.019777503090234898,
+        "published": 0.019778,
+        "quantity": "stalk_energy_Allergy",
+        "relative_error_pct": 0.0025124368748238725
+      },
+      {
+        "agrees": true,
+        "computed": 1.9777503090234858,
+        "published": 1.97775,
+        "quantity": "stalk_energy_MedicationRequest",
+        "relative_error_pct": 1.5625002447809513e-05
+      },
+      {
+        "agrees": true,
+        "computed": 0.002472187886279357,
+        "published": 0.002472,
+        "quantity": "stalk_energy_RenalLab",
+        "relative_error_pct": 0.007600577643900189
+      },
+      {
+        "agrees": true,
+        "computed": 0.029493819079612474,
+        "published": 0.029494,
+        "quantity": "fisher_eigenvalue_interior_1",
+        "relative_error_pct": 0.0006134142114516191
+      },
+      {
+        "agrees": true,
+        "computed": 0.2544353755927679,
+        "published": 0.254435,
+        "quantity": "fisher_eigenvalue_interior_2",
+        "relative_error_pct": 0.0001476183574929683
+      },
+      {
+        "agrees": true,
+        "computed": 0.36156757758947783,
+        "published": 0.361568,
+        "quantity": "fisher_eigenvalue_interior_3",
+        "relative_error_pct": 0.00011682740789332422
+      },
+      {
+        "agrees": true,
+        "computed": 0.6033561982193006,
+        "published": 0.603356,
+        "quantity": "fisher_eigenvalue_interior_4",
+        "relative_error_pct": 3.285279348179389e-05
+      },
+      {
+        "agrees": true,
+        "computed": 20.457038696503332,
+        "published": 20.46,
+        "quantity": "fisher_condition_interior",
+        "relative_error_pct": 0.014473624128390403
+      },
+      {
+        "agrees": true,
+        "computed": 0.0219856871115095,
+        "published": 0.021986,
+        "quantity": "fisher_eigenvalue_boundary_1",
+        "relative_error_pct": 0.0014231260370179382
+      },
+      {
+        "agrees": true,
+        "computed": 0.2547045724476539,
+        "published": 0.254705,
+        "quantity": "fisher_eigenvalue_boundary_2",
+        "relative_error_pct": 0.0001678617797602473
+      },
+      {
+        "agrees": true,
+        "computed": 0.36290805862796666,
+        "published": 0.362908,
+        "quantity": "fisher_eigenvalue_boundary_3",
+        "relative_error_pct": 1.6155049392167765e-05
+      },
+      {
+        "agrees": true,
+        "computed": 10001.534389323351,
+        "published": 10001.5344,
+        "quantity": "fisher_eigenvalue_boundary_4",
+        "relative_error_pct": 1.06750112798518e-07
+      },
+      {
+        "agrees": true,
+        "computed": 454911.15827294526,
+        "published": 455000.0,
+        "quantity": "fisher_condition_boundary",
+        "relative_error_pct": 0.0195256542977442
+      },
+      {
+        "agrees": true,
+        "computed": 10001.621213528304,
+        "published": 10001.621,
+        "quantity": "trigamma_0_01",
+        "relative_error_pct": 2.1349369748355427e-06
+      },
+      {
+        "agrees": true,
+        "computed": 0.07404026866399192,
+        "published": 0.07404,
+        "quantity": "trigamma_14",
+        "relative_error_pct": 0.0003628633062244694
+      }
+    ],
+    "mapping_status_labels": [
+      "exact",
+      "equivalent",
+      "narrower",
+      "broader",
+      "conflict",
+      "unmapped"
+    ],
+    "quarantine_threshold": 0.8,
+    "schema_version": "boundarybench.appendix_a_report.v1",
+    "surrogate_energy_sum_equals_rank": {
+      "rank": 2,
+      "sum": 2.0
+    },
+    "surrogate_laplacian_eigenvalues": [
+      -0.0,
+      -0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "surrogate_stalk_energies": [
+      {
+        "decision": "COMMIT",
+        "energy": 0.019777503090234898,
+        "name": "Allergy"
+      },
+      {
+        "decision": "QUARANTINE",
+        "energy": 1.9777503090234858,
+        "name": "MedicationRequest"
+      },
+      {
+        "decision": "COMMIT",
+        "energy": 0.002472187886279357,
+        "name": "RenalLab"
+      }
+    ],
+    "trigamma_cross_validation": [
+      {
+        "independent": 10001.62121352829,
+        "ported": 10001.621213528304,
+        "relative_error": 1.4549556434594614e-15,
+        "x": 0.01
+      },
+      {
+        "independent": 4.934802200519688,
+        "ported": 4.934802200540348,
+        "relative_error": 4.186574736160428e-12,
+        "x": 0.5
+      },
+      {
+        "independent": 1.644934066823236,
+        "ported": 1.6449340668398371,
+        "relative_error": 1.009229805744179e-11,
+        "x": 1.0
+      },
+      {
+        "independent": 0.6449340668232365,
+        "ported": 0.6449340668398372,
+        "relative_error": 2.5740182837263642e-11,
+        "x": 2.0
+      },
+      {
+        "independent": 0.1331547165881699,
+        "ported": 0.13315471661083597,
+        "relative_error": 1.702235118014619e-10,
+        "x": 7.999
+      },
+      {
+        "independent": 0.1331370146690413,
+        "ported": 0.13313701468564212,
+        "relative_error": 1.2468983070996269e-10,
+        "x": 8.0
+      },
+      {
+        "independent": 0.07404026863902019,
+        "ported": 0.07404026866399192,
+        "relative_error": 3.3727231780442687e-10,
+        "x": 14.0
+      },
+      {
+        "independent": 0.010050166638358424,
+        "ported": 0.010050166663333571,
+        "relative_error": 2.485048044399876e-09,
+        "x": 100.0
+      }
+    ],
+    "trigamma_cross_validation_max_relative_error": 2.485048044399876e-09
+  },
+  "self_check": {
+    "all_passed": true,
+    "appendix_a_version": "gbi-appendix-a-port-v3.0",
+    "assertions": [
+      {
+        "assertion": "fisher_metric_symmetric",
+        "detail": null,
+        "passed": true
+      },
+      {
+        "assertion": "fisher_min_eigenvalue_above_tolerance",
+        "detail": 0.029493819079612474,
+        "passed": true
+      },
+      {
+        "assertion": "boundary_fisher_min_eigenvalue_above_tolerance",
+        "detail": 0.0219856871115095,
+        "passed": true
+      },
+      {
+        "assertion": "wirtinger_dz_exact_matches_finite_difference",
+        "detail": 3.6033579373499133e-12,
+        "passed": true
+      },
+      {
+        "assertion": "wirtinger_dzbar_exact_matches_finite_difference",
+        "detail": 6.370733798856396e-12,
+        "passed": true
+      },
+      {
+        "assertion": "axis_eccentricity_at_least_one",
+        "detail": 1.7016317340117195,
+        "passed": true
+      },
+      {
+        "assertion": "outer_distortion_at_least_one",
+        "detail": 1.9226608214731098,
+        "passed": true
+      },
+      {
+        "assertion": "surrogate_basis_orthonormal",
+        "detail": 2.715776479642543e-18,
+        "passed": true
+      },
+      {
+        "assertion": "surrogate_laplacian_symmetric",
+        "detail": 0.0,
+        "passed": true
+      },
+      {
+        "assertion": "surrogate_laplacian_eigenvalues_above_negative_tolerance",
+        "detail": -2.1048202261975983e-16,
+        "passed": true
+      },
+      {
+        "assertion": "surrogate_projector_rotation_invariant",
+        "detail": 6.249090824925994e-17,
+        "passed": true
+      }
+    ],
+    "assertions_passed": 11,
+    "assertions_run": 11,
+    "schema_version": "boundarybench.appendix_a_self_check.v1"
+  }
+}

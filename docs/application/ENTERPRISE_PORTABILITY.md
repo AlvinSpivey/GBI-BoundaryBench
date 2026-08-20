@@ -87,6 +87,18 @@ This is what lets two evaluations distinguish “the model behaved differently�
 
 The table shows portability of the verification contract, not portability of the healthcare benchmark tasks themselves.
 
+## Evidence added after v0.1
+
+The v0.2/v2/v3 public artifacts add one limited portability check beyond the healthcare-shaped benchmark. In the evaluated second synthetic domain, the systems layer was reused without architecture changes while domain-specific semantics remained isolated in policy/witness objects:
+
+- `8` domain-neutral systems modules reused unchanged;
+- `4` domain-specific policy/witness objects;
+- `265 / 265` injected severe cases caught;
+- `0 / 175` false conflicts on the declared clean synthetic population;
+- `0` architecture changes.
+
+This supports a narrow engineering claim about the evaluated synthetic domains. It does not prove that GBI is portable to every enterprise setting, and it does not remove the need to define each domain’s authoritative evidence, dependencies, and policy contract.
+
 ## Liveness and surgical quarantine
 
 Surgical quarantine does not mean partially committing an operation whose underlying system requires atomicity. GBI/DCSE can replace unnecessary pipeline-wide failure with pre-commit, work-item-level quarantine while preserving atomic transaction semantics wherever the underlying system requires them.

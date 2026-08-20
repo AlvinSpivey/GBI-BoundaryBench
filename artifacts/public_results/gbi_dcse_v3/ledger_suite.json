@@ -1,0 +1,209 @@
+{
+  "all_faults_correctly_classified": true,
+  "all_faults_detected": true,
+  "clean_ledger": {
+    "entries": 8,
+    "non_equivocating": true,
+    "structurally_valid": true
+  },
+  "clean_permits_writes": true,
+  "declared_trigger_set": [
+    "monotonic_counter_failure",
+    "enclave_restart",
+    "attestation_loss",
+    "equivocation_evidence"
+  ],
+  "detection": {
+    "equivocation_same_sequence": {
+      "detected": true,
+      "equivocation_detected": true,
+      "expected_problem_present": true,
+      "problems_detected": [
+        "hash_chain_break",
+        "monotonic_counter_failure",
+        "sequence_gap_or_reuse"
+      ],
+      "structurally_valid": false
+    },
+    "forged_signature": {
+      "detected": true,
+      "equivocation_detected": false,
+      "expected_problem_present": true,
+      "problems_detected": [
+        "invalid_signature"
+      ],
+      "structurally_valid": false
+    },
+    "hash_chain_break": {
+      "detected": true,
+      "equivocation_detected": false,
+      "expected_problem_present": true,
+      "problems_detected": [
+        "hash_chain_break"
+      ],
+      "structurally_valid": false
+    },
+    "monotonic_counter_repeat": {
+      "detected": true,
+      "equivocation_detected": false,
+      "expected_problem_present": true,
+      "problems_detected": [
+        "monotonic_counter_failure"
+      ],
+      "structurally_valid": false
+    },
+    "monotonic_counter_rollback": {
+      "detected": true,
+      "equivocation_detected": false,
+      "expected_problem_present": true,
+      "problems_detected": [
+        "monotonic_counter_failure"
+      ],
+      "structurally_valid": false
+    },
+    "nonce_replay": {
+      "detected": true,
+      "equivocation_detected": false,
+      "expected_problem_present": true,
+      "problems_detected": [
+        "nonce_replay"
+      ],
+      "structurally_valid": false
+    },
+    "sequence_reuse": {
+      "detected": true,
+      "equivocation_detected": true,
+      "expected_problem_present": true,
+      "problems_detected": [
+        "hash_chain_break",
+        "sequence_gap_or_reuse"
+      ],
+      "structurally_valid": false
+    }
+  },
+  "equivocation_detected_when_injected": true,
+  "equivocation_not_falsely_reported": true,
+  "every_fallback_trigger_halts_writes": true,
+  "fault_classes_declared": [
+    "monotonic_counter_rollback",
+    "monotonic_counter_repeat",
+    "hash_chain_break",
+    "sequence_reuse",
+    "nonce_replay",
+    "forged_signature",
+    "equivocation_same_sequence"
+  ],
+  "faults_injected": 7,
+  "ledger_version": "dcse-ledger-v3.0",
+  "schema_version": "boundarybench.dcse_ledger_suite.v1",
+  "scope_demonstration": {
+    "conclusion": "A structurally perfect, non-equivocating ledger recorded an incorrect identity binding. Ledger validity and identity correctness are independent properties, exactly as Section 9.4 states.",
+    "ledger_non_equivocating": true,
+    "ledger_structurally_valid": true,
+    "ledger_validity_implies_identity_truth": false,
+    "purpose": "Section 9.4 scope limit: protocol non-equivocation is not identity truth",
+    "recorded_binding_is_factually_wrong": true
+  },
+  "signature_scheme": "Ed25519 (real signatures, publicly verifiable equivocation evidence)",
+  "write_path_guards": {
+    "attestation_lost": {
+      "active_replicas": 4,
+      "authoritative_writes_permitted": false,
+      "byzantine_tolerance_f": 1,
+      "declared_trigger_set": [
+        "monotonic_counter_failure",
+        "enclave_restart",
+        "attestation_loss",
+        "equivocation_evidence"
+      ],
+      "fallback_triggers": [
+        "attestation_loss"
+      ],
+      "ledger_non_equivocating": true,
+      "ledger_structurally_valid": true,
+      "mode": "conservative_bft_fallback",
+      "quorum_threshold_met": true,
+      "required_replicas_3f_plus_1": 4,
+      "schema_version": "boundarybench.dcse_write_path_status.v1"
+    },
+    "below_quorum": {
+      "active_replicas": 3,
+      "authoritative_writes_permitted": false,
+      "byzantine_tolerance_f": 1,
+      "declared_trigger_set": [
+        "monotonic_counter_failure",
+        "enclave_restart",
+        "attestation_loss",
+        "equivocation_evidence"
+      ],
+      "fallback_triggers": [
+        "replica_population_below_3f_plus_1"
+      ],
+      "ledger_non_equivocating": true,
+      "ledger_structurally_valid": true,
+      "mode": "conservative_bft_fallback",
+      "quorum_threshold_met": false,
+      "required_replicas_3f_plus_1": 4,
+      "schema_version": "boundarybench.dcse_write_path_status.v1"
+    },
+    "clean": {
+      "active_replicas": 4,
+      "authoritative_writes_permitted": true,
+      "byzantine_tolerance_f": 1,
+      "declared_trigger_set": [
+        "monotonic_counter_failure",
+        "enclave_restart",
+        "attestation_loss",
+        "equivocation_evidence"
+      ],
+      "fallback_triggers": [],
+      "ledger_non_equivocating": true,
+      "ledger_structurally_valid": true,
+      "mode": "fast_path_tee_assisted",
+      "quorum_threshold_met": true,
+      "required_replicas_3f_plus_1": 4,
+      "schema_version": "boundarybench.dcse_write_path_status.v1"
+    },
+    "counter_service_down": {
+      "active_replicas": 4,
+      "authoritative_writes_permitted": false,
+      "byzantine_tolerance_f": 1,
+      "declared_trigger_set": [
+        "monotonic_counter_failure",
+        "enclave_restart",
+        "attestation_loss",
+        "equivocation_evidence"
+      ],
+      "fallback_triggers": [
+        "monotonic_counter_failure"
+      ],
+      "ledger_non_equivocating": true,
+      "ledger_structurally_valid": true,
+      "mode": "conservative_bft_fallback",
+      "quorum_threshold_met": true,
+      "required_replicas_3f_plus_1": 4,
+      "schema_version": "boundarybench.dcse_write_path_status.v1"
+    },
+    "equivocating": {
+      "active_replicas": 4,
+      "authoritative_writes_permitted": false,
+      "byzantine_tolerance_f": 1,
+      "declared_trigger_set": [
+        "monotonic_counter_failure",
+        "enclave_restart",
+        "attestation_loss",
+        "equivocation_evidence"
+      ],
+      "fallback_triggers": [
+        "monotonic_counter_failure",
+        "equivocation_evidence"
+      ],
+      "ledger_non_equivocating": false,
+      "ledger_structurally_valid": false,
+      "mode": "conservative_bft_fallback",
+      "quorum_threshold_met": true,
+      "required_replicas_3f_plus_1": 4,
+      "schema_version": "boundarybench.dcse_write_path_status.v1"
+    }
+  }
+}

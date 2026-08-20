@@ -1,0 +1,653 @@
+{
+  "note": "Tiers are declared surrogate competence constants. They are ordered labels for a simulator parameter and do not correspond to any named commercial model. No language model was executed.",
+  "ordering_check": [
+    {
+      "difficulty_level": "hard",
+      "rho_hat_task_by_tier": [
+        0.0703125,
+        0.21484375,
+        0.50390625
+      ],
+      "separation_order_preserved": true,
+      "tier_order": [
+        "tier_low",
+        "tier_mid",
+        "tier_high"
+      ]
+    },
+    {
+      "difficulty_level": "medium",
+      "rho_hat_task_by_tier": [
+        0.30859375,
+        0.5,
+        0.69140625
+      ],
+      "separation_order_preserved": true,
+      "tier_order": [
+        "tier_low",
+        "tier_mid",
+        "tier_high"
+      ]
+    },
+    {
+      "difficulty_level": "easy",
+      "rho_hat_task_by_tier": [
+        0.55078125,
+        0.75390625,
+        0.90625
+      ],
+      "separation_order_preserved": true,
+      "tier_order": [
+        "tier_low",
+        "tier_mid",
+        "tier_high"
+      ]
+    },
+    {
+      "difficulty_level": "trivial",
+      "rho_hat_task_by_tier": [
+        0.7421875,
+        0.88671875,
+        0.94140625
+      ],
+      "separation_order_preserved": true,
+      "tier_order": [
+        "tier_low",
+        "tier_mid",
+        "tier_high"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "abstention_count": 45,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": false,
+          "provenance_temporal": false,
+          "terminology": false
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 3,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [
+          "identity",
+          "terminology",
+          "provenance_temporal"
+        ],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 1.0,
+          "provenance_temporal": 1.0,
+          "terminology": 1.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "ad715c44b271f8cd5efa7e6bf8639ba819911be4d3e18b68b1972297dfc31eee",
+      "coverage": 0.82421875,
+      "difficulty_level": "hard",
+      "false_acceptance_count": 17,
+      "false_rejection_count": 22,
+      "gap_vs_rho": 0.1796875,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.09375,
+        "evidence_sufficiency": 0.09375,
+        "field_anomaly_bleed": 0.125,
+        "orphan_duplicate_detection": 0.03125,
+        "patient_identity_normalization": 0.0,
+        "policy_action_selection": 0.0625,
+        "rpms_to_fhir_mapping": 0.15625,
+        "temporal_status_classification": 0.0
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.0703125,
+      "selective_risk": 0.9289099526066351,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_low",
+      "tuned_against": "repaired_emitter_c055"
+    },
+    {
+      "abstention_count": 33,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": false,
+          "provenance_temporal": false,
+          "terminology": false
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 3,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [
+          "identity",
+          "terminology",
+          "provenance_temporal"
+        ],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 1.0,
+          "provenance_temporal": 1.0,
+          "terminology": 1.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "ad715c44b271f8cd5efa7e6bf8639ba819911be4d3e18b68b1972297dfc31eee",
+      "coverage": 0.87109375,
+      "difficulty_level": "hard",
+      "false_acceptance_count": 21,
+      "false_rejection_count": 28,
+      "gap_vs_rho": 0.03515625,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.21875,
+        "evidence_sufficiency": 0.28125,
+        "field_anomaly_bleed": 0.25,
+        "orphan_duplicate_detection": 0.25,
+        "patient_identity_normalization": 0.125,
+        "policy_action_selection": 0.3125,
+        "rpms_to_fhir_mapping": 0.15625,
+        "temporal_status_classification": 0.125
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.21484375,
+      "selective_risk": 0.7937219730941704,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_mid",
+      "tuned_against": "repaired_emitter_c055"
+    },
+    {
+      "abstention_count": 32,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": false,
+          "provenance_temporal": false,
+          "terminology": true
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 2,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [
+          "identity",
+          "provenance_temporal"
+        ],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 1.0,
+          "provenance_temporal": 1.0,
+          "terminology": 0.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "ad715c44b271f8cd5efa7e6bf8639ba819911be4d3e18b68b1972297dfc31eee",
+      "coverage": 0.875,
+      "difficulty_level": "hard",
+      "false_acceptance_count": 11,
+      "false_rejection_count": 18,
+      "gap_vs_rho": 0.25390625,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.53125,
+        "evidence_sufficiency": 0.4375,
+        "field_anomaly_bleed": 0.4375,
+        "orphan_duplicate_detection": 0.5625,
+        "patient_identity_normalization": 0.46875,
+        "policy_action_selection": 0.65625,
+        "rpms_to_fhir_mapping": 0.5,
+        "temporal_status_classification": 0.4375
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.50390625,
+      "selective_risk": 0.48660714285714285,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_high",
+      "tuned_against": "repaired_emitter_c055"
+    },
+    {
+      "abstention_count": 34,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": false,
+          "provenance_temporal": false,
+          "terminology": false
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 3,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [
+          "identity",
+          "terminology",
+          "provenance_temporal"
+        ],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 1.0,
+          "provenance_temporal": 1.0,
+          "terminology": 1.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "7ec8657a7f7494adc36da5b4af41fb57930c4ff75d450ecd2ceac1a7d4751749",
+      "coverage": 0.8671875,
+      "difficulty_level": "medium",
+      "false_acceptance_count": 15,
+      "false_rejection_count": 22,
+      "gap_vs_rho": 0.19140625,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.1875,
+        "evidence_sufficiency": 0.25,
+        "field_anomaly_bleed": 0.40625,
+        "orphan_duplicate_detection": 0.28125,
+        "patient_identity_normalization": 0.28125,
+        "policy_action_selection": 0.4375,
+        "rpms_to_fhir_mapping": 0.375,
+        "temporal_status_classification": 0.25
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.30859375,
+      "selective_risk": 0.6801801801801802,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_low",
+      "tuned_against": "repaired_emitter_c055"
+    },
+    {
+      "abstention_count": 35,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": false,
+          "provenance_temporal": false,
+          "terminology": false
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 3,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [
+          "identity",
+          "terminology",
+          "provenance_temporal"
+        ],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 1.0,
+          "provenance_temporal": 1.0,
+          "terminology": 1.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "7ec8657a7f7494adc36da5b4af41fb57930c4ff75d450ecd2ceac1a7d4751749",
+      "coverage": 0.86328125,
+      "difficulty_level": "medium",
+      "false_acceptance_count": 8,
+      "false_rejection_count": 18,
+      "gap_vs_rho": 0.0,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.375,
+        "evidence_sufficiency": 0.46875,
+        "field_anomaly_bleed": 0.40625,
+        "orphan_duplicate_detection": 0.375,
+        "patient_identity_normalization": 0.5,
+        "policy_action_selection": 0.625,
+        "rpms_to_fhir_mapping": 0.75,
+        "temporal_status_classification": 0.5
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.5,
+      "selective_risk": 0.48868778280542985,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_mid",
+      "tuned_against": "repaired_emitter_c055"
+    },
+    {
+      "abstention_count": 35,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": true,
+          "provenance_temporal": true,
+          "terminology": true
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 0,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 0.0,
+          "provenance_temporal": 0.0,
+          "terminology": 0.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "7ec8657a7f7494adc36da5b4af41fb57930c4ff75d450ecd2ceac1a7d4751749",
+      "coverage": 0.86328125,
+      "difficulty_level": "medium",
+      "false_acceptance_count": 3,
+      "false_rejection_count": 9,
+      "gap_vs_rho": 0.19140625,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.59375,
+        "evidence_sufficiency": 0.71875,
+        "field_anomaly_bleed": 0.59375,
+        "orphan_duplicate_detection": 0.71875,
+        "patient_identity_normalization": 0.65625,
+        "policy_action_selection": 0.78125,
+        "rpms_to_fhir_mapping": 0.84375,
+        "temporal_status_classification": 0.625
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.69140625,
+      "selective_risk": 0.3031674208144796,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_high",
+      "tuned_against": "repaired_emitter_c055"
+    },
+    {
+      "abstention_count": 31,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": false,
+          "provenance_temporal": false,
+          "terminology": false
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 3,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [
+          "identity",
+          "terminology",
+          "provenance_temporal"
+        ],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 1.0,
+          "provenance_temporal": 1.0,
+          "terminology": 1.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "e134bdcc7b3099aff77740373efa0759c27be060f006d77b9efce1c64059adbb",
+      "coverage": 0.87890625,
+      "difficulty_level": "easy",
+      "false_acceptance_count": 6,
+      "false_rejection_count": 16,
+      "gap_vs_rho": 0.19921875,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.46875,
+        "evidence_sufficiency": 0.5,
+        "field_anomaly_bleed": 0.65625,
+        "orphan_duplicate_detection": 0.625,
+        "patient_identity_normalization": 0.4375,
+        "policy_action_selection": 0.59375,
+        "rpms_to_fhir_mapping": 0.65625,
+        "temporal_status_classification": 0.46875
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.55078125,
+      "selective_risk": 0.4444444444444444,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_low",
+      "tuned_against": "repaired_emitter_c055"
+    },
+    {
+      "abstention_count": 33,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": true,
+          "provenance_temporal": true,
+          "terminology": true
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 0,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 0.0,
+          "provenance_temporal": 0.0,
+          "terminology": 0.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "e134bdcc7b3099aff77740373efa0759c27be060f006d77b9efce1c64059adbb",
+      "coverage": 0.87109375,
+      "difficulty_level": "easy",
+      "false_acceptance_count": 4,
+      "false_rejection_count": 14,
+      "gap_vs_rho": 0.00390625,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.65625,
+        "evidence_sufficiency": 0.78125,
+        "field_anomaly_bleed": 0.9375,
+        "orphan_duplicate_detection": 0.71875,
+        "patient_identity_normalization": 0.71875,
+        "policy_action_selection": 0.78125,
+        "rpms_to_fhir_mapping": 0.8125,
+        "temporal_status_classification": 0.625
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.75390625,
+      "selective_risk": 0.24663677130044842,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_mid",
+      "tuned_against": "repaired_emitter_c055"
+    },
+    {
+      "abstention_count": 34,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": true,
+          "provenance_temporal": true,
+          "terminology": true
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 0,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 0.0,
+          "provenance_temporal": 0.0,
+          "terminology": 0.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "e134bdcc7b3099aff77740373efa0759c27be060f006d77b9efce1c64059adbb",
+      "coverage": 0.8671875,
+      "difficulty_level": "easy",
+      "false_acceptance_count": 3,
+      "false_rejection_count": 5,
+      "gap_vs_rho": 0.15625,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.9375,
+        "evidence_sufficiency": 0.9375,
+        "field_anomaly_bleed": 0.9375,
+        "orphan_duplicate_detection": 0.90625,
+        "patient_identity_normalization": 0.84375,
+        "policy_action_selection": 0.875,
+        "rpms_to_fhir_mapping": 0.875,
+        "temporal_status_classification": 0.9375
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.90625,
+      "selective_risk": 0.09009009009009009,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_high",
+      "tuned_against": "repaired_emitter_c055"
+    },
+    {
+      "abstention_count": 0,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": true,
+          "provenance_temporal": true,
+          "terminology": true
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 0,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 0.0,
+          "provenance_temporal": 0.0,
+          "terminology": 0.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "c822b5dab09e7b77e0c641e98ab46cca8ec23b3303e8b5ccfc48ec42f14ccb99",
+      "coverage": 1.0,
+      "difficulty_level": "trivial",
+      "false_acceptance_count": 0,
+      "false_rejection_count": 0,
+      "gap_vs_rho": 0.15781250000000002,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.75,
+        "evidence_sufficiency": 0.6875,
+        "field_anomaly_bleed": 0.84375,
+        "orphan_duplicate_detection": 0.65625,
+        "patient_identity_normalization": 0.75,
+        "policy_action_selection": 0.65625,
+        "rpms_to_fhir_mapping": 0.78125,
+        "temporal_status_classification": 0.8125
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.7421875,
+      "selective_risk": 0.2578125,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_low",
+      "tuned_against": "repaired_emitter_c055"
+    },
+    {
+      "abstention_count": 0,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": true,
+          "provenance_temporal": true,
+          "terminology": true
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 0,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 0.0,
+          "provenance_temporal": 0.0,
+          "terminology": 0.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "c822b5dab09e7b77e0c641e98ab46cca8ec23b3303e8b5ccfc48ec42f14ccb99",
+      "coverage": 1.0,
+      "difficulty_level": "trivial",
+      "false_acceptance_count": 0,
+      "false_rejection_count": 0,
+      "gap_vs_rho": 0.013281250000000022,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.84375,
+        "evidence_sufficiency": 0.96875,
+        "field_anomaly_bleed": 0.84375,
+        "orphan_duplicate_detection": 0.9375,
+        "patient_identity_normalization": 0.9375,
+        "policy_action_selection": 0.90625,
+        "rpms_to_fhir_mapping": 0.90625,
+        "temporal_status_classification": 0.75
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.88671875,
+      "selective_risk": 0.11328125,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_mid",
+      "tuned_against": "repaired_emitter_c055"
+    },
+    {
+      "abstention_count": 0,
+      "cone_diagnostic": {
+        "axis_agreement": {
+          "identity": true,
+          "provenance_temporal": true,
+          "terminology": true
+        },
+        "cone_version": "betal-gbi-mapping-cone-v0.2",
+        "construction": "genuine_cone_laplacian_on_declared_toy_complex",
+        "obstruction_dimension": 0,
+        "quarantine_threshold": 0.5,
+        "quarantined_stalks": [],
+        "schema_version": "boundarybench.betal_cone_diagnostic.v1",
+        "scoring_weight": 0,
+        "stalk_energies": {
+          "identity": 0.0,
+          "provenance_temporal": 0.0,
+          "terminology": 0.0
+        },
+        "status": "DIAGNOSTIC_ONLY_NOT_VALIDATED",
+        "validated": false
+      },
+      "configuration_sha256": "c822b5dab09e7b77e0c641e98ab46cca8ec23b3303e8b5ccfc48ec42f14ccb99",
+      "coverage": 1.0,
+      "difficulty_level": "trivial",
+      "false_acceptance_count": 0,
+      "false_rejection_count": 0,
+      "gap_vs_rho": 0.04140624999999998,
+      "per_family_rho_task": {
+        "code_system_version_validation": 0.84375,
+        "evidence_sufficiency": 1.0,
+        "field_anomaly_bleed": 0.96875,
+        "orphan_duplicate_detection": 0.90625,
+        "patient_identity_normalization": 1.0,
+        "policy_action_selection": 0.9375,
+        "rpms_to_fhir_mapping": 1.0,
+        "temporal_status_classification": 0.875
+      },
+      "rho_hat_adm": 1.0,
+      "rho_hat_task": 0.94140625,
+      "selective_risk": 0.05859375,
+      "target_kind": "repaired_emitter",
+      "target_name": "tier_high",
+      "tuned_against": "repaired_emitter_c055"
+    }
+  ],
+  "schema_version": "boundarybench.betal_transfer_study.v1",
+  "tiers": [
+    {
+      "competence": 0.35,
+      "name": "tier_low"
+    },
+    {
+      "competence": 0.55,
+      "name": "tier_mid"
+    },
+    {
+      "competence": 0.75,
+      "name": "tier_high"
+    }
+  ]
+}

@@ -1,22 +1,43 @@
-# GBI BoundaryBench v0.1
+# GBI BoundaryBench / GBI-DCSE Research Program
 
-## Programmatic Verification of Legacy-EHR Transformations
+## Programmatic verification of model-to-enterprise boundaries
 
-GBI BoundaryBench is a research benchmark for testing the boundary between a plausible model proposal and an enterprise-admissible action. The core design principle is simple: a model output is evidence, not authority.
+GBI BoundaryBench is a public research showcase for testing the boundary between a plausible model or agent proposal and an enterprise-admissible action. The core design principle is simple: a model output is evidence, not authority.
 
 ```text
-MODEL PROPOSAL
+MODEL / AGENT PROPOSAL
+      ↓
+TYPED EVIDENCE
       ↓
 PROGRAMMATIC VERIFICATION
       ↓
-ADMISSIBLE ACTION / QUARANTINE / REVIEW / REJECTION
+VERSIONED ENTERPRISE POLICY
+      ↓
+ADMIT / QUARANTINE / REVIEW / REJECT
 ```
 
-The benchmark uses synthetic legacy-EHR-style records and deterministic verifier rules to evaluate whether proposed mappings, repairs, classifications, traces, and abstentions satisfy explicit identity, provenance, terminology/version, temporal-validity, evidence, dependency, and policy constraints.
+The repository is anchored in synthetic legacy-EHR transformation, then extends into admission-aware benchmark tuning, reference-independent runtime verification, and claim-level systems verification. Across all stages, the question is not whether a model output looks plausible; it is whether a typed proposal can cross a governed boundary under explicit evidence, provenance, version, dependency, and policy constraints.
 
 This repository is an application-facing public showcase. It is not a clinical system, a medical device, a certified terminology crosswalk, or an autonomous EHR write-back service. Expected answers in the private research record are benchmark references derived from synthetic generator truth and explicit corruption manifests, not clinical truth.
 
-## Headline empirical result
+## Research progression
+
+| Stage | Research question | Evidence |
+|---|---|---|
+| BoundaryBench v0.1 | Can malformed/model-generated output be prevented from silently crossing the structured boundary? | Frozen Qwen3-4B held-out execution; 768/768 executions completed, zero accepted, deterministic quarantine. |
+| BoundaryBench v0.2 / BeTaL-inspired tuning | Can benchmark difficulty be tuned without confusing interface admission failure with task competence? | 9-dimensional finite design space with 2,218,750,380 grid configurations; feedback-coordinate search mean held-out gap 2.87% versus 13.61% and 11.46% for non-feedback baselines. |
+| GBI v2 runtime admissibility | Can a reference-independent runtime policy gate remain selective under repaired inputs, contradictions, and synthetic adversaries? | 512 synthetic tasks; selected strictness 0.6; 116/116 injected severe contradictions detected; zero silent promotions under evaluated synthetic adversaries. |
+| GBI-DCSE v3 claim verification | Can the broader systems manuscript be converted into explicit, executable claim-to-evidence checks? | 99 registered manuscript claims, 96 testable, 95 met/supported plus one erratum; standalone scorecard verifier reports 148 checks and 0 failures. |
+
+Important distinctions:
+
+- `admission rate` is not the same as conditional task performance.
+- benchmark reference answers are not runtime authority.
+- deterministic format repair is not substantive answer repair.
+- synthetic adversaries are not frontier-model executions.
+- synthetic systems verification is not production clinical validation.
+
+## Historical v0.1 empirical result
 
 Across 768 frozen held-out executions of `Qwen/Qwen3-4B-Instruct-2507` spanning three evidence modes, all model executions completed, but zero outputs satisfied the benchmark's admissibility contract: 369 were rejected during safe parsing and 399 during schema validation. All 768 were deterministically quarantined.
 
@@ -38,6 +59,8 @@ This v0.1 result evaluates one 4B open-weight model and is not a general claim a
 
 Start with:
 
+- Research program summary: [`docs/RESEARCH_PROGRAM.md`](docs/RESEARCH_PROGRAM.md)
+- v0.2/v2/v3 summary: [`docs/application/GBI_V0_2_V2_V3_SUMMARY.md`](docs/application/GBI_V0_2_V2_V3_SUMMARY.md)
 - Architecture figure: [`docs/application/figures/boundarybench_architecture.svg`](docs/application/figures/boundarybench_architecture.svg)
 - Empirical failure-flow figure: [`docs/application/figures/qwen_v0_1_failure_flow.svg`](docs/application/figures/qwen_v0_1_failure_flow.svg)
 - Application summary: [`docs/application/GBI_BOUNDARYBENCH_V0_1_SUMMARY.md`](docs/application/GBI_BOUNDARYBENCH_V0_1_SUMMARY.md)
@@ -45,19 +68,20 @@ Start with:
 - Reproducibility summary: [`docs/application/REPRODUCIBILITY.md`](docs/application/REPRODUCIBILITY.md)
 - Benchmark card: [`docs/benchmark_card.md`](docs/benchmark_card.md)
 - Public aggregate results: [`artifacts/public_results/v0_1/`](artifacts/public_results/v0_1/)
-- Submitted research manuscript: [`paper/GBI_DCSE_manuscript.pdf`](paper/GBI_DCSE_manuscript.pdf)
+- New result artifacts: [`artifacts/public_results/v0_2/`](artifacts/public_results/v0_2/), [`artifacts/public_results/gbi_v2/`](artifacts/public_results/gbi_v2/), [`artifacts/public_results/gbi_dcse_v3/`](artifacts/public_results/gbi_dcse_v3/)
+- Papers: [`paper/README.md`](paper/README.md)
 
 ### Research manuscript
 
 **Logit-Boundary Geometric Belief Interfaces and Sparse Sheaf-Enclave Protocols** — Alvin Spivey & Yu Huang
 
-Companion research manuscript underlying the GBI/DCSE verification architecture and BoundaryBench evaluation framework.
+Research manuscript underlying the GBI/DCSE verification architecture and BoundaryBench evaluation framework.
 
-**Status: submitted to arXiv: [processing / identifier](https://arxiv.org/abs/2608.10300).**
+**Status: public on arXiv as [arXiv:2608.10300v2](https://arxiv.org/abs/2608.10300).**
 
-[Read the submitted manuscript](paper/GBI_DCSE_manuscript.pdf)
+[Read the canonical arXiv paper](https://arxiv.org/abs/2608.10300) or the repository PDF copy: [`paper/GBI_DCSE_manuscript.pdf`](paper/GBI_DCSE_manuscript.pdf).
 
-The manuscript covers:
+The original manuscript covers:
 
 - typed model-to-system evidence boundaries;
 - the versioned runtime admissibility policy `P`;
@@ -65,6 +89,34 @@ The manuscript covers:
 - pre-commit surgical quarantine and liveness;
 - deterministic human-review surfaces;
 - GBI BoundaryBench v0.1 empirical evaluation.
+
+The companion manuscript, [`paper/GBI_DCSE_BeTaL_Companion.pdf`](paper/GBI_DCSE_BeTaL_Companion.pdf), adds benchmark-design and systems-verification evidence for BoundaryBench v0.2, GBI v2, and GBI-DCSE v3. It is prepared for arXiv submission and does not yet have an arXiv identifier.
+
+## Why the newer work matters
+
+The v0.2/v2/v3 stages make the research program more diagnostic:
+
+- benchmark design can fail if admission degenerates, because zero admission makes conditional task competence unidentified;
+- customer-specific failure surfaces require separating interface failure from capability failure;
+- a runtime enterprise gate should be reproducible from versioned policy and evidence rather than benchmark answer keys;
+- verification infrastructure should be capable of falsifying its own claims;
+- the v3 claim registry converts research prose into evidence classes and executable assertions;
+- cross-domain portability is demonstrated only for the evaluated synthetic domains and should not be generalized beyond them.
+
+The practical claim remains narrow: the framework contains unsupported or inadmissible model outputs before governed downstream action under the tested policy. It does not solve hallucination generally, establish clinical safety, or validate a production deployment.
+
+## Research relevance
+
+For researchers and enterprise AI teams, the useful pattern is a separable evaluation control plane:
+
+- evaluation quality: distinguish formatting/admission failure from actual task competence;
+- dynamic benchmark design: tune benchmark environments only where the intended metric is identifiable and reachable;
+- data development: convert verified failure slices into concrete targets for expert data, synthetic/counterfactual examples, evaluator design, retrieval changes, or post-training;
+- runtime governance: evaluate proposed actions under versioned enterprise evidence and policy rather than model confidence alone;
+- research assurance: map manuscript claims to evidence categories and executable assertions;
+- portability: preserve a stable verification control plane while changing domain-specific policy and evidence objects.
+
+The newer artifacts make the model/system boundary more measurable; they do not predetermine any particular vendor, product, or training intervention.
 
 ## Why this benchmark exists
 
@@ -142,9 +194,12 @@ This repository includes compact aggregate scored artifacts only:
 
 ```text
 artifacts/public_results/v0_1/
+artifacts/public_results/v0_2/
+artifacts/public_results/gbi_v2/
+artifacts/public_results/gbi_dcse_v3/
 ```
 
-The public result files contain aggregate and slice metrics, status distributions, and provenance identifiers. They intentionally do not contain trusted held-out answer content or raw held-out model responses.
+The public result files contain aggregate and slice metrics, status distributions, claim registers, scorecards, and provenance identifiers. They intentionally do not contain trusted held-out answer content or raw held-out model responses.
 
 ## Why the full held-out benchmark is not public
 
@@ -182,7 +237,15 @@ src/boundarybench/tasks/         typed task/result contracts and task-family log
 src/boundarybench/verification/  deterministic verification engine and fail-closed checks
 src/boundarybench/adapters/      provider-neutral adapter interfaces and offline adapter scaffolding
 src/boundarybench/empirical/     execution/reporting interfaces included where public-safe
+src/boundarybench/betal/         v0.2 benchmark-tuning simulator and deterministic verification helpers
+src/boundarybench/gbi/           GBI v2/v3 claim and appendix verification helpers
+src/boundarybench/dcse/          synthetic DCSE protocol/ledger/receipt/certificate verification helpers
 artifacts/public_results/v0_1/   public-safe aggregate scored metrics and provenance
+artifacts/public_results/v0_2/   admission-aware benchmark tuning artifacts
+artifacts/public_results/gbi_v2/ reference-independent runtime admissibility artifacts
+artifacts/public_results/gbi_dcse_v3/ claim-level systems verification artifacts
+docs/betal/                      v0.2/v2/v3 reports, figure sources, and generated figures
+paper/                           public manuscript PDFs and companion source
 ```
 
 ## Limitations and next experiments

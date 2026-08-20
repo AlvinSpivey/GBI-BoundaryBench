@@ -1,0 +1,290 @@
+{
+  "checks": [
+    {
+      "monotone_non_increasing": false,
+      "note": "Sampling noise at this task count can produce small local violations. The reported range is the usable dynamic range of the dial for this target.",
+      "observed_range": [
+        0.015625,
+        0.7265625
+      ],
+      "rows": [
+        {
+          "dial": 0.0,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.7265625
+        },
+        {
+          "dial": 0.125,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.63671875
+        },
+        {
+          "dial": 0.25,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.546875
+        },
+        {
+          "dial": 0.375,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.3515625
+        },
+        {
+          "dial": 0.5,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.2421875
+        },
+        {
+          "dial": 0.625,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.203125
+        },
+        {
+          "dial": 0.75,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.08984375
+        },
+        {
+          "dial": 0.875,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.09375
+        },
+        {
+          "dial": 1.0,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.015625
+        }
+      ],
+      "schema_version": "boundarybench.betal_monotonicity_check.v1",
+      "strict_violations": 1,
+      "target_name": "tier_low"
+    },
+    {
+      "monotone_non_increasing": false,
+      "note": "Sampling noise at this task count can produce small local violations. The reported range is the usable dynamic range of the dial for this target.",
+      "observed_range": [
+        0.12109375,
+        0.8984375
+      ],
+      "rows": [
+        {
+          "dial": 0.0,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.8984375
+        },
+        {
+          "dial": 0.125,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.83984375
+        },
+        {
+          "dial": 0.25,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.76171875
+        },
+        {
+          "dial": 0.375,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.546875
+        },
+        {
+          "dial": 0.5,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.41796875
+        },
+        {
+          "dial": 0.625,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.43359375
+        },
+        {
+          "dial": 0.75,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.19140625
+        },
+        {
+          "dial": 0.875,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.14453125
+        },
+        {
+          "dial": 1.0,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.12109375
+        }
+      ],
+      "schema_version": "boundarybench.betal_monotonicity_check.v1",
+      "strict_violations": 1,
+      "target_name": "tier_mid"
+    },
+    {
+      "monotone_non_increasing": true,
+      "note": "Sampling noise at this task count can produce small local violations. The reported range is the usable dynamic range of the dial for this target.",
+      "observed_range": [
+        0.23828125,
+        0.94140625
+      ],
+      "rows": [
+        {
+          "dial": 0.0,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.94140625
+        },
+        {
+          "dial": 0.125,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.92578125
+        },
+        {
+          "dial": 0.25,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.91796875
+        },
+        {
+          "dial": 0.375,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.82421875
+        },
+        {
+          "dial": 0.5,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.71484375
+        },
+        {
+          "dial": 0.625,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.59765625
+        },
+        {
+          "dial": 0.75,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.44921875
+        },
+        {
+          "dial": 0.875,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.31640625
+        },
+        {
+          "dial": 1.0,
+          "rho_hat_adm": 1.0,
+          "rho_hat_task": 0.23828125
+        }
+      ],
+      "schema_version": "boundarybench.betal_monotonicity_check.v1",
+      "strict_violations": 0,
+      "target_name": "tier_high"
+    }
+  ],
+  "reachability": [
+    {
+      "attainable_gap_floor": 0.0,
+      "difficulty_level": "hard",
+      "observed_range_high": 0.726562,
+      "observed_range_low": 0.015625,
+      "reachable": true,
+      "rho_target_performance": 0.25,
+      "target_name": "tier_low"
+    },
+    {
+      "attainable_gap_floor": 0.0,
+      "difficulty_level": "medium",
+      "observed_range_high": 0.726562,
+      "observed_range_low": 0.015625,
+      "reachable": true,
+      "rho_target_performance": 0.5,
+      "target_name": "tier_low"
+    },
+    {
+      "attainable_gap_floor": 0.023438,
+      "difficulty_level": "easy",
+      "observed_range_high": 0.726562,
+      "observed_range_low": 0.015625,
+      "reachable": false,
+      "rho_target_performance": 0.75,
+      "target_name": "tier_low"
+    },
+    {
+      "attainable_gap_floor": 0.173438,
+      "difficulty_level": "trivial",
+      "observed_range_high": 0.726562,
+      "observed_range_low": 0.015625,
+      "reachable": false,
+      "rho_target_performance": 0.9,
+      "target_name": "tier_low"
+    },
+    {
+      "attainable_gap_floor": 0.0,
+      "difficulty_level": "hard",
+      "observed_range_high": 0.898438,
+      "observed_range_low": 0.121094,
+      "reachable": true,
+      "rho_target_performance": 0.25,
+      "target_name": "tier_mid"
+    },
+    {
+      "attainable_gap_floor": 0.0,
+      "difficulty_level": "medium",
+      "observed_range_high": 0.898438,
+      "observed_range_low": 0.121094,
+      "reachable": true,
+      "rho_target_performance": 0.5,
+      "target_name": "tier_mid"
+    },
+    {
+      "attainable_gap_floor": 0.0,
+      "difficulty_level": "easy",
+      "observed_range_high": 0.898438,
+      "observed_range_low": 0.121094,
+      "reachable": true,
+      "rho_target_performance": 0.75,
+      "target_name": "tier_mid"
+    },
+    {
+      "attainable_gap_floor": 0.001563,
+      "difficulty_level": "trivial",
+      "observed_range_high": 0.898438,
+      "observed_range_low": 0.121094,
+      "reachable": false,
+      "rho_target_performance": 0.9,
+      "target_name": "tier_mid"
+    },
+    {
+      "attainable_gap_floor": 0.0,
+      "difficulty_level": "hard",
+      "observed_range_high": 0.941406,
+      "observed_range_low": 0.238281,
+      "reachable": true,
+      "rho_target_performance": 0.25,
+      "target_name": "tier_high"
+    },
+    {
+      "attainable_gap_floor": 0.0,
+      "difficulty_level": "medium",
+      "observed_range_high": 0.941406,
+      "observed_range_low": 0.238281,
+      "reachable": true,
+      "rho_target_performance": 0.5,
+      "target_name": "tier_high"
+    },
+    {
+      "attainable_gap_floor": 0.0,
+      "difficulty_level": "easy",
+      "observed_range_high": 0.941406,
+      "observed_range_low": 0.238281,
+      "reachable": true,
+      "rho_target_performance": 0.75,
+      "target_name": "tier_high"
+    },
+    {
+      "attainable_gap_floor": 0.0,
+      "difficulty_level": "trivial",
+      "observed_range_high": 0.941406,
+      "observed_range_low": 0.238281,
+      "reachable": true,
+      "rho_target_performance": 0.9,
+      "target_name": "tier_high"
+    }
+  ],
+  "schema_version": "boundarybench.betal_monotonicity_report.v1",
+  "task_count": 256
+}

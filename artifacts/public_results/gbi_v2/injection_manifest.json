@@ -1,0 +1,32 @@
+{
+  "classes_not_producible_by_base_simulator": [
+    "terminology_bundle_unpinned",
+    "terminology_bundle_unsigned",
+    "validity_window_expired",
+    "validity_window_invalid"
+  ],
+  "disjointness_verified": true,
+  "injected_per_class": {
+    "identity_ambiguous": 12,
+    "identity_unresolvable": 12,
+    "provenance_signature_absent": 11,
+    "required_evidence_absent": 11,
+    "structured_field_fully_contaminated": 11,
+    "terminology_bundle_unpinned": 12,
+    "terminology_bundle_unsigned": 12,
+    "terminology_unresolvable": 11,
+    "validity_window_expired": 12,
+    "validity_window_invalid": 12
+  },
+  "injection_rate": 0.5,
+  "injection_version": "gbi-v2-contradiction-injection-v1",
+  "methodology_note": "Synthetic analogue of Appendix B.2's golden-standard retrospective chart injection. No clinical chart, cohort, or adjudication is involved.",
+  "population": {
+    "base_severe": 279,
+    "clean_left_alone": 117,
+    "injected_severe": 116,
+    "total": 512
+  },
+  "schema_version": "boundarybench.gbi_v2_injection_manifest.v1",
+  "seed": "gbi_v2_injection"
+}

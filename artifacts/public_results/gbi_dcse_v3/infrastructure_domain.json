@@ -1,0 +1,81 @@
+{
+  "action_distribution": {
+    "abstain": 4,
+    "analyst_review": 44,
+    "quarantine_record": 78,
+    "reject": 157,
+    "release_historical_only": 54,
+    "release_verified": 175
+  },
+  "admitted": 229,
+  "all_severe_classes_represented": true,
+  "atomicity_held_under_forced_bad_entry": true,
+  "authoritative_writes_permitted": true,
+  "clean_population": 175,
+  "false_conflict_adjudication_rate": 0.0,
+  "false_conflict_count": 0,
+  "false_conflict_denominator": 175,
+  "false_conflict_target_met": true,
+  "infrastructure_version": "dcse-infrastructure-domain-v3.0",
+  "injected_class_counts": {
+    "catalog_bundle_unpinned": 25,
+    "catalog_bundle_unsigned": 21,
+    "directive_version_unpinned": 29,
+    "entity_resolution_ambiguous": 27,
+    "handling_caveat_violation": 23,
+    "jurisdiction_unauthorized": 37,
+    "need_to_know_unsatisfied": 22,
+    "provenance_signature_absent": 26,
+    "source_reliability_unrated": 30,
+    "validity_window_invalid": 25
+  },
+  "ledger_non_equivocating": true,
+  "ledger_structurally_valid": true,
+  "population": 512,
+  "portability": {
+    "architecture_changed_for_new_domain": false,
+    "domain_neutral_module_count": 8,
+    "domain_neutral_modules_reused": [
+      "dcse.crypto",
+      "dcse.ledger",
+      "dcse.attestation",
+      "dcse.consensus",
+      "dcse.enclave",
+      "dcse.transaction",
+      "dcse.receipts",
+      "dcse.cone_certificate"
+    ],
+    "domain_specific_object_count": 4,
+    "domain_specific_objects": [
+      "InfrastructureWitness",
+      "required_action",
+      "GATE_PRECEDENCE",
+      "SEVERE_CLASSES"
+    ],
+    "semantics_changed_for_new_domain": true
+  },
+  "pre_construction_quarantine_keys": [
+    "AssetRecord/infra-00001",
+    "AssetRecord/infra-00003",
+    "AssetRecord/infra-00004",
+    "AssetRecord/infra-00005"
+  ],
+  "receipt_chain_valid": true,
+  "receipts_emitted": 105,
+  "refused": 283,
+  "schema_version": "boundarybench.dcse_infrastructure_domain.v1",
+  "scope": "Synthetic, non-real records. No actual asset, operator, location or telemetry value is represented. This tests architectural portability, not readiness for any operational infrastructure environment.",
+  "sensitivity_target_met": true,
+  "severe_contradiction_sensitivity": 1.0,
+  "severe_contradictions_missed": 0,
+  "severe_population": 265,
+  "systems_layer_reused_verbatim": {
+    "attestation_all_injections_fail_closed": true,
+    "consensus_all_invariants_hold": true,
+    "enclave_claim_supported": true
+  },
+  "table_1_column": "Government / mission systems, applied to sensitive infrastructure",
+  "table_1_portability_claim_supported": true,
+  "unrelated_records_unchanged": true,
+  "write_path_mode": "fast_path_tee_assisted"
+}

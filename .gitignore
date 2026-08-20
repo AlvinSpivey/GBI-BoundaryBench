@@ -1,0 +1,17 @@
+# Local/editor/build debris
+.DS_Store
+__MACOSX/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+# LaTeX build debris; source .tex and selected public figures remain tracked explicitly.
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.out

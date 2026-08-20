@@ -1,0 +1,204 @@
+{
+  "additional_claims_summary": {
+    "evaluated": 8,
+    "met": 8
+  },
+  "additional_manuscript_claims": [
+    {
+      "claim": "Section 12: no unsupported model proposal is silently promoted to an authoritative write",
+      "measure": "silent-promotion rate under adversarial targets",
+      "measured": {
+        "confident_hallucinator_by_reference": 0,
+        "confident_hallucinator_by_witness": 0,
+        "evidence_forger_by_reference": 0,
+        "evidence_forger_by_witness": 0
+      },
+      "met": true,
+      "status": "MEASURED_SYNTHETIC"
+    },
+    {
+      "claim": "Appendix B.3 Boundary 1: ambiguous identity halts regardless of similarity score",
+      "measure": "direct conformance probe at similarity 1.0",
+      "measured": true,
+      "met": true,
+      "status": "MEASURED"
+    },
+    {
+      "claim": "Appendix B.3 Boundary 2: unsigned or unpinned terminology triggers an administrative freeze",
+      "measure": "direct conformance probe",
+      "measured": true,
+      "met": true,
+      "status": "MEASURED"
+    },
+    {
+      "claim": "Section 9.2: localized quarantine preserves liveness for independent work",
+      "measure": "fraction of admissible work surviving dependency closure from record-scoped refusals, with mandated Boundary 2 administrative freezes reported separately",
+      "measured": {
+        "administrative_freezes": 24,
+        "coarse_family_scope_contrast": 0.0,
+        "declared_scope_including_mandated_freezes": 0.75,
+        "naive_shared_reference_scope_contrast": 0.75,
+        "record_scoped_refusals_only": 1.0
+      },
+      "met": true,
+      "status": "MEASURED_SYNTHETIC"
+    },
+    {
+      "claim": "Section 11 / repo limitations: selective risk is undefined at zero coverage",
+      "measure": "coverage and selective risk after format repair",
+      "measured": {
+        "competent_coverage": 0.875,
+        "competent_selective_risk": 0.5066964285714286,
+        "repaired_admissibility_rate": 0.46484375,
+        "repaired_coverage": 0.447265625,
+        "repaired_selective_risk": 1.0,
+        "v01_floor_admissibility_rate": 0.0
+      },
+      "met": true,
+      "status": "MEASURED_SYNTHETIC"
+    },
+    {
+      "claim": "Appendix B.1 Assertion 1: Boolean algebra over >= 2^16 randomized operations",
+      "measure": "law violations",
+      "measured": 0,
+      "met": true,
+      "status": "MEASURED"
+    },
+    {
+      "claim": "Appendix B.1 Assertion 2: evidence-box conditioning with lambda_min > 1e-6",
+      "measure": "worst lambda_min over corners and adversarial probes",
+      "measured": 0.0009570208925549886,
+      "met": true,
+      "status": "MEASURED"
+    },
+    {
+      "claim": "Appendix B.1 Assertion 3: cone Laplacian symmetry, PSD, basis-invariant energies",
+      "measure": "worst symmetry residual / min eigenvalue / rotation drift",
+      "measured": {
+        "min_eigenvalue": -2.6867397195928787e-16,
+        "rotation_drift": 1.1102230246251565e-15,
+        "symmetry_residual": 0.0
+      },
+      "met": true,
+      "status": "MEASURED"
+    }
+  ],
+  "benchmark_contract": "benchmark-contract-v0.1",
+  "clinical_data_used": false,
+  "component_versions": {
+    "assertions": "gbi-v2-appendix-b1-assertions-v1",
+    "external_validity": "gbi-v2-external-validity-v1",
+    "injection": "gbi-v2-contradiction-injection-v1",
+    "repair": "gbi-v2-format-repair-v1",
+    "scorecard": "gbi-v2-table3-scorecard-v1",
+    "simulator": "betal-gbi-simulator-v0.2",
+    "witness": "gbi-v2-witness-bundle-v2"
+  },
+  "confidence_intervals": "NOT_RUN",
+  "language_model_executed": false,
+  "operating_strictness": 0.6,
+  "out_of_scope_validation_items": [
+    {
+      "item": "B.1 Systems Validation - Attestation Verification",
+      "reason": "requires a staging TEE with injectable invalid/expired attestation claims"
+    },
+    {
+      "item": "B.1 Systems Validation - Consensus Fault Injector",
+      "reason": "requires a running BFT validator set with network-partition injection"
+    },
+    {
+      "item": "B.1 Systems Validation - Rollback Conformance",
+      "reason": "requires a live FHIR gateway accepting transaction bundles"
+    },
+    {
+      "item": "B.1 Clinical Validation - Retrospective Playback",
+      "reason": "requires a preregistered, powered retrospective or shadow-mode cohort with expert adjudication; explicitly future work in the manuscript"
+    },
+    {
+      "item": "Table 3 - Attestation Bootstrapping Time",
+      "reason": "requires a TEE/IAS handshake"
+    }
+  ],
+  "repeat_run_stability": "NOT_RUN",
+  "run_plan": "gbi-v2-scorecard-plan-v2.0.0",
+  "schema_version": "boundarybench.gbi_v2_table3_scorecard.v1",
+  "scorecard_version": "gbi-v2-table3-scorecard-v1",
+  "table_3": [
+    {
+      "measure": "Spectral Gap (lambda_1 - lambda_0) on L_C",
+      "measured": 0.9999999999999989,
+      "met": true,
+      "method": "eigendecomposition of the real cone Laplacian, all 8 agreement patterns",
+      "metric_group": "Mathematical",
+      "proposed_baseline": ">= 0.15",
+      "status": "MEASURED"
+    },
+    {
+      "measure": "Fisher Matrix Condition Number",
+      "measured": 9998.347229258337,
+      "met": true,
+      "method": "evidence-box corner sweep plus 512 adversarial near-boundary probes",
+      "metric_group": "Mathematical",
+      "proposed_baseline": "<= 1e+04",
+      "status": "MEASURED"
+    },
+    {
+      "measure": "End-to-End Latency (Enclave)",
+      "measured": 0.06628087721765041,
+      "met": true,
+      "method": "CPU-only p95 of the deterministic verification plus admission-gate path. No TEE is present, so this is an indicative lower bound on the enclave-resident checks of Section 9.3, not the enclave measurement Table 3 specifies.",
+      "metric_group": "Systems",
+      "proposed_baseline": "<= 150 ms",
+      "status": "PARTIAL_PROXY"
+    },
+    {
+      "measure": "Attestation Bootstrapping Time",
+      "measured": null,
+      "met": null,
+      "method": "Requires a TEE and an attestation service (SGX/IAS handshake). Not available in this environment; cannot be proxied without misrepresenting it.",
+      "metric_group": "Systems",
+      "proposed_baseline": "<= 2.5 s",
+      "status": "OUT_OF_SCOPE"
+    },
+    {
+      "measure": "Severe Contradiction Sensitivity",
+      "measured": 1.0,
+      "met": true,
+      "method": "Synthetic analogue of golden-standard chart injection: 116 injected severe contradictions across 10 classes, 4 of which the base generator cannot produce.",
+      "metric_group": "Clinical",
+      "proposed_baseline": "100%",
+      "status": "MEASURED_SYNTHETIC"
+    },
+    {
+      "measure": "False Conflict Adjudication Rate",
+      "measured": 0.0,
+      "met": true,
+      "method": "Refusal rate over the 99 records left clean by injection, disjoint from the injected population. Substitutes for a shadow-mode user-experience trial, which requires human adjudicators.",
+      "metric_group": "Clinical",
+      "proposed_baseline": "<= 4%",
+      "status": "MEASURED_SYNTHETIC"
+    }
+  ],
+  "table_3_summary": {
+    "measurable_in_this_environment": 5,
+    "out_of_scope": 1,
+    "targets_met": 5
+  },
+  "task_count": 512,
+  "v01_baseline_contrast": {
+    "accepted_records": 0,
+    "canonical_executions": 768,
+    "coverage": 0.0,
+    "false_conflict_adjudication_rate": 1.0,
+    "false_conflict_margin": 0.96,
+    "false_conflict_target": 0.04,
+    "false_conflict_target_met": false,
+    "quarantined": 768,
+    "selective_risk": null,
+    "sensitivity_caveat": "Vacuously satisfied. Every execution was refused, so every contradiction was necessarily caught. The measure carries no information at zero coverage.",
+    "sensitivity_target_met": true,
+    "severe_contradiction_sensitivity": 1.0,
+    "source": "artifacts/public_results/v0_1 (frozen)",
+    "verdict": "One Table 3 clinical target satisfied vacuously; the other missed by the maximum possible margin. This is the precise sense in which v0.1 is not a positive data-driven performance result for the substrate."
+  }
+}

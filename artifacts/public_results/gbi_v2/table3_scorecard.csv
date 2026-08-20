@@ -1,0 +1,7 @@
+metric_group,measure,proposed_baseline,measured,met,status
+Mathematical,Spectral Gap (lambda_1 - lambda_0) on L_C,>= 0.15,0.9999999999999989,True,MEASURED
+Mathematical,Fisher Matrix Condition Number,<= 1e+04,9998.347229258337,True,MEASURED
+Systems,End-to-End Latency (Enclave),<= 150 ms,0.06628087721765041,True,PARTIAL_PROXY
+Systems,Attestation Bootstrapping Time,<= 2.5 s,,,OUT_OF_SCOPE
+Clinical,Severe Contradiction Sensitivity,100%,1.0,True,MEASURED_SYNTHETIC
+Clinical,False Conflict Adjudication Rate,<= 4%,0.0,True,MEASURED_SYNTHETIC

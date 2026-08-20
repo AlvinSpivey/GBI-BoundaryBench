@@ -1,21 +1,33 @@
-# Research manuscript
+# Papers
 
-## Title
+## Original GBI/DCSE paper
 
-Logit-Boundary Geometric Belief Interfaces and Sparse Sheaf-Enclave Protocols: A Self-Contained Substrate for Secure Network Electronic Health Record (EHR) Interoperability
+**Title:** Logit-Boundary Geometric Belief Interfaces and Sparse Sheaf-Enclave Protocols: A Self-Contained Substrate for Secure Network Electronic Health Record (EHR) Interoperability
 
-## Authors
+**Authors:** Alvin Spivey and Yu Huang
 
-Alvin Spivey and Thomas Huang
+**Status:** public on arXiv as [arXiv:2608.10300v2](https://arxiv.org/abs/2608.10300).
 
-## Status
+This manuscript provides the mathematical and systems architecture underlying GBI/DCSE, including typed model-to-system evidence boundaries, the versioned runtime admissibility policy `P`, domain portability, pre-commit surgical quarantine and liveness, deterministic human-review surfaces, and the BoundaryBench v0.1 empirical admission-boundary evaluation.
 
-Submitted to arXiv; processing / permanent identifier pending.
+Files:
 
-## Relationship to BoundaryBench
+- [Repository PDF copy](GBI_DCSE_manuscript.pdf)
+- [Canonical arXiv page](https://arxiv.org/abs/2608.10300)
 
-The manuscript provides the mathematical and systems architecture underlying GBI/DCSE. GBI BoundaryBench v0.1 provides the companion frozen empirical admission-boundary evaluation: a concrete legacy-EHR transformation benchmark for testing whether model or agent proposals satisfy typed evidence, provenance, identity, terminology/version, dependency, and versioned enterprise-policy constraints before action.
+## Companion BeTaL/GBI paper
 
-This repository includes the submitted manuscript PDF only:
+**Title:** BeTaL-GBI: Dynamic Benchmark Tuning and Full-Stack Verification of Geometric Belief Interfaces
 
-- [`GBI_DCSE_manuscript.pdf`](GBI_DCSE_manuscript.pdf)
+**Authors:** Alvin Spivey and Yu Huang
+
+**Status:** manuscript prepared for arXiv submission.
+
+The companion paper adds benchmark-design and systems-verification evidence for BoundaryBench v0.2, GBI v2, and GBI-DCSE v3. It does not replace the original theoretical paper.
+
+Files:
+
+- [Companion PDF](GBI_DCSE_BeTaL_Companion.pdf)
+- [Companion TeX source](source/GBI_DCSE_BeTaL_Companion.tex)
+
+The companion paper reports deterministic public-safe verification artifacts only. It does not publish hidden held-out answer keys, trusted verifier packages, raw held-out model responses, or private research history.

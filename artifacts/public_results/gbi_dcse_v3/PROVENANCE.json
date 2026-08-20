@@ -1,0 +1,51 @@
+{
+  "benchmark_contract": "benchmark-contract-v0.1",
+  "builds_on": {
+    "v0_2_search": "artifacts/public_results/v0_2",
+    "v2_scorecard": "artifacts/public_results/gbi_v2"
+  },
+  "component_versions": {
+    "appendix_a_port": "gbi-appendix-a-port-v3.0",
+    "claim_register": "gbi-dcse-claim-register-v3.0",
+    "dcse_attestation": "dcse-attestation-v3.0",
+    "dcse_cone_certificate": "dcse-cone-certificate-v3.0",
+    "dcse_consensus": "dcse-consensus-v3.0",
+    "dcse_enclave": "dcse-enclave-v3.0",
+    "dcse_infrastructure_domain": "dcse-infrastructure-domain-v3.0",
+    "dcse_ledger": "dcse-ledger-v3.0",
+    "dcse_protocol_inventory": "dcse-protocol-inventory-v3.0",
+    "dcse_receipts": "dcse-receipts-v3.0",
+    "dcse_transaction": "dcse-transaction-v3.0",
+    "gbi_section_claims": "gbi-section-claims-v3.0"
+  },
+  "cryptography": {
+    "digest": "SHA-256",
+    "note": "Real signatures, so equivocation evidence is publicly verifiable.",
+    "signature_scheme": "Ed25519 via the cryptography package"
+  },
+  "execution_scope": {
+    "bft_cluster_present": false,
+    "fhir_server_present": false,
+    "hardware_root_of_trust_present": false,
+    "held_out_references_read": 0,
+    "language_models_executed": 0,
+    "provider_calls": 0,
+    "real_clinical_data_used": false,
+    "real_infrastructure_data_used": false,
+    "synthetic_data_only": true,
+    "tee_present": false,
+    "zero_knowledge_proof_system_present": false
+  },
+  "reproduce": [
+    "PYTHONPATH=src python3 scripts/run_betal_v0_2_search.py",
+    "PYTHONPATH=src python3 scripts/run_gbi_v2_scorecard.py",
+    "PYTHONPATH=src python3 scripts/run_gbi_dcse_v3_scorecard.py",
+    "PYTHONPATH=src python3 scripts/verify_gbi_dcse_v3_scorecard.py"
+  ],
+  "run_plan": "gbi-dcse-v3-evaluation-plan-v3.0.0",
+  "schema_version": "boundarybench.gbi_dcse_v3_provenance.v1",
+  "verifier": {
+    "modified_for_v3": false,
+    "source": "boundarybench.verification (v0.1 Programmatic Verification Engine)"
+  }
+}

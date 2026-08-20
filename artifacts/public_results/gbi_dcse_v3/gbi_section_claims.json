@@ -1,0 +1,375 @@
+{
+  "all_met": true,
+  "claims_met": 10,
+  "claims_tested": 10,
+  "claims_version": "gbi-section-claims-v3.0",
+  "results": {
+    "section_2_affine_equivalence": {
+      "categories_M": 6,
+      "definition": "2.1 exact logit equivalence; Theorem 2.1 affine reconstruction",
+      "dimension_D": 3,
+      "left_inverse_identity_residual": 7.188482081388644e-16,
+      "logit_residual_is_roundoff": true,
+      "published_order_of_magnitude": 1.49e-15,
+      "stimuli_evaluated": 32,
+      "theorem_2_1_holds_on_evaluated_set": true,
+      "w_b_full_column_rank": true,
+      "worst_logit_residual_l2": 2.2644195468014703e-15,
+      "worst_reconstruction_residual_l2": 1.3322676295501878e-15
+    },
+    "section_2_component_logits": {
+      "attributable_components": 25,
+      "component_norms": {
+        "attention_total": 45.246209007590366,
+        "mlp_total": 50.243969119330636,
+        "residual_stream": 10.787190029059833
+      },
+      "decomposition_is_exact": true,
+      "decomposition_residual_l2": 8.881784197001252e-15,
+      "layers": 12,
+      "section": "2.6 component logits"
+    },
+    "section_2_dynamical_category_switch": {
+      "category_switches": 2,
+      "entropy_floor_nats": 0.6,
+      "interpretation": "The decision boundary is crossed repeatedly while entropy never drops below the floor, so no confidence signal marks the crossing.",
+      "manuscript_status": "explicitly not implemented in the manuscript appendix",
+      "max_margin_after_settling": 0.478038268826381,
+      "min_entropy_nats_after_settling": 0.6653778437378056,
+      "section": "2.7 logit space as a non-autonomous dynamical system",
+      "settled_steps": 232,
+      "steps": 240,
+      "switch_occurs_under_sustained_high_entropy": true
+    },
+    "section_2_probe_visible_quotient": {
+      "control_is_visible": true,
+      "control_visible_direction_drift": 0.8491891924687207,
+      "definition": "2.2 probe-visible quotient; first isomorphism theorem",
+      "hidden_dimension": 8,
+      "kernel_dimension": 4,
+      "kernel_directions_are_probe_invisible": true,
+      "kernel_is_nontrivial": true,
+      "perturbations_tested": 12,
+      "quotient_dimension_equals_image_dimension": true,
+      "readout_rank": 4,
+      "worst_kernel_perturbation_logit_drift": 2.9613711778634e-12
+    },
+    "section_2_softmax_and_topk": {
+      "all_rows_agree": true,
+      "categories_zeroed_by_truncation": [
+        3,
+        4,
+        5
+      ],
+      "collapses_to_vertex": true,
+      "kl_full_vs_truncated_is_infinite": true,
+      "logits": [
+        4.0,
+        2.7,
+        1.4,
+        0.7,
+        -0.2,
+        -1.0
+      ],
+      "published_top3_tail_mass": 0.0417,
+      "rows": [
+        {
+          "entropy_agrees": "True",
+          "entropy_nats": 0.8852189892589747,
+          "max_probability": 0.7115300283838765,
+          "max_probability_agrees": true,
+          "published_entropy_nats": 0.885219,
+          "published_max_probability": 0.71153,
+          "tau": 1.0
+        },
+        {
+          "entropy_agrees": "True",
+          "entropy_nats": 0.2938428220855637,
+          "max_probability": 0.924709438186778,
+          "max_probability_agrees": true,
+          "published_entropy_nats": 0.293843,
+          "published_max_probability": 0.924709,
+          "tau": 0.5
+        },
+        {
+          "entropy_agrees": "True",
+          "entropy_nats": 0.011292778871943509,
+          "max_probability": 0.9984964953794109,
+          "max_probability_agrees": true,
+          "published_entropy_nats": 0.011293,
+          "published_max_probability": 0.998496,
+          "tau": 0.2
+        },
+        {
+          "entropy_agrees": "True",
+          "entropy_nats": 1.3794533904505824e-10,
+          "max_probability": 0.999999999994891,
+          "max_probability_agrees": true,
+          "published_entropy_nats": 0.0,
+          "published_max_probability": 1.0,
+          "tau": 0.05
+        }
+      ],
+      "section": "2.5 softmax dynamics and top-k loss",
+      "tail_mass_agrees": true,
+      "top3_tail_mass": 0.041707535968106724,
+      "vertex_collapse_max_probability": 1.0
+    },
+    "section_3_boolean_homomorphism": {
+      "algebra_elements": 64,
+      "atoms": [
+        "exact",
+        "equivalent",
+        "narrower",
+        "broader",
+        "conflict",
+        "unmapped"
+      ],
+      "bottom_maps_to_empty": true,
+      "complement_checks": 64,
+      "definition": "3.1 boundary algebra; 3.2 model-relative semantics",
+      "exhaustive": true,
+      "is_boolean_homomorphism": true,
+      "pair_checks": 4096,
+      "top_maps_to_universe": true,
+      "universe_size": 18,
+      "violation_count": 0,
+      "violations": [],
+      "world_time_facility_shape": [
+        3,
+        3,
+        2
+      ]
+    },
+    "section_4_probe_suite": {
+      "every_invariant_is_detectable": true,
+      "negative_probes": {
+        "fhir_capability_not_narrowed": {
+          "broken_invariants_detected": [
+            "fhir_capability_not_narrowed"
+          ],
+          "detected_only_the_intended_invariant": true,
+          "detected_the_intended_invariant": true,
+          "probe_failed": true
+        },
+        "identity_log_head_advances": {
+          "broken_invariants_detected": [
+            "identity_log_head_advances"
+          ],
+          "detected_only_the_intended_invariant": true,
+          "detected_the_intended_invariant": true,
+          "probe_failed": true
+        },
+        "policy_version_monotone": {
+          "broken_invariants_detected": [
+            "policy_version_monotone"
+          ],
+          "detected_only_the_intended_invariant": true,
+          "detected_the_intended_invariant": true,
+          "probe_failed": true
+        },
+        "terminology_version_monotone": {
+          "broken_invariants_detected": [
+            "terminology_version_monotone"
+          ],
+          "detected_only_the_intended_invariant": true,
+          "detected_the_intended_invariant": true,
+          "probe_failed": true
+        }
+      },
+      "positive_probe": {
+        "declared_invariants": [
+          "terminology_version_monotone",
+          "identity_log_head_advances",
+          "policy_version_monotone",
+          "fhir_capability_not_narrowed"
+        ],
+        "definition": "4.1 operational profinite probe",
+        "passed": true,
+        "states": 4,
+        "transitions": [
+          {
+            "broken_invariants": [],
+            "from": "s0",
+            "preserved": true,
+            "to": "s1"
+          },
+          {
+            "broken_invariants": [],
+            "from": "s1",
+            "preserved": true,
+            "to": "s2"
+          },
+          {
+            "broken_invariants": [],
+            "from": "s2",
+            "preserved": true,
+            "to": "s3"
+          }
+        ]
+      },
+      "positive_probe_passes": true,
+      "section": "4 condensed-mathematics motivation and operational probes",
+      "suite_is_non_vacuous": true
+    },
+    "section_6_2_dynamic_atom_registry": {
+      "all_alphas_inside_declared_box": true,
+      "all_alphas_strictly_positive": true,
+      "alpha_new_inside_declared_box": true,
+      "declared_evidence_box": {
+        "ceiling": 20.0,
+        "epsilon": 0.326472
+      },
+      "events": [
+        {
+          "categories": 6,
+          "event": "initial",
+          "fisher_min_eigenvalue": 0.12352282960982496,
+          "min_alpha": 2.0
+        },
+        {
+          "alpha_assigned": 0.5,
+          "alpha_is_strictly_positive": true,
+          "categories": 7,
+          "event": "atom_added:narrower_postcoordinated",
+          "fisher_min_eigenvalue": 0.13639610101129826,
+          "min_alpha": 0.5,
+          "parent_recorded": true,
+          "terminology_version_recorded": "2026-04-01"
+        },
+        {
+          "alpha_assigned": 0.5,
+          "alpha_is_strictly_positive": true,
+          "categories": 8,
+          "event": "atom_added:equivalent_with_qualifier",
+          "fisher_min_eigenvalue": 0.1486063521763245,
+          "min_alpha": 0.5,
+          "parent_recorded": true,
+          "terminology_version_recorded": "2026-05-01"
+        },
+        {
+          "alpha_assigned": 0.5,
+          "alpha_is_strictly_positive": true,
+          "categories": 9,
+          "event": "atom_added:conflict_severity_graded",
+          "fisher_min_eigenvalue": 0.1602060218503263,
+          "min_alpha": 0.5,
+          "parent_recorded": true,
+          "terminology_version_recorded": "2026-06-01"
+        }
+      ],
+      "every_addition_records_version_and_parent": true,
+      "final_category_count": 9,
+      "growth_is_auditable": true,
+      "min_fisher_eigenvalue_across_growth": 0.12352282960982496,
+      "no_singularity_during_growth": true,
+      "section": "6.2 evidence boxes and dynamic atom registries",
+      "zero_alpha_is_rejected": true
+    },
+    "section_8_boundary_3": {
+      "boundary": "B.3 Boundary 3 - chart distortion is advisory only",
+      "boundary_3_holds": true,
+      "high_distortion_clean_policy": {
+        "chart_flagged_for_review": true,
+        "decided_by": "declared_deterministic_policy",
+        "distortion_K": 20.0,
+        "policy_violations": [],
+        "quarantine": false,
+        "review_surface": {
+          "authoritative_evidence_present": true,
+          "candidate_value_present": true,
+          "model_confidence_number_present": false,
+          "policy_rule_present": true,
+          "provenance_present": true,
+          "required_action_present": true,
+          "schema_authority_present": true,
+          "source_freshness_present": true
+        }
+      },
+      "high_k_did_not_force_quarantine": true,
+      "k_tabular": 1.5,
+      "low_distortion_violating_policy": {
+        "chart_flagged_for_review": false,
+        "decided_by": "declared_deterministic_policy",
+        "distortion_K": 1.0714285714285714,
+        "policy_violations": [
+          "terminology_version_unsupported"
+        ],
+        "quarantine": true,
+        "review_surface": {
+          "authoritative_evidence_present": true,
+          "candidate_value_present": true,
+          "model_confidence_number_present": false,
+          "policy_rule_present": true,
+          "provenance_present": true,
+          "required_action_present": true,
+          "schema_authority_present": true,
+          "source_freshness_present": true
+        }
+      },
+      "policy_violation_quarantined_despite_low_k": true,
+      "review_surface_exposes_deterministic_reasons": true,
+      "review_surface_omits_confidence_number": true
+    },
+    "section_8_safety_checks": {
+      "all_four_checks_passed": true,
+      "certificate": {
+        "axis_eccentricity_H": 1.7016317340117195,
+        "jacobian_J": 1.028,
+        "outer_distortion_K_O": 1.9226608214731098,
+        "singular_values": [
+          1.254966,
+          1.110695,
+          0.737507
+        ]
+      },
+      "checks": {
+        "boundary_behavior": {
+          "implemented_in_appendix_a": false,
+          "observed_radius_range": [
+            0.7377462912472322,
+            1.25485260359571
+          ],
+          "passed": true,
+          "sampled_directions": 4096,
+          "singular_value_envelope": [
+            0.7375073523630687,
+            1.2549659148479608
+          ]
+        },
+        "inverse_residuals": {
+          "backward_residual": 2.494700034247868e-16,
+          "forward_residual": 2.4900490352848777e-16,
+          "implemented_in_appendix_a": false,
+          "passed": true,
+          "tolerance": 1.7016317340117195e-12
+        },
+        "positive_jacobian": {
+          "implemented_in_appendix_a": true,
+          "jacobian": 1.028,
+          "passed": true
+        },
+        "stratum_preservation": {
+          "implemented_in_appendix_a": false,
+          "passed": true,
+          "strata_checked": 7
+        }
+      },
+      "checks_added_beyond_appendix_a": 3,
+      "section": "8.1 higher-dimensional hyperellipsoid certificates"
+    }
+  },
+  "schema_version": "boundarybench.gbi_section_claims.v1",
+  "verdicts": {
+    "section_2_affine_equivalence": true,
+    "section_2_component_logits": true,
+    "section_2_dynamical_category_switch": true,
+    "section_2_probe_visible_quotient": true,
+    "section_2_softmax_and_topk": true,
+    "section_3_boolean_homomorphism": true,
+    "section_4_probe_suite": true,
+    "section_6_2_dynamic_atom_registry": true,
+    "section_8_boundary_3": true,
+    "section_8_safety_checks": true
+  }
+}

@@ -1,12 +1,15 @@
 cff-version: 1.2.0
-message: "If you use GBI BoundaryBench, cite this repository release."
-title: "GBI BoundaryBench"
-version: "0.1.0-rc1"
-date-released: "2026-08-07"
-abstract: "A synthetic research benchmark for legacy-EHR boundary validation with deterministic verification, abstention, evidence, and quarantine semantics."
+message: "If you use GBI BoundaryBench / GBI-DCSE, cite this repository and the associated arXiv paper."
+title: "GBI BoundaryBench / GBI-DCSE Research Program"
+version: "0.2.0"
+date-released: "2026-08-19"
+abstract: "A synthetic research benchmark and verification artifact for separating model or agent proposals from enterprise-admissible actions under typed evidence, provenance, versioned policy, and deterministic quarantine semantics."
 authors:
-  - name: "GBI BoundaryBench contributors"
-repository-code: "NOT_ASSIGNED"
+  - family-names: "Spivey"
+    given-names: "Alvin"
+  - family-names: "Huang"
+    given-names: "Yu"
+repository-code: "https://github.com/AlvinSpivey/GBI-BoundaryBench"
 license: "Apache-2.0"
 keywords:
   - synthetic health data
@@ -15,3 +18,18 @@ keywords:
   - FHIR
   - verification
   - abstention
+  - programmatic verification
+  - model evaluation
+references:
+  - type: article
+    title: "Logit-Boundary Geometric Belief Interfaces and Sparse Sheaf-Enclave Protocols: A Self-Contained Substrate for Secure Network Electronic Health Record (EHR) Interoperability"
+    authors:
+      - family-names: "Spivey"
+        given-names: "Alvin"
+      - family-names: "Huang"
+        given-names: "Yu"
+    year: 2026
+    identifiers:
+      - type: other
+        value: "arXiv:2608.10300"
+    url: "https://arxiv.org/abs/2608.10300"

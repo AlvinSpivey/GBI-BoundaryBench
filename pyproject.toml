@@ -4,10 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gbi-boundarybench-public-showcase"
-version = "0.1.0"
-description = "Public showcase for GBI BoundaryBench v0.1 programmatic verification architecture"
+version = "0.2.0"
+description = "Public showcase for the GBI BoundaryBench / GBI-DCSE research program"
 requires-python = ">=3.12"
 dependencies = []
+
+[project.optional-dependencies]
+betal = ["numpy>=1.26"]
+dcse = ["numpy>=1.26", "cryptography>=42"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -18,4 +22,7 @@ include = [
     "boundarybench.adapters*",
     "boundarybench.empirical*",
     "boundarybench.stage1*",
+    "boundarybench.dcse*",
+    "boundarybench.gbi*",
+    "boundarybench.betal*",
 ]

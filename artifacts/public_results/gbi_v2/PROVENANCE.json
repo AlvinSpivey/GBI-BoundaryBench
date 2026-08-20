@@ -1,0 +1,21 @@
+{
+  "benchmark_contract": "benchmark-contract-v0.1",
+  "execution_scope": {
+    "bft_cluster_present": false,
+    "clinical_data_used": false,
+    "fhir_gateway_present": false,
+    "held_out_references_read": 0,
+    "language_models_executed": 0,
+    "provider_calls": 0,
+    "synthetic_data_only": true,
+    "tee_present": false
+  },
+  "reference_action_usage": "The held-out reference action is never an input to the admission gate. It is used only afterwards, as an independent yardstick for the gate's faithfulness.",
+  "reproduce": "PYTHONPATH=src python3 scripts/run_gbi_v2_scorecard.py",
+  "run_plan": "gbi-v2-scorecard-plan-v2.0.0",
+  "schema_version": "boundarybench.gbi_v2_provenance.v1",
+  "verifier": {
+    "modified_for_v2": false,
+    "source": "boundarybench.verification (v0.1 PVE)"
+  }
+}

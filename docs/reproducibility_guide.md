@@ -8,15 +8,48 @@ The public aggregate result files are under:
 
 ```text
 artifacts/public_results/v0_1/
+artifacts/public_results/v0_2/
+artifacts/public_results/gbi_v2/
+artifacts/public_results/gbi_dcse_v3/
 ```
 
 Validate the published result files with:
 
 ```bash
 (cd artifacts/public_results/v0_1 && shasum -a 256 -c PUBLIC_ARTIFACT_SHA256SUMS)
+(cd artifacts/public_results/v0_2 && shasum -a 256 -c SHA256SUMS)
+(cd artifacts/public_results/gbi_v2 && shasum -a 256 -c SHA256SUMS)
+(cd artifacts/public_results/gbi_dcse_v3 && shasum -a 256 -c SHA256SUMS)
 ```
 
-The public result files contain aggregate metrics, per-mode metrics, status distributions, task-family/slice metrics, risk-coverage plot data, and public provenance. They do not contain raw held-out model responses or trusted held-out references.
+The public result files contain aggregate metrics, per-mode metrics, status distributions, task-family/slice metrics, risk-coverage plot data, claim registers, scorecards, public provenance, and checksums. They do not contain raw held-out model responses or trusted held-out references.
+
+## Deterministic v0.2/v2/v3 checks
+
+The newer public artifacts do not require model-provider API keys. They can be regenerated and verified with:
+
+```bash
+PYTHONPATH=src python3 scripts/run_betal_v0_2_search.py
+PYTHONPATH=src python3 scripts/verify_betal_v0_2_artifacts.py
+
+PYTHONPATH=src python3 scripts/run_gbi_v2_scorecard.py
+PYTHONPATH=src python3 scripts/verify_gbi_v2_scorecard.py
+
+PYTHONPATH=src python3 scripts/run_gbi_dcse_v3_scorecard.py
+PYTHONPATH=src python3 scripts/verify_gbi_dcse_v3_scorecard.py
+```
+
+Expected verifier totals:
+
+- BoundaryBench v0.2: `319` checks, `0` failures;
+- GBI v2: `72` checks, `0` failures;
+- GBI-DCSE v3: `148` checks, `0` failures.
+
+Publication status:
+
+- `model_execution: NOT RUN during publication`;
+- `v0.1 empirical model artifacts: UNCHANGED`;
+- v0.2/v2/v3 verification is deterministic artifact checking, not new LLM inference.
 
 ## Private research-chain identifiers
 
@@ -49,3 +82,5 @@ The full benchmark execution/scoring package includes hidden held-out references
 ## Result summary
 
 The public aggregate files record one frozen v0.1 run of `Qwen/Qwen3-4B-Instruct-2507` at revision `cdbee75f17c01a7cc42f958dc650907174af0554`: 768 completed canonical held-out executions, zero accepted outputs, 369 safe parse rejects, 399 safe schema rejects, 768 quarantines, coverage 0.0, invalid-output rate 1.0, and selective risk undefined at zero coverage.
+
+The v0.2/v2/v3 summaries are in [`application/GBI_V0_2_V2_V3_SUMMARY.md`](application/GBI_V0_2_V2_V3_SUMMARY.md) and [`RESEARCH_PROGRAM.md`](RESEARCH_PROGRAM.md).

@@ -1,0 +1,357 @@
+{
+  "attestation": {
+    "all_injections_fail_closed": true,
+    "attestation_bound_database_keys_claimed": false,
+    "attestation_version": "dcse-attestation-v3.0",
+    "baseline_accepted": true,
+    "baseline_verdict": {
+      "attestation_accepted": true,
+      "checks": {
+        "measurement_in_allowlist": true,
+        "nonce_matches_challenge": true,
+        "quote_not_expired": true,
+        "signature_valid": true,
+        "signer_not_revoked": true,
+        "tcb_version_at_or_above_minimum": true
+      },
+      "failed_checks": [],
+      "governed_write_path": "permitted"
+    },
+    "declared_check_order": [
+      "signature_valid",
+      "nonce_matches_challenge",
+      "quote_not_expired",
+      "measurement_in_allowlist",
+      "signer_not_revoked",
+      "tcb_version_at_or_above_minimum"
+    ],
+    "every_case_denied_the_write_path": true,
+    "hardware_root_of_trust_present": false,
+    "injection_cases": {
+      "downgraded_tcb_version": {
+        "attestation_accepted": false,
+        "checks": {
+          "measurement_in_allowlist": true,
+          "nonce_matches_challenge": true,
+          "quote_not_expired": true,
+          "signature_valid": true,
+          "signer_not_revoked": true,
+          "tcb_version_at_or_above_minimum": false
+        },
+        "failed_checks": [
+          "tcb_version_at_or_above_minimum"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "expired_quote": {
+        "attestation_accepted": false,
+        "checks": {
+          "nonce_matches_challenge": true,
+          "quote_not_expired": false,
+          "signature_valid": true
+        },
+        "failed_checks": [
+          "quote_not_expired"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "invalid_signature": {
+        "attestation_accepted": false,
+        "checks": {
+          "signature_valid": false
+        },
+        "failed_checks": [
+          "signature_valid"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "modified_measurement": {
+        "attestation_accepted": false,
+        "checks": {
+          "signature_valid": false
+        },
+        "failed_checks": [
+          "signature_valid"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "replayed_nonce": {
+        "attestation_accepted": false,
+        "checks": {
+          "nonce_matches_challenge": false,
+          "signature_valid": true
+        },
+        "failed_checks": [
+          "nonce_matches_challenge"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "revoked_platform_key": {
+        "attestation_accepted": false,
+        "checks": {
+          "measurement_in_allowlist": true,
+          "nonce_matches_challenge": true,
+          "quote_not_expired": true,
+          "signature_valid": true,
+          "signer_not_revoked": false
+        },
+        "failed_checks": [
+          "signer_not_revoked"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "unlisted_measurement_correctly_signed": {
+        "attestation_accepted": false,
+        "checks": {
+          "measurement_in_allowlist": false,
+          "nonce_matches_challenge": true,
+          "quote_not_expired": true,
+          "signature_valid": true
+        },
+        "failed_checks": [
+          "measurement_in_allowlist"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      }
+    },
+    "injection_cases_run": 7,
+    "injection_classes_declared": [
+      "invalid_signature",
+      "expired_quote",
+      "modified_measurement",
+      "replayed_nonce",
+      "revoked_platform_key",
+      "downgraded_tcb_version"
+    ],
+    "latency_scope": "Software verification path only. Excludes hardware quote generation and the attestation-service round trip, which dominate a real deployment. Reported as a proxy, not as the Table 3 TEE/IAS handshake measurement.",
+    "schema_version": "boundarybench.dcse_attestation_suite.v1",
+    "table_3_attestation_target_seconds": 2.5,
+    "verification_latency_ms": {
+      "max": 0.6684160325676203,
+      "median": 0.3387089818716049,
+      "p95": 0.35512493923306465,
+      "samples": 2000
+    }
+  },
+  "consensus": {
+    "all_invariants_hold": true,
+    "analysis_method": "exhaustive enumeration of correct-replica splits, not sampling",
+    "below_threshold_halts": {
+      "all_halt_with_correct_reason": true,
+      "configurations": 8
+    },
+    "bound_is_tight": {
+      "all_violable_at_f_plus_1": true,
+      "configurations": 4,
+      "example": {
+        "authoritative_writes_permitted": false,
+        "byzantine": 2,
+        "crashed": 0,
+        "example_unsafe_split": {
+          "votes_for_v1": 3,
+          "votes_for_v2": 3
+        },
+        "f_declared": 1,
+        "halt_reason": "safety_invariant_at_risk",
+        "liveness_holds": false,
+        "liveness_votes_available": 2,
+        "n": 4,
+        "partitioned": 0,
+        "quorum_2f_plus_1": 3,
+        "reachable_correct_replicas": 2,
+        "required_replicas_3f_plus_1": 4,
+        "safety_holds": false,
+        "threshold_met": true,
+        "unsafe_split_count": 1
+      }
+    },
+    "configurations_analysed": 62,
+    "consensus_version": "dcse-consensus-v3.0",
+    "crash_faults": {
+      "configurations": 18,
+      "halts_beyond_f": true,
+      "progress_up_to_f": true
+    },
+    "network_partition": {
+      "configurations": 18,
+      "halts_beyond_f": true,
+      "progress_up_to_f": true
+    },
+    "never_writes_when_halted": true,
+    "protocol": "classical PBFT-style commit, quorum 2f+1 of n >= 3f+1",
+    "safety_within_tolerance": {
+      "all_safe": true,
+      "configurations": 14
+    },
+    "schema_version": "boundarybench.dcse_consensus_suite.v1",
+    "scope": "An analytical model of the quorum condition, exhaustive over the model's state space. It is not a running BFT cluster, contains no network stack, and makes no latency or throughput claim."
+  },
+  "rollback_conformance": {
+    "atomicity_and_liveness_both_hold": true,
+    "audit_trail": [
+      {
+        "action": "transaction_committed",
+        "bundle": {
+          "entries": [
+            "Patient/1002",
+            "Condition/2002"
+          ],
+          "entry_count": 2,
+          "type": "transaction"
+        },
+        "kind": "AuditEvent",
+        "outcome": "0",
+        "store_digest_after": "43f8d55c49b17fcaf1983d365f47c4cd37e86fee777d62cfe4a6435e843b2aa7",
+        "store_digest_before": "3507b25776e9a165fd3632ed4415422e7eba2a3b2229a5926696bdd97ebdcf5a"
+      },
+      {
+        "action": "transaction_committed",
+        "bundle": {
+          "entries": [
+            "Patient/1001",
+            "Condition/2001",
+            "Observation/4001"
+          ],
+          "entry_count": 3,
+          "type": "transaction"
+        },
+        "kind": "AuditEvent",
+        "outcome": "0",
+        "store_digest_after": "31b75d3de9a86b70a2e5db889ed68636acec69ef24587d101be9baa9d64146b1",
+        "store_digest_before": "43f8d55c49b17fcaf1983d365f47c4cd37e86fee777d62cfe4a6435e843b2aa7"
+      },
+      {
+        "action": "transaction_rejected",
+        "bundle": {
+          "entries": [
+            "Patient/1003",
+            "Condition/2003",
+            "MedicationRequest/3003",
+            "Observation/4003"
+          ],
+          "entry_count": 4,
+          "type": "transaction"
+        },
+        "kind": "AuditEvent",
+        "outcome": "4",
+        "problems": [
+          {
+            "entry": "MedicationRequest/3003",
+            "reason": "medication_request_status_invalid"
+          }
+        ],
+        "store_digest_after": "31b75d3de9a86b70a2e5db889ed68636acec69ef24587d101be9baa9d64146b1",
+        "store_digest_before": "31b75d3de9a86b70a2e5db889ed68636acec69ef24587d101be9baa9d64146b1"
+      }
+    ],
+    "audit_trail_entries": 3,
+    "baseline_store_digest": "3507b25776e9a165fd3632ed4415422e7eba2a3b2229a5926696bdd97ebdcf5a",
+    "forced_atomic_submission": {
+      "atomic": true,
+      "audit_event_recorded": true,
+      "committed": false,
+      "operation_outcome": {
+        "issue": [
+          {
+            "code": "business-rule",
+            "diagnostics": "Transaction rejected atomically; no resource was created or updated.",
+            "expression": [
+              "MedicationRequest/3003"
+            ],
+            "severity": "error"
+          }
+        ],
+        "resourceType": "OperationOutcome"
+      },
+      "problems": [
+        {
+          "entry": "MedicationRequest/3003",
+          "reason": "medication_request_status_invalid"
+        }
+      ],
+      "store_state_identical": true,
+      "store_unchanged": true
+    },
+    "held_back_work_not_silently_dropped": true,
+    "independent_work_progressed": true,
+    "no_partial_commit_from_rejected_bundle": true,
+    "operation_outcome_code_is_business_rule": true,
+    "operation_outcome_severity_is_error": true,
+    "pre_construction_quarantine": {
+      "held_back_keys": [
+        "Patient/1001",
+        "Condition/2001",
+        "Observation/4001"
+      ],
+      "primary_transaction": {
+        "entries": [
+          "Patient/1002",
+          "Condition/2002"
+        ],
+        "entry_count": 2,
+        "type": "transaction"
+      },
+      "quarantine_applied_before_construction": true,
+      "quarantined_keys": [
+        "MedicationRequest/3001"
+      ],
+      "separately_scoped_transaction": {
+        "entries": [
+          "Patient/1001",
+          "Condition/2001",
+          "Observation/4001"
+        ],
+        "entry_count": 3,
+        "type": "transaction"
+      }
+    },
+    "primary_transaction_result": {
+      "atomic": true,
+      "audit_event_recorded": true,
+      "committed": true,
+      "committed_keys": [
+        "Patient/1002",
+        "Condition/2002"
+      ],
+      "operation_outcome": {
+        "issue": [
+          {
+            "code": "informational",
+            "diagnostics": "Transaction committed.",
+            "expression": [],
+            "severity": "information"
+          }
+        ],
+        "resourceType": "OperationOutcome"
+      },
+      "problems": []
+    },
+    "rollback_conformance_holds": true,
+    "schema_version": "boundarybench.dcse_rollback_conformance.v1",
+    "scope": "A conforming in-process gateway model, not a production FHIR server. It exercises the atomicity contract and the pre-construction quarantine rule; it does not certify any vendor's server.",
+    "separately_scoped_result": {
+      "atomic": true,
+      "audit_event_recorded": true,
+      "committed": true,
+      "committed_keys": [
+        "Patient/1001",
+        "Condition/2001",
+        "Observation/4001"
+      ],
+      "operation_outcome": {
+        "issue": [
+          {
+            "code": "informational",
+            "diagnostics": "Transaction committed.",
+            "expression": [],
+            "severity": "information"
+          }
+        ],
+        "resourceType": "OperationOutcome"
+      },
+      "problems": []
+    },
+    "transaction_version": "dcse-transaction-v3.0",
+    "unrelated_resources_unchanged": true
+  }
+}

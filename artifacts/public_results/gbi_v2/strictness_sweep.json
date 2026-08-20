@@ -1,0 +1,772 @@
+{
+  "policies": {
+    "complete": {
+      "operating_point": {
+        "qualifying": 7,
+        "qualifying_strictness_values": [
+          0.0,
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6
+        ],
+        "rule": "largest strictness meeting both Table 3 clinical targets",
+        "selected": 0.6
+      },
+      "rows": [
+        {
+          "both_targets_met": true,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.0,
+          "thresholds": {
+            "evidence_completeness_floor": 0.2,
+            "identity_mismatch_tolerance": 2,
+            "identity_score_floor": 0.0
+          }
+        },
+        {
+          "both_targets_met": true,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.1,
+          "thresholds": {
+            "evidence_completeness_floor": 0.28,
+            "identity_mismatch_tolerance": 2,
+            "identity_score_floor": 0.09
+          }
+        },
+        {
+          "both_targets_met": true,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.2,
+          "thresholds": {
+            "evidence_completeness_floor": 0.36,
+            "identity_mismatch_tolerance": 2,
+            "identity_score_floor": 0.18
+          }
+        },
+        {
+          "both_targets_met": true,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.3,
+          "thresholds": {
+            "evidence_completeness_floor": 0.44,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.27
+          }
+        },
+        {
+          "both_targets_met": true,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.4,
+          "thresholds": {
+            "evidence_completeness_floor": 0.52,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.36
+          }
+        },
+        {
+          "both_targets_met": true,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.5,
+          "thresholds": {
+            "evidence_completeness_floor": 0.6,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.45
+          }
+        },
+        {
+          "both_targets_met": true,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.6,
+          "thresholds": {
+            "evidence_completeness_floor": 0.68,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.54
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.18181818181818182,
+          "false_conflict_adjudication_rate_broad": 0.20512820512820512,
+          "false_conflict_count": 18,
+          "false_conflict_count_broad": 24,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.7,
+          "thresholds": {
+            "evidence_completeness_floor": 0.76,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.63
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.3434343434343434,
+          "false_conflict_adjudication_rate_broad": 0.358974358974359,
+          "false_conflict_count": 34,
+          "false_conflict_count_broad": 42,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.8,
+          "thresholds": {
+            "evidence_completeness_floor": 0.84,
+            "identity_mismatch_tolerance": 0,
+            "identity_score_floor": 0.72
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.5858585858585859,
+          "false_conflict_adjudication_rate_broad": 0.5982905982905983,
+          "false_conflict_count": 58,
+          "false_conflict_count_broad": 70,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.9,
+          "thresholds": {
+            "evidence_completeness_floor": 0.92,
+            "identity_mismatch_tolerance": 0,
+            "identity_score_floor": 0.81
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.7878787878787878,
+          "false_conflict_adjudication_rate_broad": 0.8034188034188035,
+          "false_conflict_count": 78,
+          "false_conflict_count_broad": 94,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 1.0,
+          "thresholds": {
+            "evidence_completeness_floor": 1.0,
+            "identity_mismatch_tolerance": 0,
+            "identity_score_floor": 0.9
+          }
+        }
+      ]
+    },
+    "incomplete_ablation": {
+      "operating_point": {
+        "qualifying": 0,
+        "rule": "largest strictness meeting both targets",
+        "selected": null
+      },
+      "rows": [
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.8017241379310345,
+          "severe_contradictions_missed": 23,
+          "strictness": 0.0,
+          "thresholds": {
+            "evidence_completeness_floor": 0.2,
+            "identity_mismatch_tolerance": 2,
+            "identity_score_floor": 0.0
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.8017241379310345,
+          "severe_contradictions_missed": 23,
+          "strictness": 0.1,
+          "thresholds": {
+            "evidence_completeness_floor": 0.28,
+            "identity_mismatch_tolerance": 2,
+            "identity_score_floor": 0.09
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.8017241379310345,
+          "severe_contradictions_missed": 23,
+          "strictness": 0.2,
+          "thresholds": {
+            "evidence_completeness_floor": 0.36,
+            "identity_mismatch_tolerance": 2,
+            "identity_score_floor": 0.18
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.8017241379310345,
+          "severe_contradictions_missed": 23,
+          "strictness": 0.3,
+          "thresholds": {
+            "evidence_completeness_floor": 0.44,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.27
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.8017241379310345,
+          "severe_contradictions_missed": 23,
+          "strictness": 0.4,
+          "thresholds": {
+            "evidence_completeness_floor": 0.52,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.36
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.8017241379310345,
+          "severe_contradictions_missed": 23,
+          "strictness": 0.5,
+          "thresholds": {
+            "evidence_completeness_floor": 0.6,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.45
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.8017241379310345,
+          "severe_contradictions_missed": 23,
+          "strictness": 0.6,
+          "thresholds": {
+            "evidence_completeness_floor": 0.68,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.54
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.18181818181818182,
+          "false_conflict_adjudication_rate_broad": 0.20512820512820512,
+          "false_conflict_count": 18,
+          "false_conflict_count_broad": 24,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.8448275862068966,
+          "severe_contradictions_missed": 18,
+          "strictness": 0.7,
+          "thresholds": {
+            "evidence_completeness_floor": 0.76,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.63
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.3434343434343434,
+          "false_conflict_adjudication_rate_broad": 0.358974358974359,
+          "false_conflict_count": 34,
+          "false_conflict_count_broad": 42,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.8879310344827587,
+          "severe_contradictions_missed": 13,
+          "strictness": 0.8,
+          "thresholds": {
+            "evidence_completeness_floor": 0.84,
+            "identity_mismatch_tolerance": 0,
+            "identity_score_floor": 0.72
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.5858585858585859,
+          "false_conflict_adjudication_rate_broad": 0.5982905982905983,
+          "false_conflict_count": 58,
+          "false_conflict_count_broad": 70,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.9310344827586207,
+          "severe_contradictions_missed": 8,
+          "strictness": 0.9,
+          "thresholds": {
+            "evidence_completeness_floor": 0.92,
+            "identity_mismatch_tolerance": 0,
+            "identity_score_floor": 0.81
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.7878787878787878,
+          "false_conflict_adjudication_rate_broad": 0.8034188034188035,
+          "false_conflict_count": 78,
+          "false_conflict_count_broad": 94,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.9655172413793104,
+          "severe_contradictions_missed": 4,
+          "strictness": 1.0,
+          "thresholds": {
+            "evidence_completeness_floor": 1.0,
+            "identity_mismatch_tolerance": 0,
+            "identity_score_floor": 0.9
+          }
+        }
+      ]
+    },
+    "score_only_identity_ablation": {
+      "operating_point": {
+        "qualifying": 0,
+        "rule": "largest strictness meeting both targets",
+        "selected": null
+      },
+      "rows": [
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.896551724137931,
+          "severe_contradictions_missed": 12,
+          "strictness": 0.0,
+          "thresholds": {
+            "evidence_completeness_floor": 0.2,
+            "identity_mismatch_tolerance": 2,
+            "identity_score_floor": 0.0
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.896551724137931,
+          "severe_contradictions_missed": 12,
+          "strictness": 0.1,
+          "thresholds": {
+            "evidence_completeness_floor": 0.28,
+            "identity_mismatch_tolerance": 2,
+            "identity_score_floor": 0.09
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.896551724137931,
+          "severe_contradictions_missed": 12,
+          "strictness": 0.2,
+          "thresholds": {
+            "evidence_completeness_floor": 0.36,
+            "identity_mismatch_tolerance": 2,
+            "identity_score_floor": 0.18
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.896551724137931,
+          "severe_contradictions_missed": 12,
+          "strictness": 0.3,
+          "thresholds": {
+            "evidence_completeness_floor": 0.44,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.27
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.896551724137931,
+          "severe_contradictions_missed": 12,
+          "strictness": 0.4,
+          "thresholds": {
+            "evidence_completeness_floor": 0.52,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.36
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.896551724137931,
+          "severe_contradictions_missed": 12,
+          "strictness": 0.5,
+          "thresholds": {
+            "evidence_completeness_floor": 0.6,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.45
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.0,
+          "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+          "false_conflict_count": 0,
+          "false_conflict_count_broad": 5,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": true,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.896551724137931,
+          "severe_contradictions_missed": 12,
+          "strictness": 0.6,
+          "thresholds": {
+            "evidence_completeness_floor": 0.68,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.54
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.18181818181818182,
+          "false_conflict_adjudication_rate_broad": 0.20512820512820512,
+          "false_conflict_count": 18,
+          "false_conflict_count_broad": 24,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": false,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 0.896551724137931,
+          "severe_contradictions_missed": 12,
+          "strictness": 0.7,
+          "thresholds": {
+            "evidence_completeness_floor": 0.76,
+            "identity_mismatch_tolerance": 1,
+            "identity_score_floor": 0.63
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.3434343434343434,
+          "false_conflict_adjudication_rate_broad": 0.358974358974359,
+          "false_conflict_count": 34,
+          "false_conflict_count_broad": 42,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.8,
+          "thresholds": {
+            "evidence_completeness_floor": 0.84,
+            "identity_mismatch_tolerance": 0,
+            "identity_score_floor": 0.72
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.5858585858585859,
+          "false_conflict_adjudication_rate_broad": 0.5982905982905983,
+          "false_conflict_count": 58,
+          "false_conflict_count_broad": 70,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 0.9,
+          "thresholds": {
+            "evidence_completeness_floor": 0.92,
+            "identity_mismatch_tolerance": 0,
+            "identity_score_floor": 0.81
+          }
+        },
+        {
+          "both_targets_met": false,
+          "false_conflict_adjudication_rate": 0.7878787878787878,
+          "false_conflict_adjudication_rate_broad": 0.8034188034188035,
+          "false_conflict_count": 78,
+          "false_conflict_count_broad": 94,
+          "false_conflict_denominator": 99,
+          "false_conflict_denominator_broad": 117,
+          "false_conflict_target_met": false,
+          "false_conflict_target_met_broad": false,
+          "qualified_records_excluded_from_narrow": 18,
+          "sensitivity_target_met": true,
+          "severe_contradiction_denominator": 116,
+          "severe_contradiction_sensitivity": 1.0,
+          "severe_contradictions_missed": 0,
+          "strictness": 1.0,
+          "thresholds": {
+            "evidence_completeness_floor": 1.0,
+            "identity_mismatch_tolerance": 0,
+            "identity_score_floor": 0.9
+          }
+        }
+      ]
+    }
+  },
+  "schema_version": "boundarybench.gbi_v2_strictness_sweep.v1",
+  "selection_rule_declared_in_advance": "largest strictness meeting both Table 3 clinical targets",
+  "targets": {
+    "false_conflict_adjudication_rate": 0.04,
+    "severe_contradiction_sensitivity": 1.0
+  }
+}

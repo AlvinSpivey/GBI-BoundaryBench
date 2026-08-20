@@ -1,0 +1,778 @@
+{
+  "probe_summary": {
+    "conclusion": "The admissibility rate is invariant across the probed dial, so no point in V can raise it. rho_hat_task is undefined at every point and the BeTaL gap cannot be computed. The correct response is to repair the output-format boundary, not to tune difficulty.",
+    "dials_probed": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "distinct_rho_hat_adm_values": [
+      0.0
+    ],
+    "rho_hat_adm_invariant_across_V": true
+  },
+  "purpose": "Demonstrate mechanically that BeTaL's gap signal is undefined, not merely large, against a target pinned at the admissibility floor.",
+  "runs": [
+    {
+      "admissibility_probe": [
+        {
+          "config_sha256": "79f14ca97c040415948c3f74e50a8212eafad5214a800ce821361adf95f8a835",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.0,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "c2817d57c1c7e2b45486466f4567f6f51d93a578264d27493d0ac13eb1633353",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.25,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "7ec8657a7f7494adc36da5b4af41fb57930c4ff75d450ecd2ceac1a7d4751749",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.5,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "db77a530a1d39efe9e0c600ec6cb102aae8ec1abbdc5cfc50dbd23b176ed5fb2",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.75,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "99c3d9b97d27a7c8a9534dd578aa2e25e782df4af0b302bcf21e529cd215f0ba",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 1.0,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        }
+      ],
+      "best_configuration": null,
+      "best_gap": null,
+      "best_iteration": null,
+      "designer_kind": "feedback_coordinate",
+      "designer_name": "feedback_coordinate_designer",
+      "difficulty_level": "medium",
+      "evidence_mode": "output_only",
+      "holdout_evaluation": null,
+      "holdout_gap": null,
+      "iteration_count": 1,
+      "iterations": [
+        {
+          "configuration": {
+            "config_sha256": "7ec8657a7f7494adc36da5b4af41fb57930c4ff75d450ecd2ceac1a7d4751749",
+            "origin": "feedback_coordinate_designer",
+            "projection_notes": [],
+            "space_version": "betal-gbi-parameter-space-v0.2",
+            "values": {
+              "code_system_version_validation": 0.5,
+              "distractor_actions": 2,
+              "evidence_sufficiency": 5,
+              "field_anomaly_bleed": 0.25,
+              "mapping_arity": 3,
+              "orphan_rate": 0.25,
+              "patient_identity_normalization": 0.5,
+              "policy_conflict_depth": 2,
+              "temporal_ambiguity": 0.5
+            }
+          },
+          "designer_note": "iter1: phase1 open at dial=0.500 from 1-rho prior",
+          "evaluation": {
+            "abstention_count": 0,
+            "admitted_count": 0,
+            "coverage": 0.0,
+            "declared_emission_failure_modes": {
+              "safe_parse_reject": 123,
+              "safe_schema_reject": 133
+            },
+            "evidence_mode": "output_only",
+            "false_acceptance_count": 0,
+            "false_rejection_count": 0,
+            "instantiation_sha256": "b19f423bf1f5069eab81e329fb06e8152743d41bfcdc0ea36e9c38eb6165fe07",
+            "invalid_output_rate": 1.0,
+            "metrics_version": "betal-gbi-metrics-v0.2",
+            "per_family": {
+              "code_system_version_validation": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.598896,
+                "reference_action_distribution": {
+                  "admit": 16,
+                  "admit_historical_only": 8,
+                  "reject": 8
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "evidence_sufficiency": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.531701,
+                "reference_action_distribution": {
+                  "abstain": 32
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "field_anomaly_bleed": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.600661,
+                "reference_action_distribution": {
+                  "admit": 17,
+                  "expert_review": 5,
+                  "reject": 10
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "orphan_duplicate_detection": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.592762,
+                "reference_action_distribution": {
+                  "admit": 6,
+                  "expert_review": 8,
+                  "quarantine_slice": 18
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "patient_identity_normalization": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.583588,
+                "reference_action_distribution": {
+                  "admit": 5,
+                  "expert_review": 6,
+                  "quarantine_slice": 21
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "policy_action_selection": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.480896,
+                "reference_action_distribution": {
+                  "reject": 32
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "rpms_to_fhir_mapping": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.452642,
+                "reference_action_distribution": {
+                  "admit": 27,
+                  "quarantine_slice": 5
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "temporal_status_classification": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.591704,
+                "reference_action_distribution": {
+                  "admit": 15,
+                  "admit_historical_only": 17
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              }
+            },
+            "quarantine_count": 256,
+            "rho_hat_adm": 0.0,
+            "rho_hat_task": null,
+            "schema_version": "boundarybench.betal_evaluation.v1",
+            "selective_risk": null,
+            "target_name": "v01_boundary_floor_surrogate",
+            "task_count": 256,
+            "verified_completion": 0,
+            "verifier_status_distribution": {
+              "safe_parse_reject": 123,
+              "safe_schema_reject": 133
+            }
+          },
+          "gap": null,
+          "iteration": 1
+        }
+      ],
+      "loop_version": "betal-gbi-loop-v0.2",
+      "mean_search_gap": null,
+      "rho_target_failure_rate_view": 0.5,
+      "rho_target_performance": 0.5,
+      "schema_version": "boundarybench.betal_search_run.v1",
+      "status": "degenerate_gap_admissibility_floor",
+      "target_name": "v01_boundary_floor_surrogate",
+      "task_count": 256
+    },
+    {
+      "admissibility_probe": [
+        {
+          "config_sha256": "79f14ca97c040415948c3f74e50a8212eafad5214a800ce821361adf95f8a835",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.0,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "c2817d57c1c7e2b45486466f4567f6f51d93a578264d27493d0ac13eb1633353",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.25,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "7ec8657a7f7494adc36da5b4af41fb57930c4ff75d450ecd2ceac1a7d4751749",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.5,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "db77a530a1d39efe9e0c600ec6cb102aae8ec1abbdc5cfc50dbd23b176ed5fb2",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.75,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "99c3d9b97d27a7c8a9534dd578aa2e25e782df4af0b302bcf21e529cd215f0ba",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 1.0,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        }
+      ],
+      "best_configuration": null,
+      "best_gap": null,
+      "best_iteration": null,
+      "designer_kind": "feedback_coordinate",
+      "designer_name": "feedback_coordinate_designer",
+      "difficulty_level": "medium",
+      "evidence_mode": "token_top_k",
+      "holdout_evaluation": null,
+      "holdout_gap": null,
+      "iteration_count": 1,
+      "iterations": [
+        {
+          "configuration": {
+            "config_sha256": "7ec8657a7f7494adc36da5b4af41fb57930c4ff75d450ecd2ceac1a7d4751749",
+            "origin": "feedback_coordinate_designer",
+            "projection_notes": [],
+            "space_version": "betal-gbi-parameter-space-v0.2",
+            "values": {
+              "code_system_version_validation": 0.5,
+              "distractor_actions": 2,
+              "evidence_sufficiency": 5,
+              "field_anomaly_bleed": 0.25,
+              "mapping_arity": 3,
+              "orphan_rate": 0.25,
+              "patient_identity_normalization": 0.5,
+              "policy_conflict_depth": 2,
+              "temporal_ambiguity": 0.5
+            }
+          },
+          "designer_note": "iter1: phase1 open at dial=0.500 from 1-rho prior",
+          "evaluation": {
+            "abstention_count": 0,
+            "admitted_count": 0,
+            "coverage": 0.0,
+            "declared_emission_failure_modes": {
+              "safe_parse_reject": 123,
+              "safe_schema_reject": 133
+            },
+            "evidence_mode": "token_top_k",
+            "false_acceptance_count": 0,
+            "false_rejection_count": 0,
+            "instantiation_sha256": "b19f423bf1f5069eab81e329fb06e8152743d41bfcdc0ea36e9c38eb6165fe07",
+            "invalid_output_rate": 1.0,
+            "metrics_version": "betal-gbi-metrics-v0.2",
+            "per_family": {
+              "code_system_version_validation": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.598896,
+                "reference_action_distribution": {
+                  "admit": 16,
+                  "admit_historical_only": 8,
+                  "reject": 8
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "evidence_sufficiency": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.531701,
+                "reference_action_distribution": {
+                  "abstain": 32
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "field_anomaly_bleed": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.600661,
+                "reference_action_distribution": {
+                  "admit": 17,
+                  "expert_review": 5,
+                  "reject": 10
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "orphan_duplicate_detection": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.592762,
+                "reference_action_distribution": {
+                  "admit": 6,
+                  "expert_review": 8,
+                  "quarantine_slice": 18
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "patient_identity_normalization": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.583588,
+                "reference_action_distribution": {
+                  "admit": 5,
+                  "expert_review": 6,
+                  "quarantine_slice": 21
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "policy_action_selection": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.480896,
+                "reference_action_distribution": {
+                  "reject": 32
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "rpms_to_fhir_mapping": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.452642,
+                "reference_action_distribution": {
+                  "admit": 27,
+                  "quarantine_slice": 5
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "temporal_status_classification": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.591704,
+                "reference_action_distribution": {
+                  "admit": 15,
+                  "admit_historical_only": 17
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              }
+            },
+            "quarantine_count": 256,
+            "rho_hat_adm": 0.0,
+            "rho_hat_task": null,
+            "schema_version": "boundarybench.betal_evaluation.v1",
+            "selective_risk": null,
+            "target_name": "v01_boundary_floor_surrogate",
+            "task_count": 256,
+            "verified_completion": 0,
+            "verifier_status_distribution": {
+              "safe_parse_reject": 123,
+              "safe_schema_reject": 133
+            }
+          },
+          "gap": null,
+          "iteration": 1
+        }
+      ],
+      "loop_version": "betal-gbi-loop-v0.2",
+      "mean_search_gap": null,
+      "rho_target_failure_rate_view": 0.5,
+      "rho_target_performance": 0.5,
+      "schema_version": "boundarybench.betal_search_run.v1",
+      "status": "degenerate_gap_admissibility_floor",
+      "target_name": "v01_boundary_floor_surrogate",
+      "task_count": 256
+    },
+    {
+      "admissibility_probe": [
+        {
+          "config_sha256": "79f14ca97c040415948c3f74e50a8212eafad5214a800ce821361adf95f8a835",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.0,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "c2817d57c1c7e2b45486466f4567f6f51d93a578264d27493d0ac13eb1633353",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.25,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "7ec8657a7f7494adc36da5b4af41fb57930c4ff75d450ecd2ceac1a7d4751749",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.5,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "db77a530a1d39efe9e0c600ec6cb102aae8ec1abbdc5cfc50dbd23b176ed5fb2",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 0.75,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        },
+        {
+          "config_sha256": "99c3d9b97d27a7c8a9534dd578aa2e25e782df4af0b302bcf21e529cd215f0ba",
+          "declared_emission_failure_modes": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          },
+          "dial": 1.0,
+          "invalid_output_rate": 1.0,
+          "rho_hat_adm": 0.0,
+          "rho_hat_task": null,
+          "verifier_status_distribution": {
+            "safe_parse_reject": 123,
+            "safe_schema_reject": 133
+          }
+        }
+      ],
+      "best_configuration": null,
+      "best_gap": null,
+      "best_iteration": null,
+      "designer_kind": "feedback_coordinate",
+      "designer_name": "feedback_coordinate_designer",
+      "difficulty_level": "medium",
+      "evidence_mode": "full_category_evidence",
+      "holdout_evaluation": null,
+      "holdout_gap": null,
+      "iteration_count": 1,
+      "iterations": [
+        {
+          "configuration": {
+            "config_sha256": "7ec8657a7f7494adc36da5b4af41fb57930c4ff75d450ecd2ceac1a7d4751749",
+            "origin": "feedback_coordinate_designer",
+            "projection_notes": [],
+            "space_version": "betal-gbi-parameter-space-v0.2",
+            "values": {
+              "code_system_version_validation": 0.5,
+              "distractor_actions": 2,
+              "evidence_sufficiency": 5,
+              "field_anomaly_bleed": 0.25,
+              "mapping_arity": 3,
+              "orphan_rate": 0.25,
+              "patient_identity_normalization": 0.5,
+              "policy_conflict_depth": 2,
+              "temporal_ambiguity": 0.5
+            }
+          },
+          "designer_note": "iter1: phase1 open at dial=0.500 from 1-rho prior",
+          "evaluation": {
+            "abstention_count": 0,
+            "admitted_count": 0,
+            "coverage": 0.0,
+            "declared_emission_failure_modes": {
+              "safe_parse_reject": 123,
+              "safe_schema_reject": 133
+            },
+            "evidence_mode": "full_category_evidence",
+            "false_acceptance_count": 0,
+            "false_rejection_count": 0,
+            "instantiation_sha256": "b19f423bf1f5069eab81e329fb06e8152743d41bfcdc0ea36e9c38eb6165fe07",
+            "invalid_output_rate": 1.0,
+            "metrics_version": "betal-gbi-metrics-v0.2",
+            "per_family": {
+              "code_system_version_validation": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.598896,
+                "reference_action_distribution": {
+                  "admit": 16,
+                  "admit_historical_only": 8,
+                  "reject": 8
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "evidence_sufficiency": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.531701,
+                "reference_action_distribution": {
+                  "abstain": 32
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "field_anomaly_bleed": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.600661,
+                "reference_action_distribution": {
+                  "admit": 17,
+                  "expert_review": 5,
+                  "reject": 10
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "orphan_duplicate_detection": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.592762,
+                "reference_action_distribution": {
+                  "admit": 6,
+                  "expert_review": 8,
+                  "quarantine_slice": 18
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "patient_identity_normalization": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.583588,
+                "reference_action_distribution": {
+                  "admit": 5,
+                  "expert_review": 6,
+                  "quarantine_slice": 21
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "policy_action_selection": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.480896,
+                "reference_action_distribution": {
+                  "reject": 32
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "rpms_to_fhir_mapping": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.452642,
+                "reference_action_distribution": {
+                  "admit": 27,
+                  "quarantine_slice": 5
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              },
+              "temporal_status_classification": {
+                "admitted_count": 0,
+                "declared_difficulty_mean": 0.591704,
+                "reference_action_distribution": {
+                  "admit": 15,
+                  "admit_historical_only": 17
+                },
+                "rho_hat_adm": 0.0,
+                "rho_hat_task": null,
+                "task_count": 32,
+                "verified_completion": 0
+              }
+            },
+            "quarantine_count": 256,
+            "rho_hat_adm": 0.0,
+            "rho_hat_task": null,
+            "schema_version": "boundarybench.betal_evaluation.v1",
+            "selective_risk": null,
+            "target_name": "v01_boundary_floor_surrogate",
+            "task_count": 256,
+            "verified_completion": 0,
+            "verifier_status_distribution": {
+              "safe_parse_reject": 123,
+              "safe_schema_reject": 133
+            }
+          },
+          "gap": null,
+          "iteration": 1
+        }
+      ],
+      "loop_version": "betal-gbi-loop-v0.2",
+      "mean_search_gap": null,
+      "rho_target_failure_rate_view": 0.5,
+      "rho_target_performance": 0.5,
+      "schema_version": "boundarybench.betal_search_run.v1",
+      "status": "degenerate_gap_admissibility_floor",
+      "target_name": "v01_boundary_floor_surrogate",
+      "task_count": 256
+    }
+  ],
+  "schema_version": "boundarybench.betal_degenerate_gap_report.v1",
+  "target_surrogate": {
+    "calibrated_to": {
+      "per_mode_safe_parse_reject": 123,
+      "per_mode_safe_schema_reject": 133,
+      "per_mode_task_count": 256,
+      "raw_freeze": "empirical-raw-v0.1"
+    },
+    "declared_behavior": "Every execution completes and every emission fails at the parse or schema gate, in the frozen v0.1 proportion. Admissibility rate is identically zero and is independent of the configuration v.",
+    "kind": "boundary_floor",
+    "name": "v01_boundary_floor_surrogate",
+    "not_a_model_claim": "This surrogate reproduces the shape of one frozen v0.1 run. It is not Qwen3-4B-Instruct-2507, is not a re-execution of that model, and no result obtained from it may be attributed to any language model.",
+    "schema_version": "boundarybench.betal_target_surrogate.v1",
+    "targets_version": "betal-gbi-target-surrogates-v0.2"
+  }
+}

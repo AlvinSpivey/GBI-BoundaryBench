@@ -90,3 +90,41 @@ The frozen scored package records:
 - selective risk `null` because coverage was zero.
 
 These claims can be checked against the public aggregate files in [`../../artifacts/public_results/v0_1/`](../../artifacts/public_results/v0_1/).
+
+## Deterministic v0.2/v2/v3 verification commands
+
+The later public artifacts are deterministic and do not require model-provider credentials.
+
+From the repository root:
+
+```bash
+PYTHONPATH=src python3 scripts/run_betal_v0_2_search.py
+PYTHONPATH=src python3 scripts/verify_betal_v0_2_artifacts.py
+
+PYTHONPATH=src python3 scripts/run_gbi_v2_scorecard.py
+PYTHONPATH=src python3 scripts/verify_gbi_v2_scorecard.py
+
+PYTHONPATH=src python3 scripts/run_gbi_dcse_v3_scorecard.py
+PYTHONPATH=src python3 scripts/verify_gbi_dcse_v3_scorecard.py
+```
+
+Expected deterministic scorecard checks:
+
+- BoundaryBench v0.2 verifier: `319` checks, `0` failures;
+- GBI v2 verifier: `72` checks, `0` failures;
+- GBI-DCSE v3 verifier: `148` checks, `0` failures.
+
+Checksum manifests can be validated with:
+
+```bash
+(cd artifacts/public_results/v0_1 && shasum -a 256 -c PUBLIC_ARTIFACT_SHA256SUMS)
+(cd artifacts/public_results/v0_2 && shasum -a 256 -c SHA256SUMS)
+(cd artifacts/public_results/gbi_v2 && shasum -a 256 -c SHA256SUMS)
+(cd artifacts/public_results/gbi_dcse_v3 && shasum -a 256 -c SHA256SUMS)
+```
+
+Publication-time execution status:
+
+- `model_execution: NOT RUN during publication`;
+- `v0.1 empirical model artifacts: UNCHANGED`;
+- v0.2/v2/v3 checks are deterministic artifact/verifier checks, not new LLM inference.

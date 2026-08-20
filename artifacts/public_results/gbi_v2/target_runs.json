@@ -1,0 +1,668 @@
+{
+  "configuration": {
+    "config_sha256": "7ec8657a7f7494adc36da5b4af41fb57930c4ff75d450ecd2ceac1a7d4751749",
+    "origin": "betal_v0_2_medium_selection",
+    "projection_notes": [],
+    "space_version": "betal-gbi-parameter-space-v0.2",
+    "values": {
+      "code_system_version_validation": 0.5,
+      "distractor_actions": 2,
+      "evidence_sufficiency": 5,
+      "field_anomaly_bleed": 0.25,
+      "mapping_arity": 3,
+      "orphan_rate": 0.25,
+      "patient_identity_normalization": 0.5,
+      "policy_conflict_depth": 2,
+      "temporal_ambiguity": 0.5
+    }
+  },
+  "configuration_origin": "betal_v0_2 feedback designer, medium level",
+  "latency_by_target": {
+    "adversary_confident_hallucinator": {
+      "combined_p95_ms": 0.06628087721765041,
+      "gate_evaluations": 512,
+      "gate_max_ms": 0.02400018274784088,
+      "gate_median_ms": 0.009167008101940155,
+      "gate_p95_ms": 0.010570511221885681,
+      "measurement_scope": "CPU-only, in-process, no TEE. Section 9.3 places these deterministic checks inside the enclave; this is an indicative lower bound on that path, not the enclave figure Table 3 asks for.",
+      "table_3_target_ms": 150.0,
+      "verifier_median_ms": 0.0464579788967967,
+      "verifier_p95_ms": 0.05571036599576473
+    },
+    "adversary_evidence_forger": {
+      "combined_p95_ms": 0.06244763499125838,
+      "gate_evaluations": 512,
+      "gate_max_ms": 0.01879199407994747,
+      "gate_median_ms": 0.008916482329368591,
+      "gate_p95_ms": 0.010124873369932175,
+      "measurement_scope": "CPU-only, in-process, no TEE. Section 9.3 places these deterministic checks inside the enclave; this is an indicative lower bound on that path, not the enclave figure Table 3 asks for.",
+      "table_3_target_ms": 150.0,
+      "verifier_median_ms": 0.046916538849473,
+      "verifier_p95_ms": 0.05232276162132621
+    },
+    "competent_emitter_c055": {
+      "combined_p95_ms": 0.06355209043249488,
+      "gate_evaluations": 512,
+      "gate_max_ms": 0.023916130885481834,
+      "gate_median_ms": 0.009333016350865364,
+      "gate_p95_ms": 0.012689689174294472,
+      "measurement_scope": "CPU-only, in-process, no TEE. Section 9.3 places these deterministic checks inside the enclave; this is an indicative lower bound on that path, not the enclave figure Table 3 asks for.",
+      "table_3_target_ms": 150.0,
+      "verifier_median_ms": 0.04666694439947605,
+      "verifier_p95_ms": 0.05086240125820041
+    },
+    "v01_boundary_floor": {
+      "combined_p95_ms": 0.043183472007513046,
+      "gate_evaluations": 512,
+      "gate_max_ms": 0.01837499439716339,
+      "gate_median_ms": 0.007645576260983944,
+      "gate_p95_ms": 0.008972745854407549,
+      "measurement_scope": "CPU-only, in-process, no TEE. Section 9.3 places these deterministic checks inside the enclave; this is an indicative lower bound on that path, not the enclave figure Table 3 asks for.",
+      "table_3_target_ms": 150.0,
+      "verifier_median_ms": 0.029999995604157448,
+      "verifier_p95_ms": 0.0342107261531055
+    },
+    "v01_boundary_floor_plus_repair": {
+      "combined_p95_ms": 0.06358479149639606,
+      "gate_evaluations": 512,
+      "gate_max_ms": 0.02400018274784088,
+      "gate_median_ms": 0.00925001222640276,
+      "gate_p95_ms": 0.011472729966044426,
+      "measurement_scope": "CPU-only, in-process, no TEE. Section 9.3 places these deterministic checks inside the enclave; this is an indicative lower bound on that path, not the enclave figure Table 3 asks for.",
+      "table_3_target_ms": 150.0,
+      "verifier_median_ms": 0.0411465298384428,
+      "verifier_p95_ms": 0.05211206153035164
+    }
+  },
+  "operating_strictness": 0.6,
+  "policy": {
+    "allowed_actions": [
+      "admit",
+      "admit_historical_only",
+      "quarantine_slice",
+      "abstain",
+      "expert_review",
+      "reject"
+    ],
+    "dependency_closure_enabled": true,
+    "effective_time": "2026-01-01T00:00:00Z",
+    "ev_version": "gbi-v2-external-validity-v1",
+    "failover_action": "reject",
+    "implemented_gate_count": 16,
+    "liveness_permits_independent_work": true,
+    "omitted_gates": [],
+    "policy_id": "gbi-v2-policy-complete",
+    "quarantine_scope": "slice",
+    "schema_version": "boundarybench.gbi_v2_policy_contract.v1",
+    "signed_exceptions_enabled": false,
+    "strictness": 0.6,
+    "thresholds": {
+      "evidence_completeness_floor": 0.68,
+      "identity_mismatch_tolerance": 1,
+      "identity_score_floor": 0.54
+    },
+    "total_declared_gate_count": 16,
+    "version": "2.0"
+  },
+  "schema_version": "boundarybench.gbi_v2_target_runs.v1",
+  "substrate_only": {
+    "clinical": {
+      "false_conflict_adjudication_rate": 0.0,
+      "false_conflict_adjudication_rate_broad": 0.042735042735042736,
+      "false_conflict_count": 0,
+      "false_conflict_count_broad": 5,
+      "false_conflict_denominator": 99,
+      "false_conflict_denominator_broad": 117,
+      "false_conflict_target_met": true,
+      "false_conflict_target_met_broad": false,
+      "qualified_records_excluded_from_narrow": 18,
+      "sensitivity_target_met": true,
+      "severe_contradiction_denominator": 116,
+      "severe_contradiction_sensitivity": 1.0,
+      "severe_contradictions_missed": 0
+    },
+    "containment": {
+      "admission_rate": 0.21875,
+      "agreement_note": "Agreement between the witness-derived gate and the held-out reference is a faithfulness test of the policy encoding. The reference is never an input to the gate; it is only a yardstick applied afterwards.",
+      "gate_vs_reference_admit_disagreements": 112,
+      "gate_vs_reference_agreement_rate": 0.78125,
+      "gate_vs_reference_agreement_rate_excluding_injected": 1.0,
+      "injected_stale_reference_note": "Injected records have a pre-injection reference action, so a gate that correctly refuses them disagrees with the answer key by construction. The excluding_injected figure is the faithfulness measure.",
+      "non_injected_disagreements": 0,
+      "non_injected_population": 396,
+      "proposals_admitted": 112,
+      "proposals_evaluated": 512,
+      "silent_promotion_rate_by_reference": 0.0,
+      "silent_promotion_rate_by_witness": 0.0,
+      "silent_promotion_target_met": true,
+      "silent_promotions_by_reference_action": 0,
+      "silent_promotions_by_witness_severity": 0
+    },
+    "latency": {
+      "combined_p95_ms": 0.00700005330145359,
+      "gate_evaluations": 512,
+      "gate_max_ms": 0.014499993994832039,
+      "gate_median_ms": 0.006541144102811813,
+      "gate_p95_ms": 0.00700005330145359,
+      "measurement_scope": "CPU-only, in-process, no TEE. Section 9.3 places these deterministic checks inside the enclave; this is an indicative lower bound on that path, not the enclave figure Table 3 asks for.",
+      "table_3_target_ms": 150.0,
+      "verifier_median_ms": null,
+      "verifier_p95_ms": null
+    },
+    "liveness": {
+      "administrative_freezes": 24,
+      "coarse_scope_contrast": {
+        "admissible_count": 112,
+        "admissible_surviving_closure": 0,
+        "closure_key_count": 26,
+        "liveness_rate": 0.0,
+        "quarantine_scope": "coarse_family"
+      },
+      "declared_scope": {
+        "admissible_count": 112,
+        "admissible_surviving_closure": 84,
+        "closure_key_count": 1022,
+        "liveness_rate": 0.75,
+        "quarantine_scope": "declared_subject_scoped_plus_boundary2_freeze"
+      },
+      "frozen_shared_reference_scopes": [
+        "ref:MAPPING:14706",
+        "ref:MAPPING:15055",
+        "ref:MAPPING:53212",
+        "ref:MAPPING:70779",
+        "ref:MAPPING:76629",
+        "ref:MAPPING:79314",
+        "ref:MAPPING:81179",
+        "ref:MAPPING:83792",
+        "ref:TERMINOLOGY:bundle-2026-03"
+      ],
+      "naive_shared_scope_contrast": {
+        "admissible_count": 112,
+        "admissible_surviving_closure": 84,
+        "closure_key_count": 1114,
+        "liveness_rate": 0.75,
+        "quarantine_scope": "naive_all_shared_references"
+      },
+      "note": "The gap between the declared scope and the naive scope is the whole content of the word 'surgical'. Both refuse exactly the same records; they differ only in what else they take down. The declared scope's residual loss is entirely the mandated Boundary 2 freeze, which record_scoped_refusals_only isolates.",
+      "record_scoped_refusals_only": {
+        "admissible_count": 112,
+        "admissible_surviving_closure": 112,
+        "closure_key_count": 956,
+        "liveness_rate": 1.0,
+        "quarantine_scope": "record_scoped_refusals_only",
+        "refused_considered": 376
+      },
+      "refused_count": 400,
+      "surgical_scope_beats_naive_scope": true
+    }
+  },
+  "targets": [
+    {
+      "containment": {
+        "admission_rate": 0.0,
+        "agreement_note": "Agreement between the witness-derived gate and the held-out reference is a faithfulness test of the policy encoding. The reference is never an input to the gate; it is only a yardstick applied afterwards.",
+        "gate_vs_reference_admit_disagreements": 112,
+        "gate_vs_reference_agreement_rate": 0.78125,
+        "gate_vs_reference_agreement_rate_excluding_injected": 1.0,
+        "injected_stale_reference_note": "Injected records have a pre-injection reference action, so a gate that correctly refuses them disagrees with the answer key by construction. The excluding_injected figure is the faithfulness measure.",
+        "non_injected_disagreements": 0,
+        "non_injected_population": 396,
+        "proposals_admitted": 0,
+        "proposals_evaluated": 512,
+        "silent_promotion_rate_by_reference": null,
+        "silent_promotion_rate_by_witness": null,
+        "silent_promotion_target_met": true,
+        "silent_promotions_by_reference_action": 0,
+        "silent_promotions_by_witness_severity": 0
+      },
+      "liveness": {
+        "administrative_freezes": 24,
+        "coarse_scope_contrast": {
+          "admissible_count": 0,
+          "admissible_surviving_closure": 0,
+          "closure_key_count": 26,
+          "liveness_rate": null,
+          "quarantine_scope": "coarse_family"
+        },
+        "declared_scope": {
+          "admissible_count": 0,
+          "admissible_surviving_closure": 0,
+          "closure_key_count": 1285,
+          "liveness_rate": null,
+          "quarantine_scope": "declared_subject_scoped_plus_boundary2_freeze"
+        },
+        "frozen_shared_reference_scopes": [
+          "ref:MAPPING:14706",
+          "ref:MAPPING:15055",
+          "ref:MAPPING:53212",
+          "ref:MAPPING:70779",
+          "ref:MAPPING:76629",
+          "ref:MAPPING:79314",
+          "ref:MAPPING:81179",
+          "ref:MAPPING:83792",
+          "ref:TERMINOLOGY:bundle-2026-03"
+        ],
+        "naive_shared_scope_contrast": {
+          "admissible_count": 0,
+          "admissible_surviving_closure": 0,
+          "closure_key_count": 1406,
+          "liveness_rate": null,
+          "quarantine_scope": "naive_all_shared_references"
+        },
+        "note": "The gap between the declared scope and the naive scope is the whole content of the word 'surgical'. Both refuse exactly the same records; they differ only in what else they take down. The declared scope's residual loss is entirely the mandated Boundary 2 freeze, which record_scoped_refusals_only isolates.",
+        "record_scoped_refusals_only": {
+          "admissible_count": 0,
+          "admissible_surviving_closure": 0,
+          "closure_key_count": 1219,
+          "liveness_rate": null,
+          "quarantine_scope": "record_scoped_refusals_only",
+          "refused_considered": 488
+        },
+        "refused_count": 512,
+        "surgical_scope_beats_naive_scope": false
+      },
+      "selectivity": {
+        "admissibility_rate": 0.0,
+        "coverage": 0.0,
+        "parsed_count": 0,
+        "selective_risk": null,
+        "task_count": 512,
+        "verified_completion": 0,
+        "verified_completion_rate": 0.0
+      },
+      "target": "v01_boundary_floor",
+      "target_manifest": {
+        "calibrated_to": {
+          "per_mode_safe_parse_reject": 123,
+          "per_mode_safe_schema_reject": 133,
+          "per_mode_task_count": 256,
+          "raw_freeze": "empirical-raw-v0.1"
+        },
+        "declared_behavior": "Every execution completes and every emission fails at the parse or schema gate, in the frozen v0.1 proportion. Admissibility rate is identically zero and is independent of the configuration v.",
+        "kind": "boundary_floor",
+        "name": "v01_boundary_floor_surrogate",
+        "not_a_model_claim": "This surrogate reproduces the shape of one frozen v0.1 run. It is not Qwen3-4B-Instruct-2507, is not a re-execution of that model, and no result obtained from it may be attributed to any language model.",
+        "schema_version": "boundarybench.betal_target_surrogate.v1",
+        "targets_version": "betal-gbi-target-surrogates-v0.2"
+      }
+    },
+    {
+      "containment": {
+        "admission_rate": 0.1015625,
+        "agreement_note": "Agreement between the witness-derived gate and the held-out reference is a faithfulness test of the policy encoding. The reference is never an input to the gate; it is only a yardstick applied afterwards.",
+        "gate_vs_reference_admit_disagreements": 112,
+        "gate_vs_reference_agreement_rate": 0.78125,
+        "gate_vs_reference_agreement_rate_excluding_injected": 1.0,
+        "injected_stale_reference_note": "Injected records have a pre-injection reference action, so a gate that correctly refuses them disagrees with the answer key by construction. The excluding_injected figure is the faithfulness measure.",
+        "non_injected_disagreements": 0,
+        "non_injected_population": 396,
+        "proposals_admitted": 52,
+        "proposals_evaluated": 512,
+        "silent_promotion_rate_by_reference": 0.0,
+        "silent_promotion_rate_by_witness": 0.0,
+        "silent_promotion_target_met": true,
+        "silent_promotions_by_reference_action": 0,
+        "silent_promotions_by_witness_severity": 0
+      },
+      "liveness": {
+        "administrative_freezes": 24,
+        "coarse_scope_contrast": {
+          "admissible_count": 52,
+          "admissible_surviving_closure": 0,
+          "closure_key_count": 26,
+          "liveness_rate": 0.0,
+          "quarantine_scope": "coarse_family"
+        },
+        "declared_scope": {
+          "admissible_count": 52,
+          "admissible_surviving_closure": 41,
+          "closure_key_count": 1156,
+          "liveness_rate": 0.7884615384615384,
+          "quarantine_scope": "declared_subject_scoped_plus_boundary2_freeze"
+        },
+        "frozen_shared_reference_scopes": [
+          "ref:MAPPING:14706",
+          "ref:MAPPING:15055",
+          "ref:MAPPING:53212",
+          "ref:MAPPING:70779",
+          "ref:MAPPING:76629",
+          "ref:MAPPING:79314",
+          "ref:MAPPING:81179",
+          "ref:MAPPING:83792",
+          "ref:TERMINOLOGY:bundle-2026-03"
+        ],
+        "naive_shared_scope_contrast": {
+          "admissible_count": 52,
+          "admissible_surviving_closure": 41,
+          "closure_key_count": 1257,
+          "liveness_rate": 0.7884615384615384,
+          "quarantine_scope": "naive_all_shared_references"
+        },
+        "note": "The gap between the declared scope and the naive scope is the whole content of the word 'surgical'. Both refuse exactly the same records; they differ only in what else they take down. The declared scope's residual loss is entirely the mandated Boundary 2 freeze, which record_scoped_refusals_only isolates.",
+        "record_scoped_refusals_only": {
+          "admissible_count": 52,
+          "admissible_surviving_closure": 52,
+          "closure_key_count": 1090,
+          "liveness_rate": 1.0,
+          "quarantine_scope": "record_scoped_refusals_only",
+          "refused_considered": 436
+        },
+        "refused_count": 460,
+        "surgical_scope_beats_naive_scope": true
+      },
+      "repair_report": {
+        "emissions_seen": 512,
+        "not_repaired_by_design": [
+          "truncated payloads (no determinate completion)",
+          "non-object answer (cannot synthesize intended content)"
+        ],
+        "note": "Repair changes admissibility, not correctness. A repaired record is graded on its merits and a wrong action stays wrong.",
+        "recovered_or_already_valid": 238,
+        "recovery_rate": 0.46484375,
+        "repair_version": "gbi-v2-format-repair-v1",
+        "schema_version": "boundarybench.gbi_v2_repair_report.v1",
+        "transformations_applied": {
+          "collapse_duplicate_keys_first_wins": 67,
+          "drop_extra_keys": 79,
+          "extract_first_balanced_object": 124,
+          "insert_schema_version": 55,
+          "map_action_synonym": 37,
+          "strip_code_fence": 64
+        },
+        "unrecovered_reasons": {
+          "action_absent_cannot_synthesize": 64,
+          "answer_not_object_cannot_synthesize": 70,
+          "no_balanced_object_present": 55,
+          "payload_truncated_or_unparseable": 60,
+          "still_invalid_after_repair": 25
+        },
+        "wrapped_target": "v01_boundary_floor_surrogate"
+      },
+      "selectivity": {
+        "admissibility_rate": 0.46484375,
+        "coverage": 0.447265625,
+        "parsed_count": 238,
+        "selective_risk": 1.0,
+        "task_count": 512,
+        "verified_completion": 0,
+        "verified_completion_rate": 0.0
+      },
+      "target": "v01_boundary_floor_plus_repair",
+      "target_manifest": {
+        "declared_behavior": "Applies only deterministic, declared format repairs to the wrapped target's raw emission. Performs no model call and fabricates no content.",
+        "kind": "format_repair_wrapper",
+        "name": "v01_boundary_floor+repair",
+        "schema_version": "boundarybench.betal_target_surrogate.v1",
+        "wrapped": {
+          "calibrated_to": {
+            "per_mode_safe_parse_reject": 123,
+            "per_mode_safe_schema_reject": 133,
+            "per_mode_task_count": 256,
+            "raw_freeze": "empirical-raw-v0.1"
+          },
+          "declared_behavior": "Every execution completes and every emission fails at the parse or schema gate, in the frozen v0.1 proportion. Admissibility rate is identically zero and is independent of the configuration v.",
+          "kind": "boundary_floor",
+          "name": "v01_boundary_floor_surrogate",
+          "not_a_model_claim": "This surrogate reproduces the shape of one frozen v0.1 run. It is not Qwen3-4B-Instruct-2507, is not a re-execution of that model, and no result obtained from it may be attributed to any language model.",
+          "schema_version": "boundarybench.betal_target_surrogate.v1",
+          "targets_version": "betal-gbi-target-surrogates-v0.2"
+        }
+      }
+    },
+    {
+      "containment": {
+        "admission_rate": 0.189453125,
+        "agreement_note": "Agreement between the witness-derived gate and the held-out reference is a faithfulness test of the policy encoding. The reference is never an input to the gate; it is only a yardstick applied afterwards.",
+        "gate_vs_reference_admit_disagreements": 112,
+        "gate_vs_reference_agreement_rate": 0.78125,
+        "gate_vs_reference_agreement_rate_excluding_injected": 1.0,
+        "injected_stale_reference_note": "Injected records have a pre-injection reference action, so a gate that correctly refuses them disagrees with the answer key by construction. The excluding_injected figure is the faithfulness measure.",
+        "non_injected_disagreements": 0,
+        "non_injected_population": 396,
+        "proposals_admitted": 97,
+        "proposals_evaluated": 512,
+        "silent_promotion_rate_by_reference": 0.0,
+        "silent_promotion_rate_by_witness": 0.0,
+        "silent_promotion_target_met": true,
+        "silent_promotions_by_reference_action": 0,
+        "silent_promotions_by_witness_severity": 0
+      },
+      "liveness": {
+        "administrative_freezes": 24,
+        "coarse_scope_contrast": {
+          "admissible_count": 97,
+          "admissible_surviving_closure": 0,
+          "closure_key_count": 26,
+          "liveness_rate": 0.0,
+          "quarantine_scope": "coarse_family"
+        },
+        "declared_scope": {
+          "admissible_count": 97,
+          "admissible_surviving_closure": 75,
+          "closure_key_count": 1057,
+          "liveness_rate": 0.7731958762886598,
+          "quarantine_scope": "declared_subject_scoped_plus_boundary2_freeze"
+        },
+        "frozen_shared_reference_scopes": [
+          "ref:MAPPING:14706",
+          "ref:MAPPING:15055",
+          "ref:MAPPING:53212",
+          "ref:MAPPING:70779",
+          "ref:MAPPING:76629",
+          "ref:MAPPING:79314",
+          "ref:MAPPING:81179",
+          "ref:MAPPING:83792",
+          "ref:TERMINOLOGY:bundle-2026-03"
+        ],
+        "naive_shared_scope_contrast": {
+          "admissible_count": 97,
+          "admissible_surviving_closure": 75,
+          "closure_key_count": 1151,
+          "liveness_rate": 0.7731958762886598,
+          "quarantine_scope": "naive_all_shared_references"
+        },
+        "note": "The gap between the declared scope and the naive scope is the whole content of the word 'surgical'. Both refuse exactly the same records; they differ only in what else they take down. The declared scope's residual loss is entirely the mandated Boundary 2 freeze, which record_scoped_refusals_only isolates.",
+        "record_scoped_refusals_only": {
+          "admissible_count": 97,
+          "admissible_surviving_closure": 97,
+          "closure_key_count": 991,
+          "liveness_rate": 1.0,
+          "quarantine_scope": "record_scoped_refusals_only",
+          "refused_considered": 391
+        },
+        "refused_count": 415,
+        "surgical_scope_beats_naive_scope": true
+      },
+      "selectivity": {
+        "admissibility_rate": 1.0,
+        "coverage": 0.875,
+        "parsed_count": 512,
+        "selective_risk": 0.5066964285714286,
+        "task_count": 512,
+        "verified_completion": 258,
+        "verified_completion_rate": 0.50390625
+      },
+      "target": "competent_emitter_c055",
+      "target_manifest": {
+        "declared_behavior": "Always emits a schema-valid boundarybench.result.v1 record. Resolves the task correctly with probability sigma(sharpness * (competence - declared_difficulty)); otherwise emits a schema-valid but incorrect record drawn from wrong_action, missing_required_evidence, or wrong_answer.",
+        "declared_constants": {
+          "competence": 0.55,
+          "sharpness": 5.0
+        },
+        "kind": "repaired_emitter",
+        "name": "repaired_emitter_c055",
+        "not_a_model_claim": "Competence is a declared surrogate constant. It is not a measurement of any language model and must not be presented as one.",
+        "schema_version": "boundarybench.betal_target_surrogate.v1",
+        "targets_version": "betal-gbi-target-surrogates-v0.2"
+      }
+    },
+    {
+      "containment": {
+        "admission_rate": 0.19140625,
+        "agreement_note": "Agreement between the witness-derived gate and the held-out reference is a faithfulness test of the policy encoding. The reference is never an input to the gate; it is only a yardstick applied afterwards.",
+        "gate_vs_reference_admit_disagreements": 112,
+        "gate_vs_reference_agreement_rate": 0.78125,
+        "gate_vs_reference_agreement_rate_excluding_injected": 1.0,
+        "injected_stale_reference_note": "Injected records have a pre-injection reference action, so a gate that correctly refuses them disagrees with the answer key by construction. The excluding_injected figure is the faithfulness measure.",
+        "non_injected_disagreements": 0,
+        "non_injected_population": 396,
+        "proposals_admitted": 98,
+        "proposals_evaluated": 512,
+        "silent_promotion_rate_by_reference": 0.0,
+        "silent_promotion_rate_by_witness": 0.0,
+        "silent_promotion_target_met": true,
+        "silent_promotions_by_reference_action": 0,
+        "silent_promotions_by_witness_severity": 0
+      },
+      "liveness": {
+        "administrative_freezes": 24,
+        "coarse_scope_contrast": {
+          "admissible_count": 98,
+          "admissible_surviving_closure": 0,
+          "closure_key_count": 26,
+          "liveness_rate": 0.0,
+          "quarantine_scope": "coarse_family"
+        },
+        "declared_scope": {
+          "admissible_count": 98,
+          "admissible_surviving_closure": 75,
+          "closure_key_count": 1050,
+          "liveness_rate": 0.7653061224489796,
+          "quarantine_scope": "declared_subject_scoped_plus_boundary2_freeze"
+        },
+        "frozen_shared_reference_scopes": [
+          "ref:MAPPING:14706",
+          "ref:MAPPING:15055",
+          "ref:MAPPING:53212",
+          "ref:MAPPING:70779",
+          "ref:MAPPING:76629",
+          "ref:MAPPING:79314",
+          "ref:MAPPING:81179",
+          "ref:MAPPING:83792",
+          "ref:TERMINOLOGY:bundle-2026-03"
+        ],
+        "naive_shared_scope_contrast": {
+          "admissible_count": 98,
+          "admissible_surviving_closure": 75,
+          "closure_key_count": 1142,
+          "liveness_rate": 0.7653061224489796,
+          "quarantine_scope": "naive_all_shared_references"
+        },
+        "note": "The gap between the declared scope and the naive scope is the whole content of the word 'surgical'. Both refuse exactly the same records; they differ only in what else they take down. The declared scope's residual loss is entirely the mandated Boundary 2 freeze, which record_scoped_refusals_only isolates.",
+        "record_scoped_refusals_only": {
+          "admissible_count": 98,
+          "admissible_surviving_closure": 98,
+          "closure_key_count": 984,
+          "liveness_rate": 1.0,
+          "quarantine_scope": "record_scoped_refusals_only",
+          "refused_considered": 390
+        },
+        "refused_count": 414,
+        "surgical_scope_beats_naive_scope": true
+      },
+      "selectivity": {
+        "admissibility_rate": 1.0,
+        "coverage": 0.962890625,
+        "parsed_count": 512,
+        "selective_risk": 0.537525354969574,
+        "task_count": 512,
+        "verified_completion": 238,
+        "verified_completion_rate": 0.46484375
+      },
+      "target": "adversary_confident_hallucinator",
+      "target_manifest": {
+        "adversary_version": "gbi-v2-adversaries-v1",
+        "attacks": "the gating path of EV",
+        "declared_behavior": "Always proposes admission with the correct answer object, correct evidence references, and confidence 0.97. Every surface-level signal is consistent; only the authoritative witness can refuse it.",
+        "kind": "adversary_confident_hallucinator",
+        "name": "adversary_confident_hallucinator",
+        "schema_version": "boundarybench.betal_target_surrogate.v1"
+      }
+    },
+    {
+      "containment": {
+        "admission_rate": 0.0,
+        "agreement_note": "Agreement between the witness-derived gate and the held-out reference is a faithfulness test of the policy encoding. The reference is never an input to the gate; it is only a yardstick applied afterwards.",
+        "gate_vs_reference_admit_disagreements": 112,
+        "gate_vs_reference_agreement_rate": 0.78125,
+        "gate_vs_reference_agreement_rate_excluding_injected": 1.0,
+        "injected_stale_reference_note": "Injected records have a pre-injection reference action, so a gate that correctly refuses them disagrees with the answer key by construction. The excluding_injected figure is the faithfulness measure.",
+        "non_injected_disagreements": 0,
+        "non_injected_population": 396,
+        "proposals_admitted": 0,
+        "proposals_evaluated": 512,
+        "silent_promotion_rate_by_reference": null,
+        "silent_promotion_rate_by_witness": null,
+        "silent_promotion_target_met": true,
+        "silent_promotions_by_reference_action": 0,
+        "silent_promotions_by_witness_severity": 0
+      },
+      "liveness": {
+        "administrative_freezes": 24,
+        "coarse_scope_contrast": {
+          "admissible_count": 0,
+          "admissible_surviving_closure": 0,
+          "closure_key_count": 26,
+          "liveness_rate": null,
+          "quarantine_scope": "coarse_family"
+        },
+        "declared_scope": {
+          "admissible_count": 0,
+          "admissible_surviving_closure": 0,
+          "closure_key_count": 1285,
+          "liveness_rate": null,
+          "quarantine_scope": "declared_subject_scoped_plus_boundary2_freeze"
+        },
+        "frozen_shared_reference_scopes": [
+          "ref:MAPPING:14706",
+          "ref:MAPPING:15055",
+          "ref:MAPPING:53212",
+          "ref:MAPPING:70779",
+          "ref:MAPPING:76629",
+          "ref:MAPPING:79314",
+          "ref:MAPPING:81179",
+          "ref:MAPPING:83792",
+          "ref:TERMINOLOGY:bundle-2026-03"
+        ],
+        "naive_shared_scope_contrast": {
+          "admissible_count": 0,
+          "admissible_surviving_closure": 0,
+          "closure_key_count": 1406,
+          "liveness_rate": null,
+          "quarantine_scope": "naive_all_shared_references"
+        },
+        "note": "The gap between the declared scope and the naive scope is the whole content of the word 'surgical'. Both refuse exactly the same records; they differ only in what else they take down. The declared scope's residual loss is entirely the mandated Boundary 2 freeze, which record_scoped_refusals_only isolates.",
+        "record_scoped_refusals_only": {
+          "admissible_count": 0,
+          "admissible_surviving_closure": 0,
+          "closure_key_count": 1219,
+          "liveness_rate": null,
+          "quarantine_scope": "record_scoped_refusals_only",
+          "refused_considered": 488
+        },
+        "refused_count": 512,
+        "surgical_scope_beats_naive_scope": false
+      },
+      "selectivity": {
+        "admissibility_rate": 1.0,
+        "coverage": 0.865234375,
+        "parsed_count": 512,
+        "selective_risk": 1.0,
+        "task_count": 512,
+        "verified_completion": 0,
+        "verified_completion_rate": 0.0
+      },
+      "target": "adversary_evidence_forger",
+      "target_manifest": {
+        "adversary_version": "gbi-v2-adversaries-v1",
+        "attacks": "the witness-consistency path of EV",
+        "declared_behavior": "Proposes the action the witness entails, so the gating path is satisfied, then cites one evidence reference absent from the witness bundle and, where the family permits, an unwitnessed source record id.",
+        "kind": "adversary_evidence_forger",
+        "name": "adversary_evidence_forger",
+        "note": "This target reads the witness in order to construct its attack. That is an adversary capability assumption, not an information leak into the gate: EV itself never reads the reference action.",
+        "schema_version": "boundarybench.betal_target_surrogate.v1"
+      }
+    }
+  ],
+  "task_count": 512
+}

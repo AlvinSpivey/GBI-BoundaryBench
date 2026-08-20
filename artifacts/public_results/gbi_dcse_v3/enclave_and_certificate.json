@@ -1,0 +1,265 @@
+{
+  "cone_certificate": {
+    "all_forgeries_rejected": true,
+    "clause_count": 9,
+    "cohomology_claim_encoded_finitely": true,
+    "commitment_is_binding": true,
+    "commitment_is_blinded": true,
+    "cone_certificate_version": "dcse-cone-certificate-v3.0",
+    "consistent_complex_obstruction_dimension": 0,
+    "honest_certificates_accepted": true,
+    "obstructed_complex_obstruction_dimension": 2,
+    "policy_version_binding_changes_public_input": true,
+    "precondition_of_section_9_5_met": true,
+    "results": {
+      "fabricated_spectrum": {
+        "accepted": false,
+        "failed_clauses": [
+          "first_moment_identity",
+          "second_moment_identity"
+        ],
+        "h1_vanishes_in_fact": true
+      },
+      "false_h1_vanishing_claim": {
+        "accepted": false,
+        "failed_clauses": [
+          "dimension_count_matches_claim",
+          "basis_width_matches_claim",
+          "h1_claim_matches_finite_computation"
+        ],
+        "h1_vanishes_in_fact": false
+      },
+      "honest_consistent_h1_vanishes": {
+        "accepted": true,
+        "failed_clauses": [],
+        "h1_vanishes_in_fact": true
+      },
+      "honest_obstructed_h1_does_not_vanish": {
+        "accepted": true,
+        "failed_clauses": [],
+        "h1_vanishes_in_fact": false
+      },
+      "operator_substitution": {
+        "accepted": false,
+        "failed_clauses": [
+          "operator_binding",
+          "first_moment_identity",
+          "second_moment_identity"
+        ],
+        "h1_vanishes_in_fact": true
+      }
+    },
+    "schema_version": "boundarybench.dcse_cone_certificate_suite.v1",
+    "scope": "A binding, blinded commitment plus a finite verification predicate. This is strictly weaker than a zero-knowledge proof: a verifier who is given the witness learns it. The manuscript frames the ZK layer as a future extension, and it remains future work here.",
+    "verify_predicate_is_total_and_terminating": true,
+    "zero_knowledge_claimed": false,
+    "zero_knowledge_implemented": false
+  },
+  "enclave": {
+    "all_forgeries_rejected": true,
+    "complex": {
+      "disagreeing_stalks": [
+        3,
+        17,
+        41
+      ],
+      "vertices": 60
+    },
+    "enclave_version": "dcse-enclave-v3.0",
+    "forgeries_run": 9,
+    "forgery_classes_declared": [
+      "random_basis",
+      "basis_from_a_different_matrix",
+      "over_claimed_dimension",
+      "under_claimed_dimension_hiding_obstruction",
+      "unnormalized_basis",
+      "fabricated_spectrum",
+      "stale_ledger_head",
+      "wrong_policy_version",
+      "forged_signature"
+    ],
+    "forgery_results": {
+      "basis_from_a_different_matrix": {
+        "accepted": false,
+        "failed_checks": [
+          "sparse_residual_lower_bound",
+          "spectral_moment_upper_bound"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "fabricated_spectrum": {
+        "accepted": false,
+        "failed_checks": [
+          "spectral_moment_upper_bound"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "forged_signature": {
+        "accepted": false,
+        "failed_checks": [
+          "signature_and_nonce"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "over_claimed_dimension": {
+        "accepted": false,
+        "failed_checks": [
+          "sparse_residual_lower_bound",
+          "spectral_moment_upper_bound"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "random_basis": {
+        "accepted": false,
+        "failed_checks": [
+          "sparse_residual_lower_bound"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "stale_ledger_head": {
+        "accepted": false,
+        "failed_checks": [
+          "hash_chain"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "under_claimed_dimension_hiding_obstruction": {
+        "accepted": false,
+        "failed_checks": [
+          "spectral_moment_upper_bound"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "unnormalized_basis": {
+        "accepted": false,
+        "failed_checks": [
+          "sparse_residual_lower_bound"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      },
+      "wrong_policy_version": {
+        "accepted": false,
+        "failed_checks": [
+          "policy_evaluation"
+        ],
+        "governed_write_path": "denied_fail_closed"
+      }
+    },
+    "honest_solver_accepted": true,
+    "honest_verdict": {
+      "accepted": true,
+      "certificate": {
+        "body": {
+          "kind": "dcse_consistency_certificate",
+          "laplacian_digest": "d3e9e566c1ebd21842af4a4fc33c3d163d2f1b81262a4f6c0321aede5a3ca415",
+          "ledger_head": "9c499a15bbaa89cd7d0b30cbdacc17c758c4ee994a2dcd0e19f383fccd8eb334",
+          "nonce": "nonce-enclave-1",
+          "obstruction_dimension": 3,
+          "policy_version": "1.1"
+        },
+        "public_key_hex": "1447d5abb40b3eacb4d172b1c0ddcffa4a1e2579b51b424d6af823df16f56335",
+        "signature": "cb16fc6559c033146cfdd29422882586c26378797266dcd0dfe6d8a43ad86b986d4da1da9a40cb5535581b9691d4cdb6c6697d6540bb835823847f340755ff00"
+      },
+      "checks": {
+        "certificate_signing": {
+          "passed": true,
+          "signed": true
+        },
+        "hash_chain": {
+          "expected_head": "9c499a15bbaa89cd",
+          "observed_head": "9c499a15bbaa89cd",
+          "passed": true
+        },
+        "policy_evaluation": {
+          "enclave_policy_version": "1.1",
+          "passed": true,
+          "payload_policy_version": "1.1"
+        },
+        "signature_and_nonce": {
+          "nonce_matches": true,
+          "passed": true,
+          "signature_valid": true
+        },
+        "sparse_residual_lower_bound": {
+          "certifies": "obstruction_dimension_at_least_k",
+          "columns_checked": 3,
+          "orthogonality_error": 5.185787410280936e-16,
+          "passed": true,
+          "residual_tolerance": 1e-08,
+          "worst_residual_norm": 1.901610023730375e-15
+        },
+        "spectral_moment_upper_bound": {
+          "certifies": "obstruction_dimension_at_most_k",
+          "claimed_dimension": 3,
+          "counted_near_zero_eigenvalues": 3,
+          "frobenius_identity_relative_error": 0.0,
+          "passed": true,
+          "spectrum_length_matches_dimension": true,
+          "trace_identity_relative_error": 0.0
+        }
+      },
+      "declared_budget": {
+        "max_flops": 5000000,
+        "max_heap_bytes": 262144,
+        "max_io_bytes": 65536,
+        "max_syscalls": 64
+      },
+      "enclave_version": "dcse-enclave-v3.0",
+      "governed_write_path": "permitted",
+      "matrix_nonzeros": 477,
+      "matrix_size": 240,
+      "resource_usage": {
+        "all_within_budget": true,
+        "flops": 8440.0,
+        "flops_within_budget": true,
+        "heap_within_budget": true,
+        "io_bytes": 128,
+        "io_within_budget": true,
+        "peak_heap_bytes": 13440,
+        "syscalls": 2,
+        "syscalls_within_budget": true
+      },
+      "schema_version": "boundarybench.dcse_enclave_verdict.v1"
+    },
+    "matrix_nonzeros": 477,
+    "matrix_size": 240,
+    "resource_comparison": {
+      "declared_budget": {
+        "max_flops": 5000000,
+        "max_heap_bytes": 262144,
+        "max_io_bytes": 65536,
+        "max_syscalls": 64
+      },
+      "dense_exceeds_budget": true,
+      "enclave_fits_budget": true,
+      "enclave_sparse_path": {
+        "all_within_budget": true,
+        "flops": 8440.0,
+        "flops_within_budget": true,
+        "heap_within_budget": true,
+        "io_bytes": 128,
+        "io_within_budget": true,
+        "peak_heap_bytes": 13440,
+        "syscalls": 2,
+        "syscalls_within_budget": true
+      },
+      "external_dense_path": {
+        "all_within_budget": false,
+        "flops": 124416000.0,
+        "flops_within_budget": false,
+        "heap_within_budget": false,
+        "io_bytes": 0,
+        "io_within_budget": true,
+        "peak_heap_bytes": 921600,
+        "syscalls": 0,
+        "syscalls_within_budget": true
+      },
+      "flop_ratio_dense_over_sparse": 14741.232227488152,
+      "heap_ratio_dense_over_sparse": 68.57142857142857
+    },
+    "schema_version": "boundarybench.dcse_enclave_suite.v1",
+    "scope": "No TEE. The 'enclave' is a budget-accounted software module; the budget is declared and enforced in accounting, not by hardware. The transferable result is the sufficiency of the sparse certificate, which is a property of the mathematics and does not depend on the hardware.",
+    "section_9_3_claim_supported": true,
+    "true_obstruction_dimension": 3
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "all_structural_claims_met": true,
+  "containment_table_2": {
+    "all_rows_demonstrated": true,
+    "expected_rows": 9,
+    "implemented_gate_count": 16,
+    "rows": [
+      {
+        "demonstrated": true,
+        "gate": "terminology_unresolvable",
+        "hallucination": "nonexistent code",
+        "implemented_by": "terminology resolution gate",
+        "mechanism": "signed terminology bundle rejects it"
+      },
+      {
+        "demonstrated": true,
+        "gate": "provenance_signature_absent",
+        "hallucination": "unsupported clinical assertion",
+        "implemented_by": "provenance witness gate",
+        "mechanism": "no matching resource or provenance witness, so EV = 0"
+      },
+      {
+        "demonstrated": true,
+        "gate": "boundary_1_identity_ambiguous",
+        "hallucination": "wrong patient",
+        "implemented_by": "Boundary 1 identity gate + dcse.ledger",
+        "mechanism": "identity predicate rejects ambiguous match; ledger gives non-equivocation"
+      },
+      {
+        "demonstrated": true,
+        "gate": "validity_window_expired",
+        "hallucination": "stale fact",
+        "implemented_by": "validity window gates",
+        "mechanism": "temporal interval check fails"
+      },
+      {
+        "demonstrated": true,
+        "gate": "structured_field_partially_contaminated",
+        "hallucination": "free-text overreach",
+        "implemented_by": "contamination gate routing to expert review",
+        "mechanism": "NLP output lacks provenance or human signoff"
+      },
+      {
+        "demonstrated": true,
+        "gate": null,
+        "hallucination": "unsupported medication mapping",
+        "implemented_by": "boundary algebra restricted to declared atoms",
+        "mechanism": "mapping remains unmapped, conflict or unknown"
+      },
+      {
+        "demonstrated": true,
+        "gate": null,
+        "hallucination": "internal inconsistency",
+        "implemented_by": "betal.cone real mapping cone",
+        "mechanism": "sheaf or mapping-cone obstruction flags incompatible sections"
+      },
+      {
+        "demonstrated": true,
+        "gate": "identity_score_below_floor",
+        "hallucination": "overconfident model guess",
+        "implemented_by": "gbi.claims section_2_softmax_and_topk + confident-hallucinator adversary",
+        "mechanism": "entropy, margin, tail-loss or cross-model checks trigger review"
+      },
+      {
+        "demonstrated": true,
+        "gate": null,
+        "hallucination": "unsafe commit",
+        "implemented_by": "dcse.transaction atomic rejection + dcse.receipts",
+        "mechanism": "transaction not posted; OperationOutcome and Provenance record the abstention"
+      }
+    ],
+    "rows_demonstrated": 9,
+    "section": "12.2 Table 2 operational hallucination containment"
+  },
+  "discovery_envelope": {
+    "attachable_to": [
+      "Provenance",
+      "AuditEvent"
+    ],
+    "envelope_fields_present": true,
+    "envelope_result_schema_error_count": 6,
+    "envelope_signed": true,
+    "envelope_would_fail_result_schema": true,
+    "provenance_binds": [
+      "input_digest",
+      "model_version",
+      "prompt_digest",
+      "runtime_policy_version",
+      "terminology_bundle_version"
+    ],
+    "required_fields": [
+      "subject",
+      "interval",
+      "facility",
+      "category_set",
+      "L",
+      "p",
+      "rho_provenance",
+      "policy"
+    ],
+    "section": "5 neuro-symbolic partitioning",
+    "separate_result_object_valid": true,
+    "separation_of_evidence_and_result_demonstrated": true
+  },
+  "ehr_pipeline": {
+    "all_steps_executed": true,
+    "attestation_gate_fails_closed": true,
+    "expected_steps": 8,
+    "fhir_resource_count": 7,
+    "fhir_resources_used": [
+      "AllergyIntolerance",
+      "AuditEvent",
+      "MedicationRequest",
+      "Observation",
+      "OperationOutcome",
+      "Patient",
+      "Provenance"
+    ],
+    "section": "10 complete EHR interoperability application at scale",
+    "steps": [
+      {
+        "executed": true,
+        "name": "capability_discovery",
+        "recorded_resources": 7,
+        "step": 1
+      },
+      {
+        "executed": true,
+        "ledger_valid": true,
+        "name": "identity_gate",
+        "step": 2,
+        "writes_permitted": true
+      },
+      {
+        "envelope_signed": true,
+        "executed": true,
+        "name": "discovery_parse",
+        "step": 3
+      },
+      {
+        "allowed_actions": 6,
+        "executed": true,
+        "gate_count": 16,
+        "name": "boundary_type_check",
+        "step": 4
+      },
+      {
+        "executed": true,
+        "name": "evidence_update",
+        "no_singularity": true,
+        "step": 5
+      },
+      {
+        "executed": true,
+        "name": "sheaf_diagnostic",
+        "obstruction_dimension": 1,
+        "quarantined_stalks": [
+          "terminology"
+        ],
+        "step": 6
+      },
+      {
+        "chart_advisory_only": true,
+        "executed": true,
+        "name": "reviewer_presentation",
+        "step": 7,
+        "table_authoritative": true
+      },
+      {
+        "committed": true,
+        "executed": true,
+        "name": "commit_or_abstain",
+        "receipt_chain_valid": true,
+        "step": 8
+      }
+    ],
+    "steps_executed": 8
+  },
+  "policy_decomposition": {
+    "all_present": true,
+    "attribution_fields_present": true,
+    "components": {
+      "A": {
+        "evidence": "6 typed actions",
+        "name": "allowed action set",
+        "present": true
+      },
+      "D": {
+        "evidence": "subject-scoped vs shared-reference dependency closure in scorecard.liveness_measures",
+        "name": "dependency rules and closure",
+        "present": true
+      },
+      "E": {
+        "evidence": "override path requires a named authority plus Provenance; modelled in the worked penicillin example",
+        "name": "signed exception and override rules",
+        "present": true
+      },
+      "F_b": {
+        "evidence": "attestation loss, counter failure and below-quorum all halt authoritative writes",
+        "name": "failover behaviour when services or evidence are unavailable",
+        "present": true
+      },
+      "G": {
+        "evidence": "16 gates in declared precedence",
+        "name": "hard gating predicates",
+        "present": true
+      },
+      "H": {
+        "evidence": "expert_review action plus review-surface receipt fields",
+        "name": "human authority / dual control / review",
+        "present": true
+      },
+      "Lambda": {
+        "evidence": "atomicity-preserving separately scoped transactions; crash/partition liveness sweep",
+        "name": "liveness and degraded-operation constraints",
+        "present": true
+      },
+      "Q": {
+        "evidence": "record-scoped, shared-reference and coarse-family scopes measured separately",
+        "name": "quarantine scope",
+        "present": true
+      },
+      "R": {
+        "evidence": "WritePathGuard fallback modes and consensus halt reasons",
+        "name": "recovery and escalation",
+        "present": true
+      },
+      "T": {
+        "evidence": "strictness parameter, validity-window gates, attestation max age",
+        "name": "thresholds, freshness limits, validity windows",
+        "present": true
+      }
+    },
+    "components_present": 10,
+    "expected_components": 10,
+    "policy_instance_attribution": {
+      "authority": "light-imaging-signing-authority",
+      "effective_time": "2026-03-01T00:00:00Z",
+      "hash": "9a1bd51bb2f7f57cf991cb0a2c45336a451ccc613abd86e1bd423ffe310db2a6",
+      "policy_id": "gbi-dcse-admissibility",
+      "version": "1.1"
+    },
+    "reproducible_under_explicit_version": true,
+    "section": "9.2 operational policy contract"
+  },
+  "protocol_objects": {
+    "all_present": true,
+    "expected_objects": 7,
+    "objects": {
+      "B": {
+        "action_lattice_size": 6,
+        "cardinality": 6,
+        "exercised_by": "section_3_boolean_homomorphism",
+        "implemented_in": "gbi.claims.BOUNDARY_ATOMS + betal.simulator.ALL_ACTIONS",
+        "name": "boundary algebra",
+        "present": true
+      },
+      "F": {
+        "exercised_by": "v2 target runs",
+        "implemented_in": "betal.simulator task instances and proposals",
+        "name": "candidate / local state",
+        "present": true
+      },
+      "L": {
+        "exercised_by": "ledger verification and equivocation detection",
+        "implemented_in": "dcse.ledger.IdentityLedger",
+        "name": "identity / provenance ledger",
+        "present": true
+      },
+      "P": {
+        "exercised_by": "strictness sweep and boundary conformance",
+        "gate_count": 16,
+        "implemented_in": "betal.ev.complete_policy",
+        "name": "runtime admissibility policy",
+        "present": true
+      },
+      "Theta": {
+        "categories_after_growth": 9,
+        "exercised_by": "section_6_2_dynamic_atom_registry",
+        "implemented_in": "gbi.appendix_a.fisher_dirichlet + gbi.claims dynamic registry",
+        "name": "evidence registry (hierarchical Dirichlet)",
+        "present": true
+      },
+      "V": {
+        "exercised_by": "boundary_conformance Boundary 2 probes",
+        "implemented_in": "betal.witness (terminology bundle signature, version pinning)",
+        "name": "versioned semantic bundle",
+        "present": true
+      },
+      "W": {
+        "exercised_by": "v2 substrate-only gate run",
+        "implemented_in": "betal.witness.Witness",
+        "name": "authoritative grounding state",
+        "present": true
+      }
+    },
+    "objects_present": 7,
+    "section": "9.1 protocol objects"
+  },
+  "protocol_version": "dcse-protocol-inventory-v3.0",
+  "schema_version": "boundarybench.dcse_protocol_inventory.v1",
+  "worked_examples": {
+    "both_examples_behave_as_documented": true,
+    "metformin": {
+      "abstention_provenance_recorded": true,
+      "claim_met": true,
+      "local_category_set": [
+        "renal-context-present",
+        "renal-context-expired",
+        "renal-context-missing"
+      ],
+      "medication_update_committed": false,
+      "operation_outcome": {
+        "issue": [
+          {
+            "code": "required",
+            "diagnostics": "metformin order requires a qualifying renal observation",
+            "expression": [],
+            "severity": "warning"
+          }
+        ],
+        "resourceType": "OperationOutcome"
+      },
+      "routed_to": "expert_review"
+    },
+    "penicillin": {
+      "claim_met": true,
+      "code_is_business_rule": true,
+      "no_commit_without_named_override": true,
+      "operation_outcome": {
+        "issue": [
+          {
+            "code": "business-rule",
+            "diagnostics": "amoxicillin order conflicts with active confirmed penicillin allergy",
+            "expression": [],
+            "severity": "error"
+          }
+        ],
+        "resourceType": "OperationOutcome"
+      },
+      "override_requires_provenance": true,
+      "severity_is_error": true,
+      "witness": {
+        "AllergyIntolerance": "penicillin",
+        "clinicalStatus": "active",
+        "criticality": "high",
+        "identity": "accepted",
+        "terminology_bundle": "RxNorm/SNOMED signed",
+        "verificationStatus": "confirmed"
+      }
+    },
+    "sections": "10.1, 10.2, 12.4, 12.5"
+  }
+}

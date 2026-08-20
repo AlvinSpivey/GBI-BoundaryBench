@@ -1,0 +1,100 @@
+id,section,class,met,claim,note
+C-1.1,1,STRUCTURAL,True,Division of labour: untrusted discovery -> logit receipt -> deterministic judgment engine,
+C-1.2,1,STRUCTURAL,True,The judgment engine is the only component that may create commit-ready payloads,
+C-1.3,1,STRUCTURAL,True,"A logit vector is a numerical proposal over a local categorical boundary, not a fact",
+C-2.1,2.1,MEASURED,True,Definition 2.1 exact logit equivalence is stronger than argmax/softmax agreement,
+C-2.2,2.1,MEASURED,True,Theorem 2.1 affine reconstruction holds on the evaluated stimulus set,
+C-2.3,2.4,REPRODUCED,True,Numerical example: exactly logit-equivalent readouts agree to floating-point roundoff,
+C-2.4,2.2,MEASURED,True,Definition 2.2: directions in ker(W_U) are probe-invisible,
+C-2.5,3,MEASURED,True,First isomorphism identification: H/ker(W) is canonically im(W),
+C-2.6,2.5,REPRODUCED,True,"Entropy and max-probability table at tau in {1.0, 0.5, 0.2, 0.05}",
+C-2.7,2.5,REPRODUCED,True,Top-3 tail mass at tau = 1 is about 0.0417,
+C-2.8,2.5,MEASURED,True,Hard top-k truncation makes D_KL(P || P^(k)) infinite,
+C-2.9,2.5,MEASURED,True,As tau -> 0 softmax collapses to a simplex vertex,
+C-2.10,2.6,MEASURED,True,"Because the readout is affine, the logit decomposes exactly into component contributions",
+C-2.11,2.7,MEASURED,True,A category switch can occur while entropy remains high (manuscript: not implemented),Closes a gap the manuscript explicitly leaves open.
+C-2.12,2.3,STRUCTURAL,True,Output agreement does not establish hidden-state or representation alignment,A nontrivial readout kernel is a witness: hidden states differing inside it are behaviourally identical.
+C-3.1,3.1,MEASURED,True,Definition 3.1: the boundary algebra is a finite Boolean algebra over declared atoms,
+C-3.2,3.1,MEASURED,True,Definition 3.2: the semantics map is a Boolean homomorphism into P(W x T x L),
+C-3.3,3.1,STRUCTURAL,True,The semantics is model-relative and does not prove reality,Declared and honoured: every verdict in this run is relative to a declared witness model.
+C-4.1,4,REPRODUCED,True,"The condensed cokernel is nonzero, witnessed by a convergent non-eventually-constant sequence",
+C-4.2,4.1,MEASURED,True,Definition 4.1: an operational probe passes iff every transition preserves the declared invariants,
+C-4.3,4.1,STRUCTURAL,True,The finite probe is not claimed to approximate a condensed object in a convergence sense,No such claim is made anywhere in this run's artifacts.
+C-5.1,5,STRUCTURAL,True,"Discovery output must carry model version, prompt digest, terminology version, logits and provenance",
+C-5.2,5,STRUCTURAL,True,The discovery/judgment boundary is a signed envelope E attachable to Provenance or AuditEvent,
+C-5.3,5,STRUCTURAL,True,The evidence envelope is a distinct object from the admissible result payload,
+C-6.1,6.1,REPRODUCED,True,Dirichlet Fisher information matrix g_ij = psi_1(a_i) delta_ij - psi_1(sum a),
+C-6.2,6.3,REPRODUCED,True,"Condition number about 20.46 at alpha = (2,3,4,5)",
+C-6.3,6.3,REPRODUCED,True,"Condition number about 4.55e5 at alpha = (0.01,3,4,5)",
+C-6.4,6.3.1,REPRODUCED,True,trigamma(0.01) = 10001.621 and trigamma(14) = 0.074040,
+C-6.5,6.3,REPRODUCED,True,The one-dimensional sweep crosses a 1e4 budget near epsilon = 0.066,
+C-6.6,6.3,ERRATUM,False,That epsilon is presented as a bound for the declared evidence box,Defect found and corrected. The slice bound is about 48x outside the stated budget at the worst box corner; the bound that holds over the box is about 0.3265 and depends on the ceiling A.
+C-6.7,6.2,MEASURED,True,A dynamic atom registry assigns alpha_new > 0 and records terminology version and parent,
+C-6.8,6.3,MEASURED,True,The evidence box keeps the Fisher metric numerically conditioned,
+C-7.1,7.1,MEASURED,True,"Cellular sheaf cochain complex, coboundary and Hodge Laplacian with ker Delta = H^k",
+C-7.2,7.2,MEASURED,True,Definition 7.1 trace cell energy E_sigma = tr(Pi_Lambda Pi_sigma),
+C-7.3,7.2,MEASURED,True,Proposition 7.1: E_sigma is invariant under orthogonal rotation of the obstruction basis,
+C-7.4,7.3,MEASURED,True,E_sigma > theta quarantines only the affected stalk,
+C-7.5,7.3,MEASURED,True,"Stalk quarantine is applied before atomic transaction construction, preserving atomicity",
+C-7.6,7.3,REPRODUCED,True,Appendix A stalk energies 0.019778 / 1.977750 / 0.002472 with MedicationRequest quarantined,
+C-7.7,7.3,STRUCTURAL,True,The appendix surrogate is not a mapping-cone Laplacian and must not be presented as one,Preserved in the port: the surrogate keeps its own construction label and is not silently upgraded.
+C-8.1,8.1,REPRODUCED,True,Hyperellipsoid certificate H_f = sigma_1 / sigma_n,
+C-8.2,8.1,REPRODUCED,True,Worked values J = 1.028 and K_O = 1.922661,
+C-8.3,8.1,MEASURED,True,A safety-critical implementation must check positive Jacobian,
+C-8.4,8.1,MEASURED,True,... and boundary behaviour,Not implemented in Appendix A; added here.
+C-8.5,8.1,MEASURED,True,... and inverse residuals,Not implemented in Appendix A; added here.
+C-8.6,8.1,MEASURED,True,... and stratum preservation,Not implemented in Appendix A; added here.
+C-8.7,8.2,MEASURED,True,The tabular contradiction report is authoritative for review; the chart is advisory,
+C-8.8,8.2,MEASURED,True,Spectral gap on the cone Laplacian,
+C-9.1,9.1,STRUCTURAL,True,"A DCSE node maintains the seven protocol objects (B, V, Theta, F, W, L, P)",
+C-9.2,9.2,STRUCTURAL,True,"The policy decomposes into (A, G, T, D, H, Q, R, Lambda, E, F_b)",
+C-9.3,9.2,STRUCTURAL,True,"A policy instance is attributable via policy_id, version, effective_time, authority and hash",
+C-9.4,9.2,MEASURED,True,Every admissibility decision is reproducible under an explicit policy version,
+C-9.5,9.2,MEASURED,True,Table 1: the verification architecture is portable while domain semantics are not,
+C-9.6,9.2,MEASURED,True,Localized quarantine preserves liveness without permitting partial commit,
+C-9.7,9.2,MEASURED,True,The review surface exposes deterministic reasons rather than a model confidence number,
+C-9.8,9.2,MEASURED,True,A versioned evaluation package yields a customer-specific empirical failure surface,Demonstrated as a mechanism on synthetic data; no customer deployment.
+C-9.9,9.3,MEASURED,True,"Small deterministic checks inside the enclave; dense linear algebra outside, replaced by sparse certified residual checks",
+C-9.10,9.3,MEASURED,True,"WASM/WAMR-style packaging can enforce heap, I/O and syscall budgets","Budgets are enforced in accounting, not by hardware."
+C-9.11,9.4,MEASURED,True,Fast path: a TEE-assisted non-equivocation profile,
+C-9.12,9.4,MEASURED,True,"On counter failure, attestation loss or equivocation evidence, authoritative writes halt and fall back to BFT",
+C-9.13,9.4,MEASURED,True,n >= 3f+1 is required; falling below the threshold must halt authoritative writes,
+C-9.14,9.4,MEASURED,True,"The ledger proves protocol-level non-equivocation, not identity truth",
+C-9.15,9.5,MEASURED,True,A cohomology claim in the certificate must be encoded as a concrete finite computation,
+C-9.16,9.5,OUT_OF_SCOPE,,A zero-knowledge proof of the consistency result,"The manuscript frames this as future work and it remains future work. A binding, blinded commitment plus a finite predicate is implemented; that is strictly weaker than zero knowledge and is not claimed as such."
+C-10.1,10,STRUCTURAL,True,"The eight-step EHR pipeline, end to end",
+C-10.2,10.1,MEASURED_SYNTHETIC,True,Penicillin/amoxicillin: business-rule OperationOutcome and no commit without a named override,
+C-10.3,10.2,MEASURED_SYNTHETIC,True,"Metformin without renal context: routed to review, abstention recorded, no medication update",
+C-10.4,10.3,STRUCTURAL,True,Seven FHIR resource types are used as described,
+C-11.1,11,REPRODUCED,True,"768 canonical executions, 0 accepted, 369 parse / 399 schema rejects, coverage 0, invalid rate 1.0",
+C-11.2,11,MEASURED,True,Selective risk is undefined at zero coverage,
+C-11.3,11,STRUCTURAL,True,"The v0.1 result is about the admission interface, not about LLM capability",Honoured throughout: no capability claim is derived from the v0.1 run in any artifact.
+C-12.1,12,MEASURED_SYNTHETIC,True,No unsupported model output is silently promoted to an authoritative write,
+C-12.2,12.1.1,STRUCTURAL,True,"The logit layer is treated as evidence, not authority",
+C-12.3,12.1.2,MEASURED,True,The boundary algebra restricts what the model is allowed to say,
+C-12.4,12.1.3,MEASURED,True,"The model proposal is checked against an external validity predicate EV(b, w)",
+C-12.5,12.2,STRUCTURAL,True,Table 2: nine hallucination types each have an implemented containment mechanism,
+C-12.6,12.3,STRUCTURAL,True,The framework does NOT prevent an internally consistent false belief,"An honest negative claim, and it holds: the hallucinator's proposals are refused at the gate, not prevented at generation."
+C-12.7,12.6,STRUCTURAL,True,Admissibility is existential over admissible witnesses,
+C-12.8,12.2,MEASURED,True,"The substrate emits typed certificates, not autonomous decisions",
+C-12.9,12.6,STRUCTURAL,True,Model-relative admissibility: the substrate cannot repair a wrong institutional model,"Declared limit, honoured: the register never claims witness correctness, only traceability to declared witnesses."
+C-A.1,A,REPRODUCED,True,The reference implementation's self-check assertions all pass,
+C-A.2,A,REPRODUCED,True,The reference implementation's reported values reproduce independently,
+C-A.3,A,REPRODUCED,True,Local mapping-status entropy over the declared alpha vector,
+C-B1.1,B.1,MEASURED,True,Assertion 1: Boolean algebra stress test over at least 2^16 randomized operations,
+C-B1.2,B.1,MEASURED,True,Assertion 2: evidence-box corner and adversarial near-boundary sweep with lambda_min > 1e-6,
+C-B1.3,B.1,MEASURED,True,"Assertion 3: cone Laplacian symmetry, PSD and basis-invariant trace energies",
+C-B1.4,B.1,MEASURED,True,"Attestation verification: invalid, expired or modified attestation must fail closed",Software attestation model; no hardware root of trust.
+C-B1.5,B.1,MEASURED,True,Consensus fault injector: partition and crash faults against safety and liveness invariants,
+C-B1.6,B.1,MEASURED,True,Rollback conformance: a corrupted order nested in a bundle is rejected atomically,
+C-B1.7,B.1,OUT_OF_SCOPE,,Retrospective playback over a powered clinical cohort with expert adjudication,"The reproducibility mechanism is established (receipt-driven replay reproduces every decision); the clinical half requires a real cohort, preregistration and expert adjudicators and cannot be established here."
+C-B2.1,B.2 Table 3,MEASURED,True,Spectral Gap (lambda_1 - lambda_0) >= 0.15,
+C-B2.2,B.2 Table 3,MEASURED,True,Fisher Matrix Condition Number <= 1e+04,
+C-B2.3,B.2 Table 3,PARTIAL_PROXY,True,End-to-End Latency (Enclave) <= 150 ms,"CPU-only p95 of the deterministic verification plus admission-gate path. No TEE is present, so this is an indicative lower bound on the enclave-resident checks of Section 9.3, not the enclave measurement Table 3 specifies."
+C-B2.4,B.2 Table 3,OUT_OF_SCOPE,,Attestation Bootstrapping Time <= 2.5 s,Requires a TEE and an attestation service (SGX/IAS handshake). Not available in this environment; cannot be proxied without misrepresenting it.
+C-B2.5,B.2 Table 3,MEASURED_SYNTHETIC,True,Severe Contradiction Sensitivity 100%,
+C-B2.6,B.2 Table 3,MEASURED_SYNTHETIC,True,False Conflict Adjudication Rate <= 4%,
+C-B3.1,B.3,MEASURED,True,Boundary 1: ambiguous identity halts and denies write regardless of similarity score,
+C-B3.2,B.3,MEASURED,True,"Boundary 2: unsigned, unpinned or stale terminology triggers an administrative freeze",
+C-B3.3,B.3,MEASURED,True,Boundary 3: chart distortion K is advisory and never proof of logical inconsistency,
+C-B3.4,B.3,STRUCTURAL,True,"The framework is a fail-closed co-processor, not an autonomous practitioner",

@@ -1,0 +1,30 @@
+{
+  "benchmark_contract": "benchmark-contract-v0.1",
+  "calibration_source": {
+    "artifact": "artifacts/public_results/v0_1/status_distributions.json",
+    "per_mode_safe_parse_reject": 123,
+    "per_mode_safe_schema_reject": 133,
+    "raw_freeze": "empirical-raw-v0.1"
+  },
+  "component_versions": {
+    "loop": "betal-gbi-loop-v0.2",
+    "parameter_space": "betal-gbi-parameter-space-v0.2",
+    "simulator": "betal-gbi-simulator-v0.2",
+    "target_surrogates": "betal-gbi-target-surrogates-v0.2"
+  },
+  "execution_scope": {
+    "clinical_data_used": false,
+    "held_out_references_read": 0,
+    "language_models_executed": 0,
+    "provider_calls": 0,
+    "synthetic_data_only": true
+  },
+  "reproduce": "PYTHONPATH=src python3 scripts/run_betal_v0_2_search.py",
+  "run_plan": "betal-search-plan-v0.2.0",
+  "schema_version": "boundarybench.betal_provenance.v1",
+  "verifier": {
+    "modified_for_v0_2": false,
+    "note": "All grading is performed by the unmodified v0.1 verifier. The BeTaL layer generates tasks and evaluates surrogates; it does not re-implement a criterion.",
+    "source": "boundarybench.verification (v0.1 Programmatic Verification Engine)"
+  }
+}

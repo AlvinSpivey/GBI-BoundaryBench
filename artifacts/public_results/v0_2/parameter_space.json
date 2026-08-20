@@ -1,0 +1,143 @@
+{
+  "cardinality_note": "Continuous dimensions are snapped to a declared step grid, so V is finite. The grid, not the interval, is the searched object.",
+  "declared_difficulty_disclaimer": "The difficulty map is a simulator property used to make difficulty scaling auditable. It is not a clinical severity model and is not fitted to any model's observed behavior.",
+  "declared_difficulty_map": {
+    "code_system_version_validation": {
+      "base": 0.15,
+      "slope": 0.85
+    },
+    "evidence_sufficiency": {
+      "base": 0.1,
+      "slope": 0.85
+    },
+    "field_anomaly_bleed": {
+      "base": 0.15,
+      "slope": 0.85
+    },
+    "orphan_duplicate_detection": {
+      "base": 0.15,
+      "slope": 0.85
+    },
+    "patient_identity_normalization": {
+      "base": 0.15,
+      "slope": 0.85
+    },
+    "policy_action_selection": {
+      "base": 0.1,
+      "slope": 0.75
+    },
+    "rpms_to_fhir_mapping": {
+      "base": 0.1,
+      "slope": 0.8
+    },
+    "temporal_status_classification": {
+      "base": 0.15,
+      "slope": 0.85
+    }
+  },
+  "dimension_count": 9,
+  "grid_cardinality": 2218750380,
+  "parameters": [
+    {
+      "description": "Fraction of DEM identity fields carrying transcription, truncation, or transposition noise. Higher values shrink the separation between a supportable identity link and a required quarantine.",
+      "family": "patient_identity_normalization",
+      "grid_points": 21,
+      "harder_direction": "up",
+      "high": 1.0,
+      "kind": "continuous",
+      "low": 0.0,
+      "name": "patient_identity_normalization",
+      "step": 0.05
+    },
+    {
+      "description": "Fraction of patient references pointing at absent or duplicated DEM rows. Higher values increase the number of records whose correct action is quarantine_slice or expert_review rather than admit.",
+      "family": "orphan_duplicate_detection",
+      "grid_points": 11,
+      "harder_direction": "up",
+      "high": 0.5,
+      "kind": "continuous",
+      "low": 0.0,
+      "name": "orphan_rate",
+      "step": 0.05
+    },
+    {
+      "description": "Frequency at which free-text narrative bleeds into a structured column. Targets the failure mode responsible for the v0.1 safe_parse_reject slice.",
+      "family": "field_anomaly_bleed",
+      "grid_points": 11,
+      "harder_direction": "up",
+      "high": 0.5,
+      "kind": "continuous",
+      "low": 0.0,
+      "name": "field_anomaly_bleed",
+      "step": 0.05
+    },
+    {
+      "description": "Fraction of coded evidence pinned to an unsupported or superseded terminology version. Higher values raise the count of tasks whose only admissible outcome is admit_historical_only or reject.",
+      "family": "code_system_version_validation",
+      "grid_points": 21,
+      "harder_direction": "up",
+      "high": 1.0,
+      "kind": "continuous",
+      "low": 0.0,
+      "name": "code_system_version_validation",
+      "step": 0.05
+    },
+    {
+      "description": "Number of candidate FHIR target resources offered for one RPMS-shaped row. Higher arity widens the local categorical decision the model must resolve.",
+      "family": "rpms_to_fhir_mapping",
+      "grid_points": 6,
+      "harder_direction": "up",
+      "high": 6,
+      "kind": "integer",
+      "low": 1,
+      "name": "mapping_arity",
+      "step": 1
+    },
+    {
+      "description": "Fraction of records whose validity interval is open, stale, or overlapping, so that active and historical-only evidence are not separable by date alone.",
+      "family": "temporal_status_classification",
+      "grid_points": 21,
+      "harder_direction": "up",
+      "high": 1.0,
+      "kind": "continuous",
+      "low": 0.0,
+      "name": "temporal_ambiguity",
+      "step": 0.05
+    },
+    {
+      "description": "Count of facts required by the reference answer that are withheld from the model input. Higher values reward abstention and punish confident assertion.",
+      "family": "evidence_sufficiency",
+      "grid_points": 11,
+      "harder_direction": "up",
+      "high": 10,
+      "kind": "integer",
+      "low": 0,
+      "name": "evidence_sufficiency",
+      "step": 1
+    },
+    {
+      "description": "Number of simultaneously firing policy predicates whose fail-closed precedence order must be applied to select a single action.",
+      "family": "policy_action_selection",
+      "grid_points": 5,
+      "harder_direction": "up",
+      "high": 4,
+      "kind": "integer",
+      "low": 0,
+      "name": "policy_conflict_depth",
+      "step": 1
+    },
+    {
+      "description": "Count of allowed-but-incorrect actions retained in the task's allowed_actions list. Applies to every family; widens the categorical decision uniformly.",
+      "family": "*",
+      "grid_points": 6,
+      "harder_direction": "up",
+      "high": 5,
+      "kind": "integer",
+      "low": 0,
+      "name": "distractor_actions",
+      "step": 1
+    }
+  ],
+  "schema_version": "boundarybench.betal_parameter_space.v1",
+  "space_version": "betal-gbi-parameter-space-v0.2"
+}

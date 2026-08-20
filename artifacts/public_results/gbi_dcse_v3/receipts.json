@@ -1,0 +1,170 @@
+{
+  "all_receipts_version_pinned": true,
+  "chain_verification": {
+    "chain_valid": true,
+    "problem_count": 0,
+    "problems": [],
+    "receipts": 14
+  },
+  "completeness": [
+    {
+      "complete": true,
+      "decision": "admit",
+      "has_audit_event": true,
+      "has_operation_outcome": false,
+      "has_provenance": true,
+      "operation_outcome_required": false,
+      "subject": "subject-1001"
+    },
+    {
+      "complete": true,
+      "decision": "quarantine_slice",
+      "has_audit_event": true,
+      "has_operation_outcome": true,
+      "has_provenance": true,
+      "operation_outcome_required": true,
+      "subject": "subject-1002"
+    },
+    {
+      "complete": true,
+      "decision": "abstain",
+      "has_audit_event": true,
+      "has_operation_outcome": true,
+      "has_provenance": true,
+      "operation_outcome_required": true,
+      "subject": "subject-1003"
+    },
+    {
+      "complete": true,
+      "decision": "expert_review",
+      "has_audit_event": true,
+      "has_operation_outcome": true,
+      "has_provenance": true,
+      "operation_outcome_required": true,
+      "subject": "subject-1004"
+    },
+    {
+      "complete": true,
+      "decision": "reject",
+      "has_audit_event": true,
+      "has_operation_outcome": true,
+      "has_provenance": true,
+      "operation_outcome_required": true,
+      "subject": "subject-1005"
+    }
+  ],
+  "decisions": 5,
+  "every_decision_fully_receipted": true,
+  "ledger_verification": {
+    "entries": 14,
+    "non_equivocating": true,
+    "structurally_valid": true
+  },
+  "receipt_coherence_holds": true,
+  "receipt_kinds_used": [
+    "AuditEvent",
+    "OperationOutcome",
+    "Provenance"
+  ],
+  "receipts_emitted": 14,
+  "receipts_version": "dcse-receipts-v3.0",
+  "replay": [
+    {
+      "recorded_decision": "admit",
+      "replayed_decision": "admit",
+      "reproduced": true,
+      "subject": "subject-1001"
+    },
+    {
+      "recorded_decision": "admit",
+      "replayed_decision": "admit",
+      "reproduced": true,
+      "subject": "subject-1001"
+    },
+    {
+      "recorded_decision": "quarantine_slice",
+      "replayed_decision": "quarantine_slice",
+      "reproduced": true,
+      "subject": "subject-1002"
+    },
+    {
+      "recorded_decision": "quarantine_slice",
+      "replayed_decision": "quarantine_slice",
+      "reproduced": true,
+      "subject": "subject-1002"
+    },
+    {
+      "recorded_decision": "quarantine_slice",
+      "replayed_decision": "quarantine_slice",
+      "reproduced": true,
+      "subject": "subject-1002"
+    },
+    {
+      "recorded_decision": "abstain",
+      "replayed_decision": "abstain",
+      "reproduced": true,
+      "subject": "subject-1003"
+    },
+    {
+      "recorded_decision": "abstain",
+      "replayed_decision": "abstain",
+      "reproduced": true,
+      "subject": "subject-1003"
+    },
+    {
+      "recorded_decision": "abstain",
+      "replayed_decision": "abstain",
+      "reproduced": true,
+      "subject": "subject-1003"
+    },
+    {
+      "recorded_decision": "expert_review",
+      "replayed_decision": "expert_review",
+      "reproduced": true,
+      "subject": "subject-1004"
+    },
+    {
+      "recorded_decision": "expert_review",
+      "replayed_decision": "expert_review",
+      "reproduced": true,
+      "subject": "subject-1004"
+    },
+    {
+      "recorded_decision": "expert_review",
+      "replayed_decision": "expert_review",
+      "reproduced": true,
+      "subject": "subject-1004"
+    },
+    {
+      "recorded_decision": "reject",
+      "replayed_decision": "reject",
+      "reproduced": true,
+      "subject": "subject-1005"
+    },
+    {
+      "recorded_decision": "reject",
+      "replayed_decision": "reject",
+      "reproduced": true,
+      "subject": "subject-1005"
+    },
+    {
+      "recorded_decision": "reject",
+      "replayed_decision": "reject",
+      "reproduced": true,
+      "subject": "subject-1005"
+    }
+  ],
+  "replay_reproduces_every_decision": true,
+  "review_surface_forbidden_fields": [],
+  "review_surface_omits_model_confidence": true,
+  "review_surface_required_fields_present": true,
+  "schema_version": "boundarybench.dcse_receipt_suite.v1",
+  "tamper_detection": {
+    "problems_detected": [
+      "invalid_receipt_signature",
+      "receipt_chain_break"
+    ],
+    "tampered_chain_valid": false,
+    "tampering_detected": true
+  }
+}

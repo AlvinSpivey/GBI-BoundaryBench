@@ -1,0 +1,227 @@
+{
+  "policies": {
+    "complete": {
+      "all_passed": true,
+      "failed_probes": [],
+      "policy": {
+        "allowed_actions": [
+          "admit",
+          "admit_historical_only",
+          "quarantine_slice",
+          "abstain",
+          "expert_review",
+          "reject"
+        ],
+        "dependency_closure_enabled": true,
+        "effective_time": "2026-01-01T00:00:00Z",
+        "ev_version": "gbi-v2-external-validity-v1",
+        "failover_action": "reject",
+        "implemented_gate_count": 16,
+        "liveness_permits_independent_work": true,
+        "omitted_gates": [],
+        "policy_id": "gbi-v2-policy-complete",
+        "quarantine_scope": "slice",
+        "schema_version": "boundarybench.gbi_v2_policy_contract.v1",
+        "signed_exceptions_enabled": false,
+        "strictness": 0.5,
+        "thresholds": {
+          "evidence_completeness_floor": 0.6,
+          "identity_mismatch_tolerance": 1,
+          "identity_score_floor": 0.45
+        },
+        "total_declared_gate_count": 16,
+        "version": "2.0"
+      },
+      "probes": [
+        {
+          "admissible": false,
+          "passed": true,
+          "probe": "boundary_1_ambiguous_identity_at_similarity_1.0",
+          "required_action": "quarantine_slice",
+          "requirement": "must not admit; similarity score must not override ambiguity"
+        },
+        {
+          "admissible": false,
+          "passed": true,
+          "probe": "boundary_1_unresolvable_identity_at_similarity_1.0",
+          "required_action": "reject",
+          "requirement": "must halt and deny write permissions"
+        },
+        {
+          "admissible": false,
+          "passed": true,
+          "probe": "boundary_2_terminology_bundle_unsigned",
+          "required_action": "reject",
+          "requirement": "must trigger administrative freeze; no clinical lookup admitted"
+        },
+        {
+          "admissible": false,
+          "passed": true,
+          "probe": "boundary_2_terminology_bundle_unpinned",
+          "required_action": "reject",
+          "requirement": "must trigger administrative freeze; no clinical lookup admitted"
+        },
+        {
+          "admissible": true,
+          "passed": true,
+          "probe": "non_vacuity_clean_witness_is_admitted",
+          "required_action": "admit",
+          "requirement": "a witness with no contradiction must be admitted"
+        }
+      ]
+    },
+    "incomplete_ablation": {
+      "all_passed": false,
+      "failed_probes": [
+        "boundary_2_terminology_bundle_unsigned"
+      ],
+      "policy": {
+        "allowed_actions": [
+          "admit",
+          "admit_historical_only",
+          "quarantine_slice",
+          "abstain",
+          "expert_review",
+          "reject"
+        ],
+        "dependency_closure_enabled": true,
+        "effective_time": "2026-01-01T00:00:00Z",
+        "ev_version": "gbi-v2-external-validity-v1",
+        "failover_action": "reject",
+        "implemented_gate_count": 14,
+        "liveness_permits_independent_work": true,
+        "omitted_gates": [
+          "boundary_2_bundle_unsigned",
+          "provenance_signature_absent"
+        ],
+        "policy_id": "gbi-v2-policy-incomplete",
+        "quarantine_scope": "slice",
+        "schema_version": "boundarybench.gbi_v2_policy_contract.v1",
+        "signed_exceptions_enabled": false,
+        "strictness": 0.5,
+        "thresholds": {
+          "evidence_completeness_floor": 0.6,
+          "identity_mismatch_tolerance": 1,
+          "identity_score_floor": 0.45
+        },
+        "total_declared_gate_count": 16,
+        "version": "0.9"
+      },
+      "probes": [
+        {
+          "admissible": false,
+          "passed": true,
+          "probe": "boundary_1_ambiguous_identity_at_similarity_1.0",
+          "required_action": "quarantine_slice",
+          "requirement": "must not admit; similarity score must not override ambiguity"
+        },
+        {
+          "admissible": false,
+          "passed": true,
+          "probe": "boundary_1_unresolvable_identity_at_similarity_1.0",
+          "required_action": "reject",
+          "requirement": "must halt and deny write permissions"
+        },
+        {
+          "admissible": true,
+          "passed": false,
+          "probe": "boundary_2_terminology_bundle_unsigned",
+          "required_action": "admit",
+          "requirement": "must trigger administrative freeze; no clinical lookup admitted"
+        },
+        {
+          "admissible": false,
+          "passed": true,
+          "probe": "boundary_2_terminology_bundle_unpinned",
+          "required_action": "reject",
+          "requirement": "must trigger administrative freeze; no clinical lookup admitted"
+        },
+        {
+          "admissible": true,
+          "passed": true,
+          "probe": "non_vacuity_clean_witness_is_admitted",
+          "required_action": "admit",
+          "requirement": "a witness with no contradiction must be admitted"
+        }
+      ]
+    },
+    "score_only_identity_ablation": {
+      "all_passed": false,
+      "failed_probes": [
+        "boundary_1_ambiguous_identity_at_similarity_1.0",
+        "boundary_1_unresolvable_identity_at_similarity_1.0"
+      ],
+      "policy": {
+        "allowed_actions": [
+          "admit",
+          "admit_historical_only",
+          "quarantine_slice",
+          "abstain",
+          "expert_review",
+          "reject"
+        ],
+        "dependency_closure_enabled": true,
+        "effective_time": "2026-01-01T00:00:00Z",
+        "ev_version": "gbi-v2-external-validity-v1",
+        "failover_action": "reject",
+        "implemented_gate_count": 14,
+        "liveness_permits_independent_work": true,
+        "omitted_gates": [
+          "boundary_1_identity_ambiguous",
+          "boundary_1_identity_unresolvable"
+        ],
+        "policy_id": "gbi-v2-policy-score-only-identity",
+        "quarantine_scope": "slice",
+        "schema_version": "boundarybench.gbi_v2_policy_contract.v1",
+        "signed_exceptions_enabled": false,
+        "strictness": 0.5,
+        "thresholds": {
+          "evidence_completeness_floor": 0.6,
+          "identity_mismatch_tolerance": 1,
+          "identity_score_floor": 0.45
+        },
+        "total_declared_gate_count": 16,
+        "version": "0.5"
+      },
+      "probes": [
+        {
+          "admissible": true,
+          "passed": false,
+          "probe": "boundary_1_ambiguous_identity_at_similarity_1.0",
+          "required_action": "admit",
+          "requirement": "must not admit; similarity score must not override ambiguity"
+        },
+        {
+          "admissible": false,
+          "passed": false,
+          "probe": "boundary_1_unresolvable_identity_at_similarity_1.0",
+          "required_action": "expert_review",
+          "requirement": "must halt and deny write permissions"
+        },
+        {
+          "admissible": false,
+          "passed": true,
+          "probe": "boundary_2_terminology_bundle_unsigned",
+          "required_action": "reject",
+          "requirement": "must trigger administrative freeze; no clinical lookup admitted"
+        },
+        {
+          "admissible": false,
+          "passed": true,
+          "probe": "boundary_2_terminology_bundle_unpinned",
+          "required_action": "reject",
+          "requirement": "must trigger administrative freeze; no clinical lookup admitted"
+        },
+        {
+          "admissible": true,
+          "passed": true,
+          "probe": "non_vacuity_clean_witness_is_admitted",
+          "required_action": "admit",
+          "requirement": "a witness with no contradiction must be admitted"
+        }
+      ]
+    }
+  },
+  "schema_version": "boundarybench.gbi_v2_boundary_conformance.v1",
+  "source": "main.pdf Appendix B.3 Boundary 1 and Boundary 2"
+}

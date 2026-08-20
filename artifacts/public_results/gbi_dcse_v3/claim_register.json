@@ -1,0 +1,1354 @@
+{
+  "benchmark_contract": "benchmark-contract-v0.1",
+  "claims": [
+    {
+      "claim": "Division of labour: untrusted discovery -> logit receipt -> deterministic judgment engine",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "envelope_signed": true
+      },
+      "id": "C-1.1",
+      "met": true,
+      "note": null,
+      "section": "1"
+    },
+    {
+      "claim": "The judgment engine is the only component that may create commit-ready payloads",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "quarantined_before_construction": [
+          "MedicationRequest/3001"
+        ]
+      },
+      "id": "C-1.2",
+      "met": true,
+      "note": null,
+      "section": "1"
+    },
+    {
+      "claim": "A logit vector is a numerical proposal over a local categorical boundary, not a fact",
+      "class": "STRUCTURAL",
+      "evidence": null,
+      "id": "C-1.3",
+      "met": true,
+      "note": null,
+      "section": "1"
+    },
+    {
+      "claim": "Definition 2.1 exact logit equivalence is stronger than argmax/softmax agreement",
+      "class": "MEASURED",
+      "evidence": {
+        "worst_logit_residual": 2.2644195468014703e-15
+      },
+      "id": "C-2.1",
+      "met": true,
+      "note": null,
+      "section": "2.1"
+    },
+    {
+      "claim": "Theorem 2.1 affine reconstruction holds on the evaluated stimulus set",
+      "class": "MEASURED",
+      "evidence": {
+        "worst_reconstruction_residual": 1.3322676295501878e-15
+      },
+      "id": "C-2.2",
+      "met": true,
+      "note": null,
+      "section": "2.1"
+    },
+    {
+      "claim": "Numerical example: exactly logit-equivalent readouts agree to floating-point roundoff",
+      "class": "REPRODUCED",
+      "evidence": {
+        "computed": 2.2644195468014703e-15,
+        "published_order": 1.49e-15
+      },
+      "id": "C-2.3",
+      "met": true,
+      "note": null,
+      "section": "2.4"
+    },
+    {
+      "claim": "Definition 2.2: directions in ker(W_U) are probe-invisible",
+      "class": "MEASURED",
+      "evidence": {
+        "control_visible_drift": 0.8491891924687207,
+        "kernel_dimension": 4,
+        "worst_drift": 2.9613711778634e-12
+      },
+      "id": "C-2.4",
+      "met": true,
+      "note": null,
+      "section": "2.2"
+    },
+    {
+      "claim": "First isomorphism identification: H/ker(W) is canonically im(W)",
+      "class": "MEASURED",
+      "evidence": null,
+      "id": "C-2.5",
+      "met": true,
+      "note": null,
+      "section": "3"
+    },
+    {
+      "claim": "Entropy and max-probability table at tau in {1.0, 0.5, 0.2, 0.05}",
+      "class": "REPRODUCED",
+      "evidence": {
+        "rows": [
+          {
+            "entropy_agrees": "True",
+            "entropy_nats": 0.8852189892589747,
+            "max_probability": 0.7115300283838765,
+            "max_probability_agrees": true,
+            "published_entropy_nats": 0.885219,
+            "published_max_probability": 0.71153,
+            "tau": 1.0
+          },
+          {
+            "entropy_agrees": "True",
+            "entropy_nats": 0.2938428220855637,
+            "max_probability": 0.924709438186778,
+            "max_probability_agrees": true,
+            "published_entropy_nats": 0.293843,
+            "published_max_probability": 0.924709,
+            "tau": 0.5
+          },
+          {
+            "entropy_agrees": "True",
+            "entropy_nats": 0.011292778871943509,
+            "max_probability": 0.9984964953794109,
+            "max_probability_agrees": true,
+            "published_entropy_nats": 0.011293,
+            "published_max_probability": 0.998496,
+            "tau": 0.2
+          },
+          {
+            "entropy_agrees": "True",
+            "entropy_nats": 1.3794533904505824e-10,
+            "max_probability": 0.999999999994891,
+            "max_probability_agrees": true,
+            "published_entropy_nats": 0.0,
+            "published_max_probability": 1.0,
+            "tau": 0.05
+          }
+        ]
+      },
+      "id": "C-2.6",
+      "met": true,
+      "note": null,
+      "section": "2.5"
+    },
+    {
+      "claim": "Top-3 tail mass at tau = 1 is about 0.0417",
+      "class": "REPRODUCED",
+      "evidence": {
+        "computed": 0.041707535968106724,
+        "published": 0.0417
+      },
+      "id": "C-2.7",
+      "met": true,
+      "note": null,
+      "section": "2.5"
+    },
+    {
+      "claim": "Hard top-k truncation makes D_KL(P || P^(k)) infinite",
+      "class": "MEASURED",
+      "evidence": {
+        "categories_zeroed": [
+          3,
+          4,
+          5
+        ]
+      },
+      "id": "C-2.8",
+      "met": true,
+      "note": null,
+      "section": "2.5"
+    },
+    {
+      "claim": "As tau -> 0 softmax collapses to a simplex vertex",
+      "class": "MEASURED",
+      "evidence": null,
+      "id": "C-2.9",
+      "met": true,
+      "note": null,
+      "section": "2.5"
+    },
+    {
+      "claim": "Because the readout is affine, the logit decomposes exactly into component contributions",
+      "class": "MEASURED",
+      "evidence": {
+        "attributable_components": 25,
+        "residual": 8.881784197001252e-15
+      },
+      "id": "C-2.10",
+      "met": true,
+      "note": null,
+      "section": "2.6"
+    },
+    {
+      "claim": "A category switch can occur while entropy remains high (manuscript: not implemented)",
+      "class": "MEASURED",
+      "evidence": {
+        "min_entropy_nats": 0.6653778437378056,
+        "switches": 2
+      },
+      "id": "C-2.11",
+      "met": true,
+      "note": "Closes a gap the manuscript explicitly leaves open.",
+      "section": "2.7"
+    },
+    {
+      "claim": "Output agreement does not establish hidden-state or representation alignment",
+      "class": "STRUCTURAL",
+      "evidence": null,
+      "id": "C-2.12",
+      "met": true,
+      "note": "A nontrivial readout kernel is a witness: hidden states differing inside it are behaviourally identical.",
+      "section": "2.3"
+    },
+    {
+      "claim": "Definition 3.1: the boundary algebra is a finite Boolean algebra over declared atoms",
+      "class": "MEASURED",
+      "evidence": {
+        "algebra_elements": 64,
+        "atoms": 6
+      },
+      "id": "C-3.1",
+      "met": true,
+      "note": null,
+      "section": "3.1"
+    },
+    {
+      "claim": "Definition 3.2: the semantics map is a Boolean homomorphism into P(W x T x L)",
+      "class": "MEASURED",
+      "evidence": {
+        "exhaustive": true,
+        "pair_checks": 4096,
+        "violations": 0
+      },
+      "id": "C-3.2",
+      "met": true,
+      "note": null,
+      "section": "3.1"
+    },
+    {
+      "claim": "The semantics is model-relative and does not prove reality",
+      "class": "STRUCTURAL",
+      "evidence": null,
+      "id": "C-3.3",
+      "met": true,
+      "note": "Declared and honoured: every verdict in this run is relative to a declared witness model.",
+      "section": "3.1"
+    },
+    {
+      "claim": "The condensed cokernel is nonzero, witnessed by a convergent non-eventually-constant sequence",
+      "class": "REPRODUCED",
+      "evidence": {
+        "eventually_constant": false,
+        "tail_variation": 0.012499999999999997
+      },
+      "id": "C-4.1",
+      "met": true,
+      "note": null,
+      "section": "4"
+    },
+    {
+      "claim": "Definition 4.1: an operational probe passes iff every transition preserves the declared invariants",
+      "class": "MEASURED",
+      "evidence": {
+        "every_invariant_detectable": true,
+        "positive_probe_passes": true,
+        "suite_non_vacuous": true
+      },
+      "id": "C-4.2",
+      "met": true,
+      "note": null,
+      "section": "4.1"
+    },
+    {
+      "claim": "The finite probe is not claimed to approximate a condensed object in a convergence sense",
+      "class": "STRUCTURAL",
+      "evidence": null,
+      "id": "C-4.3",
+      "met": true,
+      "note": "No such claim is made anywhere in this run's artifacts.",
+      "section": "4.1"
+    },
+    {
+      "claim": "Discovery output must carry model version, prompt digest, terminology version, logits and provenance",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "provenance_binds": [
+          "input_digest",
+          "model_version",
+          "prompt_digest",
+          "runtime_policy_version",
+          "terminology_bundle_version"
+        ]
+      },
+      "id": "C-5.1",
+      "met": true,
+      "note": null,
+      "section": "5"
+    },
+    {
+      "claim": "The discovery/judgment boundary is a signed envelope E attachable to Provenance or AuditEvent",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "attachable_to": [
+          "Provenance",
+          "AuditEvent"
+        ]
+      },
+      "id": "C-5.2",
+      "met": true,
+      "note": null,
+      "section": "5"
+    },
+    {
+      "claim": "The evidence envelope is a distinct object from the admissible result payload",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "envelope_result_schema_errors": 6
+      },
+      "id": "C-5.3",
+      "met": true,
+      "note": null,
+      "section": "5"
+    },
+    {
+      "claim": "Dirichlet Fisher information matrix g_ij = psi_1(a_i) delta_ij - psi_1(sum a)",
+      "class": "REPRODUCED",
+      "evidence": {
+        "interior_eigenvalues": [
+          0.029493819079612474,
+          0.2544353755927679,
+          0.36156757758947783,
+          0.6033561982193006
+        ]
+      },
+      "id": "C-6.1",
+      "met": true,
+      "note": null,
+      "section": "6.1"
+    },
+    {
+      "claim": "Condition number about 20.46 at alpha = (2,3,4,5)",
+      "class": "REPRODUCED",
+      "evidence": {
+        "computed": 20.457038696503332,
+        "published": 20.46
+      },
+      "id": "C-6.2",
+      "met": true,
+      "note": null,
+      "section": "6.3"
+    },
+    {
+      "claim": "Condition number about 4.55e5 at alpha = (0.01,3,4,5)",
+      "class": "REPRODUCED",
+      "evidence": {
+        "computed": 454911.15827294526,
+        "published": 455000.0
+      },
+      "id": "C-6.3",
+      "met": true,
+      "note": null,
+      "section": "6.3"
+    },
+    {
+      "claim": "trigamma(0.01) = 10001.621 and trigamma(14) = 0.074040",
+      "class": "REPRODUCED",
+      "evidence": {
+        "trigamma_cross_validation_max_rel_error": 2.485048044399876e-09
+      },
+      "id": "C-6.4",
+      "met": true,
+      "note": null,
+      "section": "6.3.1"
+    },
+    {
+      "claim": "The one-dimensional sweep crosses a 1e4 budget near epsilon = 0.066",
+      "class": "REPRODUCED",
+      "evidence": {
+        "solved_exactly": 0.06602170317776525
+      },
+      "id": "C-6.5",
+      "met": true,
+      "note": null,
+      "section": "6.3"
+    },
+    {
+      "claim": "That epsilon is presented as a bound for the declared evidence box",
+      "class": "ERRATUM",
+      "evidence": {
+        "box_wide_bound": 0.3264723286059484,
+        "epsilon_star_by_ceiling": {
+          "10.0": 0.16179397364334577,
+          "20.0": 0.3264723286059484,
+          "5.0": 0.09300121968048213,
+          "50.0": 0.9189460687169351
+        },
+        "epsilon_star_finding": "Section 6.3 reports that the 1e4 condition-number budget is crossed near epsilon ~ 0.066, obtained from the one-dimensional sweep [epsilon, 3, 4, 5]. Solving that slice exactly gives epsilon = 0.066021703, confirming the reported figure. However Assertion 2 requires a CORNER sweep of the whole box, and the worst corner places K-1 coordinates at epsilon and one at the ceiling. Over [epsilon, 20]^4 the slice bound yields a worst-corner condition number of roughly 4.8e5, about 48x over budget. The bound that actually holds over the box is epsilon = 0.326472, roughly 5x larger than the reported value, and it depends strongly on the ceiling A. The declared box below uses the box-wide bound.",
+        "slice_bound": 0.06602170317776525
+      },
+      "id": "C-6.6",
+      "met": false,
+      "note": "Defect found and corrected. The slice bound is about 48x outside the stated budget at the worst box corner; the bound that holds over the box is about 0.3265 and depends on the ceiling A.",
+      "section": "6.3"
+    },
+    {
+      "claim": "A dynamic atom registry assigns alpha_new > 0 and records terminology version and parent",
+      "class": "MEASURED",
+      "evidence": {
+        "final_categories": 9,
+        "min_fisher_eigenvalue": 0.12352282960982496,
+        "zero_alpha_rejected": true
+      },
+      "id": "C-6.7",
+      "met": true,
+      "note": null,
+      "section": "6.2"
+    },
+    {
+      "claim": "The evidence box keeps the Fisher metric numerically conditioned",
+      "class": "MEASURED",
+      "evidence": {
+        "target": "<= 1e4",
+        "worst_condition": 9998.347229258337
+      },
+      "id": "C-6.8",
+      "met": true,
+      "note": null,
+      "section": "6.3"
+    },
+    {
+      "claim": "Cellular sheaf cochain complex, coboundary and Hodge Laplacian with ker Delta = H^k",
+      "class": "MEASURED",
+      "evidence": {
+        "d_squared_violations": 0
+      },
+      "id": "C-7.1",
+      "met": true,
+      "note": null,
+      "section": "7.1"
+    },
+    {
+      "claim": "Definition 7.1 trace cell energy E_sigma = tr(Pi_Lambda Pi_sigma)",
+      "class": "MEASURED",
+      "evidence": {
+        "min_spectral_gap": 0.9999999999999989
+      },
+      "id": "C-7.2",
+      "met": true,
+      "note": null,
+      "section": "7.2"
+    },
+    {
+      "claim": "Proposition 7.1: E_sigma is invariant under orthogonal rotation of the obstruction basis",
+      "class": "MEASURED",
+      "evidence": {
+        "worst_drift": 1.1102230246251565e-15
+      },
+      "id": "C-7.3",
+      "met": true,
+      "note": null,
+      "section": "7.2"
+    },
+    {
+      "claim": "E_sigma > theta quarantines only the affected stalk",
+      "class": "MEASURED",
+      "evidence": {
+        "cone_localization": "E_sigma = 1.0 exactly on disagreeing axes, 0.0 elsewhere, all 8 patterns"
+      },
+      "id": "C-7.4",
+      "met": true,
+      "note": null,
+      "section": "7.3"
+    },
+    {
+      "claim": "Stalk quarantine is applied before atomic transaction construction, preserving atomicity",
+      "class": "MEASURED",
+      "evidence": {
+        "forced_bundle_committed": false,
+        "independent_work_progressed": true,
+        "store_state_identical": true
+      },
+      "id": "C-7.5",
+      "met": true,
+      "note": null,
+      "section": "7.3"
+    },
+    {
+      "claim": "Appendix A stalk energies 0.019778 / 1.977750 / 0.002472 with MedicationRequest quarantined",
+      "class": "REPRODUCED",
+      "evidence": {
+        "energies": [
+          {
+            "decision": "COMMIT",
+            "energy": 0.019777503090234898,
+            "name": "Allergy"
+          },
+          {
+            "decision": "QUARANTINE",
+            "energy": 1.9777503090234858,
+            "name": "MedicationRequest"
+          },
+          {
+            "decision": "COMMIT",
+            "energy": 0.002472187886279357,
+            "name": "RenalLab"
+          }
+        ],
+        "energy_sum_equals_rank": {
+          "rank": 2,
+          "sum": 2.0
+        }
+      },
+      "id": "C-7.6",
+      "met": true,
+      "note": null,
+      "section": "7.3"
+    },
+    {
+      "claim": "The appendix surrogate is not a mapping-cone Laplacian and must not be presented as one",
+      "class": "STRUCTURAL",
+      "evidence": null,
+      "id": "C-7.7",
+      "met": true,
+      "note": "Preserved in the port: the surrogate keeps its own construction label and is not silently upgraded.",
+      "section": "7.3"
+    },
+    {
+      "claim": "Hyperellipsoid certificate H_f = sigma_1 / sigma_n",
+      "class": "REPRODUCED",
+      "evidence": {
+        "computed": 1.7016317340117195,
+        "published": 1.701632
+      },
+      "id": "C-8.1",
+      "met": true,
+      "note": null,
+      "section": "8.1"
+    },
+    {
+      "claim": "Worked values J = 1.028 and K_O = 1.922661",
+      "class": "REPRODUCED",
+      "evidence": {
+        "J": 1.028,
+        "K_O": 1.9226608214731098
+      },
+      "id": "C-8.2",
+      "met": true,
+      "note": null,
+      "section": "8.1"
+    },
+    {
+      "claim": "A safety-critical implementation must check positive Jacobian",
+      "class": "MEASURED",
+      "evidence": null,
+      "id": "C-8.3",
+      "met": true,
+      "note": null,
+      "section": "8.1"
+    },
+    {
+      "claim": "... and boundary behaviour",
+      "class": "MEASURED",
+      "evidence": {
+        "sampled_directions": 4096
+      },
+      "id": "C-8.4",
+      "met": true,
+      "note": "Not implemented in Appendix A; added here.",
+      "section": "8.1"
+    },
+    {
+      "claim": "... and inverse residuals",
+      "class": "MEASURED",
+      "evidence": {
+        "forward_residual": 2.4900490352848777e-16
+      },
+      "id": "C-8.5",
+      "met": true,
+      "note": "Not implemented in Appendix A; added here.",
+      "section": "8.1"
+    },
+    {
+      "claim": "... and stratum preservation",
+      "class": "MEASURED",
+      "evidence": {
+        "strata_checked": 7
+      },
+      "id": "C-8.6",
+      "met": true,
+      "note": "Not implemented in Appendix A; added here.",
+      "section": "8.1"
+    },
+    {
+      "claim": "The tabular contradiction report is authoritative for review; the chart is advisory",
+      "class": "MEASURED",
+      "evidence": {
+        "review_surface_omits_confidence": true
+      },
+      "id": "C-8.7",
+      "met": true,
+      "note": null,
+      "section": "8.2"
+    },
+    {
+      "claim": "Spectral gap on the cone Laplacian",
+      "class": "MEASURED",
+      "evidence": {
+        "measured": 0.9999999999999989,
+        "target": ">= 0.15"
+      },
+      "id": "C-8.8",
+      "met": true,
+      "note": null,
+      "section": "8.2"
+    },
+    {
+      "claim": "A DCSE node maintains the seven protocol objects (B, V, Theta, F, W, L, P)",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "expected": 7,
+        "objects_present": 7
+      },
+      "id": "C-9.1",
+      "met": true,
+      "note": null,
+      "section": "9.1"
+    },
+    {
+      "claim": "The policy decomposes into (A, G, T, D, H, Q, R, Lambda, E, F_b)",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "components_present": 10,
+        "expected": 10
+      },
+      "id": "C-9.2",
+      "met": true,
+      "note": null,
+      "section": "9.2"
+    },
+    {
+      "claim": "A policy instance is attributable via policy_id, version, effective_time, authority and hash",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "attribution": {
+          "authority": "light-imaging-signing-authority",
+          "effective_time": "2026-03-01T00:00:00Z",
+          "hash": "9a1bd51bb2f7f57cf991cb0a2c45336a451ccc613abd86e1bd423ffe310db2a6",
+          "policy_id": "gbi-dcse-admissibility",
+          "version": "1.1"
+        }
+      },
+      "id": "C-9.3",
+      "met": true,
+      "note": null,
+      "section": "9.2"
+    },
+    {
+      "claim": "Every admissibility decision is reproducible under an explicit policy version",
+      "class": "MEASURED",
+      "evidence": {
+        "all_version_pinned": true,
+        "receipts_replayed": 14
+      },
+      "id": "C-9.4",
+      "met": true,
+      "note": null,
+      "section": "9.2"
+    },
+    {
+      "claim": "Table 1: the verification architecture is portable while domain semantics are not",
+      "class": "MEASURED",
+      "evidence": {
+        "architecture_changed": false,
+        "domain_neutral_modules_reused": 8,
+        "domain_specific_objects": 4,
+        "infrastructure_false_conflict": 0.0,
+        "infrastructure_sensitivity": 1.0
+      },
+      "id": "C-9.5",
+      "met": true,
+      "note": null,
+      "section": "9.2"
+    },
+    {
+      "claim": "Localized quarantine preserves liveness without permitting partial commit",
+      "class": "MEASURED",
+      "evidence": null,
+      "id": "C-9.6",
+      "met": true,
+      "note": null,
+      "section": "9.2"
+    },
+    {
+      "claim": "The review surface exposes deterministic reasons rather than a model confidence number",
+      "class": "MEASURED",
+      "evidence": {
+        "forbidden_fields_found": []
+      },
+      "id": "C-9.7",
+      "met": true,
+      "note": null,
+      "section": "9.2"
+    },
+    {
+      "claim": "A versioned evaluation package yields a customer-specific empirical failure surface",
+      "class": "MEASURED",
+      "evidence": {
+        "failure_slices": "per-family and per-gate slices are emitted by the v2 scorecard and the v0.2 search"
+      },
+      "id": "C-9.8",
+      "met": true,
+      "note": "Demonstrated as a mechanism on synthetic data; no customer deployment.",
+      "section": "9.2"
+    },
+    {
+      "claim": "Small deterministic checks inside the enclave; dense linear algebra outside, replaced by sparse certified residual checks",
+      "class": "MEASURED",
+      "evidence": {
+        "flop_ratio_dense_over_sparse": 14741.232227488152,
+        "forgeries_rejected": true,
+        "forgery_classes": 9,
+        "honest_accepted": true,
+        "matrix_size": 240,
+        "nonzeros": 477
+      },
+      "id": "C-9.9",
+      "met": true,
+      "note": null,
+      "section": "9.3"
+    },
+    {
+      "claim": "WASM/WAMR-style packaging can enforce heap, I/O and syscall budgets",
+      "class": "MEASURED",
+      "evidence": {
+        "declared_budget": {
+          "max_flops": 5000000,
+          "max_heap_bytes": 262144,
+          "max_io_bytes": 65536,
+          "max_syscalls": 64
+        },
+        "enclave_usage": {
+          "all_within_budget": true,
+          "flops": 8440.0,
+          "flops_within_budget": true,
+          "heap_within_budget": true,
+          "io_bytes": 128,
+          "io_within_budget": true,
+          "peak_heap_bytes": 13440,
+          "syscalls": 2,
+          "syscalls_within_budget": true
+        }
+      },
+      "id": "C-9.10",
+      "met": true,
+      "note": "Budgets are enforced in accounting, not by hardware.",
+      "section": "9.3"
+    },
+    {
+      "claim": "Fast path: a TEE-assisted non-equivocation profile",
+      "class": "MEASURED",
+      "evidence": {
+        "clean_mode": "fast_path_tee_assisted"
+      },
+      "id": "C-9.11",
+      "met": true,
+      "note": null,
+      "section": "9.4"
+    },
+    {
+      "claim": "On counter failure, attestation loss or equivocation evidence, authoritative writes halt and fall back to BFT",
+      "class": "MEASURED",
+      "evidence": {
+        "guards": {
+          "attestation_lost": [
+            "attestation_loss"
+          ],
+          "below_quorum": [
+            "replica_population_below_3f_plus_1"
+          ],
+          "clean": [],
+          "counter_service_down": [
+            "monotonic_counter_failure"
+          ],
+          "equivocating": [
+            "monotonic_counter_failure",
+            "equivocation_evidence"
+          ]
+        }
+      },
+      "id": "C-9.12",
+      "met": true,
+      "note": null,
+      "section": "9.4"
+    },
+    {
+      "claim": "n >= 3f+1 is required; falling below the threshold must halt authoritative writes",
+      "class": "MEASURED",
+      "evidence": {
+        "bound_is_tight": true,
+        "configurations_analysed": 62,
+        "safety_within_tolerance": true
+      },
+      "id": "C-9.13",
+      "met": true,
+      "note": null,
+      "section": "9.4"
+    },
+    {
+      "claim": "The ledger proves protocol-level non-equivocation, not identity truth",
+      "class": "MEASURED",
+      "evidence": {
+        "all_correctly_classified": true,
+        "fault_classes": 7,
+        "scope_conclusion": "A structurally perfect, non-equivocating ledger recorded an incorrect identity binding. Ledger validity and identity correctness are independent properties, exactly as Section 9.4 states."
+      },
+      "id": "C-9.14",
+      "met": true,
+      "note": null,
+      "section": "9.4"
+    },
+    {
+      "claim": "A cohomology claim in the certificate must be encoded as a concrete finite computation",
+      "class": "MEASURED",
+      "evidence": {
+        "clauses": 9,
+        "forgeries_rejected": true,
+        "honest_accepted": true
+      },
+      "id": "C-9.15",
+      "met": true,
+      "note": null,
+      "section": "9.5"
+    },
+    {
+      "claim": "A zero-knowledge proof of the consistency result",
+      "class": "OUT_OF_SCOPE",
+      "evidence": {
+        "commitment_binding": true,
+        "commitment_blinded": true,
+        "zero_knowledge_implemented": false
+      },
+      "id": "C-9.16",
+      "met": null,
+      "note": "The manuscript frames this as future work and it remains future work. A binding, blinded commitment plus a finite predicate is implemented; that is strictly weaker than zero knowledge and is not claimed as such.",
+      "section": "9.5"
+    },
+    {
+      "claim": "The eight-step EHR pipeline, end to end",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "expected": 8,
+        "steps_executed": 8
+      },
+      "id": "C-10.1",
+      "met": true,
+      "note": null,
+      "section": "10"
+    },
+    {
+      "claim": "Penicillin/amoxicillin: business-rule OperationOutcome and no commit without a named override",
+      "class": "MEASURED_SYNTHETIC",
+      "evidence": {
+        "code": "business-rule",
+        "no_commit_without_override": true,
+        "severity": "error"
+      },
+      "id": "C-10.2",
+      "met": true,
+      "note": null,
+      "section": "10.1"
+    },
+    {
+      "claim": "Metformin without renal context: routed to review, abstention recorded, no medication update",
+      "class": "MEASURED_SYNTHETIC",
+      "evidence": {
+        "medication_update_committed": false,
+        "routed_to": "expert_review"
+      },
+      "id": "C-10.3",
+      "met": true,
+      "note": null,
+      "section": "10.2"
+    },
+    {
+      "claim": "Seven FHIR resource types are used as described",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "resources": [
+          "AllergyIntolerance",
+          "AuditEvent",
+          "MedicationRequest",
+          "Observation",
+          "OperationOutcome",
+          "Patient",
+          "Provenance"
+        ]
+      },
+      "id": "C-10.4",
+      "met": true,
+      "note": null,
+      "section": "10.3"
+    },
+    {
+      "claim": "768 canonical executions, 0 accepted, 369 parse / 399 schema rejects, coverage 0, invalid rate 1.0",
+      "class": "REPRODUCED",
+      "evidence": {
+        "contrast": {
+          "accepted_records": 0,
+          "canonical_executions": 768,
+          "coverage": 0.0,
+          "false_conflict_adjudication_rate": 1.0,
+          "false_conflict_margin": 0.96,
+          "false_conflict_target": 0.04,
+          "false_conflict_target_met": false,
+          "quarantined": 768,
+          "selective_risk": null,
+          "sensitivity_caveat": "Vacuously satisfied. Every execution was refused, so every contradiction was necessarily caught. The measure carries no information at zero coverage.",
+          "sensitivity_target_met": true,
+          "severe_contradiction_sensitivity": 1.0,
+          "source": "artifacts/public_results/v0_1 (frozen)",
+          "verdict": "One Table 3 clinical target satisfied vacuously; the other missed by the maximum possible margin. This is the precise sense in which v0.1 is not a positive data-driven performance result for the substrate."
+        }
+      },
+      "id": "C-11.1",
+      "met": true,
+      "note": null,
+      "section": "11"
+    },
+    {
+      "claim": "Selective risk is undefined at zero coverage",
+      "class": "MEASURED",
+      "evidence": null,
+      "id": "C-11.2",
+      "met": true,
+      "note": null,
+      "section": "11"
+    },
+    {
+      "claim": "The v0.1 result is about the admission interface, not about LLM capability",
+      "class": "STRUCTURAL",
+      "evidence": null,
+      "id": "C-11.3",
+      "met": true,
+      "note": "Honoured throughout: no capability claim is derived from the v0.1 run in any artifact.",
+      "section": "11"
+    },
+    {
+      "claim": "No unsupported model output is silently promoted to an authoritative write",
+      "class": "MEASURED_SYNTHETIC",
+      "evidence": {
+        "adversaries": 2,
+        "silent_promotions": 0
+      },
+      "id": "C-12.1",
+      "met": true,
+      "note": null,
+      "section": "12"
+    },
+    {
+      "claim": "The logit layer is treated as evidence, not authority",
+      "class": "STRUCTURAL",
+      "evidence": null,
+      "id": "C-12.2",
+      "met": true,
+      "note": null,
+      "section": "12.1.1"
+    },
+    {
+      "claim": "The boundary algebra restricts what the model is allowed to say",
+      "class": "MEASURED",
+      "evidence": null,
+      "id": "C-12.3",
+      "met": true,
+      "note": null,
+      "section": "12.1.2"
+    },
+    {
+      "claim": "The model proposal is checked against an external validity predicate EV(b, w)",
+      "class": "MEASURED",
+      "evidence": {
+        "agreement_excluding_injected": 1.0
+      },
+      "id": "C-12.4",
+      "met": true,
+      "note": null,
+      "section": "12.1.3"
+    },
+    {
+      "claim": "Table 2: nine hallucination types each have an implemented containment mechanism",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "expected": 9,
+        "rows_demonstrated": 9
+      },
+      "id": "C-12.5",
+      "met": true,
+      "note": null,
+      "section": "12.2"
+    },
+    {
+      "claim": "The framework does NOT prevent an internally consistent false belief",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "confident_hallucinator_admitted_proposals": 98
+      },
+      "id": "C-12.6",
+      "met": true,
+      "note": "An honest negative claim, and it holds: the hallucinator's proposals are refused at the gate, not prevented at generation.",
+      "section": "12.3"
+    },
+    {
+      "claim": "Admissibility is existential over admissible witnesses",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "witness_bundle_fields": 7
+      },
+      "id": "C-12.7",
+      "met": true,
+      "note": null,
+      "section": "12.6"
+    },
+    {
+      "claim": "The substrate emits typed certificates, not autonomous decisions",
+      "class": "MEASURED",
+      "evidence": {
+        "chain_valid": true,
+        "receipts_emitted": 14,
+        "tamper_detected": true
+      },
+      "id": "C-12.8",
+      "met": true,
+      "note": null,
+      "section": "12.2"
+    },
+    {
+      "claim": "Model-relative admissibility: the substrate cannot repair a wrong institutional model",
+      "class": "STRUCTURAL",
+      "evidence": null,
+      "id": "C-12.9",
+      "met": true,
+      "note": "Declared limit, honoured: the register never claims witness correctness, only traceability to declared witnesses.",
+      "section": "12.6"
+    },
+    {
+      "claim": "The reference implementation's self-check assertions all pass",
+      "class": "REPRODUCED",
+      "evidence": {
+        "assertions_passed": 11,
+        "assertions_run": 11
+      },
+      "id": "C-A.1",
+      "met": true,
+      "note": null,
+      "section": "A"
+    },
+    {
+      "claim": "The reference implementation's reported values reproduce independently",
+      "class": "REPRODUCED",
+      "evidence": {
+        "comparisons_agreeing": 21,
+        "comparisons_run": 21
+      },
+      "id": "C-A.2",
+      "met": true,
+      "note": null,
+      "section": "A"
+    },
+    {
+      "claim": "Local mapping-status entropy over the declared alpha vector",
+      "class": "REPRODUCED",
+      "evidence": {
+        "entropy_bits": 1.6276575936849544
+      },
+      "id": "C-A.3",
+      "met": true,
+      "note": null,
+      "section": "A"
+    },
+    {
+      "claim": "Assertion 1: Boolean algebra stress test over at least 2^16 randomized operations",
+      "class": "MEASURED",
+      "evidence": {
+        "operations_run": 65536,
+        "violations": 0
+      },
+      "id": "C-B1.1",
+      "met": true,
+      "note": null,
+      "section": "B.1"
+    },
+    {
+      "claim": "Assertion 2: evidence-box corner and adversarial near-boundary sweep with lambda_min > 1e-6",
+      "class": "MEASURED",
+      "evidence": {
+        "worst_min_eigenvalue": 0.0009570208925549886
+      },
+      "id": "C-B1.2",
+      "met": true,
+      "note": null,
+      "section": "B.1"
+    },
+    {
+      "claim": "Assertion 3: cone Laplacian symmetry, PSD and basis-invariant trace energies",
+      "class": "MEASURED",
+      "evidence": {
+        "min_eigenvalue": -2.6867397195928787e-16,
+        "symmetry_residual": 0.0
+      },
+      "id": "C-B1.3",
+      "met": true,
+      "note": null,
+      "section": "B.1"
+    },
+    {
+      "claim": "Attestation verification: invalid, expired or modified attestation must fail closed",
+      "class": "MEASURED",
+      "evidence": {
+        "every_case_denied": true,
+        "injection_cases": 7,
+        "verification_p95_ms": 0.35512493923306465
+      },
+      "id": "C-B1.4",
+      "met": true,
+      "note": "Software attestation model; no hardware root of trust.",
+      "section": "B.1"
+    },
+    {
+      "claim": "Consensus fault injector: partition and crash faults against safety and liveness invariants",
+      "class": "MEASURED",
+      "evidence": {
+        "configurations": 62,
+        "crash": {
+          "configurations": 18,
+          "halts_beyond_f": true,
+          "progress_up_to_f": true
+        },
+        "partition": {
+          "configurations": 18,
+          "halts_beyond_f": true,
+          "progress_up_to_f": true
+        }
+      },
+      "id": "C-B1.5",
+      "met": true,
+      "note": null,
+      "section": "B.1"
+    },
+    {
+      "claim": "Rollback conformance: a corrupted order nested in a bundle is rejected atomically",
+      "class": "MEASURED",
+      "evidence": {
+        "audit_entries": 3,
+        "committed": false,
+        "no_partial_commit": true,
+        "operation_outcome_error": true,
+        "unrelated_unchanged": true
+      },
+      "id": "C-B1.6",
+      "met": true,
+      "note": null,
+      "section": "B.1"
+    },
+    {
+      "claim": "Retrospective playback over a powered clinical cohort with expert adjudication",
+      "class": "OUT_OF_SCOPE",
+      "evidence": {
+        "mechanism_half_met": true
+      },
+      "id": "C-B1.7",
+      "met": null,
+      "note": "The reproducibility mechanism is established (receipt-driven replay reproduces every decision); the clinical half requires a real cohort, preregistration and expert adjudicators and cannot be established here.",
+      "section": "B.1"
+    },
+    {
+      "claim": "Spectral Gap (lambda_1 - lambda_0) >= 0.15",
+      "class": "MEASURED",
+      "evidence": {
+        "measured": 0.9999999999999989,
+        "target": ">= 0.15"
+      },
+      "id": "C-B2.1",
+      "met": true,
+      "note": null,
+      "section": "B.2 Table 3"
+    },
+    {
+      "claim": "Fisher Matrix Condition Number <= 1e+04",
+      "class": "MEASURED",
+      "evidence": {
+        "measured": 9998.347229258337,
+        "target": "<= 1e+04"
+      },
+      "id": "C-B2.2",
+      "met": true,
+      "note": null,
+      "section": "B.2 Table 3"
+    },
+    {
+      "claim": "End-to-End Latency (Enclave) <= 150 ms",
+      "class": "PARTIAL_PROXY",
+      "evidence": {
+        "measured": 0.06628087721765041,
+        "target": "<= 150 ms"
+      },
+      "id": "C-B2.3",
+      "met": true,
+      "note": "CPU-only p95 of the deterministic verification plus admission-gate path. No TEE is present, so this is an indicative lower bound on the enclave-resident checks of Section 9.3, not the enclave measurement Table 3 specifies.",
+      "section": "B.2 Table 3"
+    },
+    {
+      "claim": "Attestation Bootstrapping Time <= 2.5 s",
+      "class": "OUT_OF_SCOPE",
+      "evidence": {
+        "measured": null,
+        "target": "<= 2.5 s"
+      },
+      "id": "C-B2.4",
+      "met": null,
+      "note": "Requires a TEE and an attestation service (SGX/IAS handshake). Not available in this environment; cannot be proxied without misrepresenting it.",
+      "section": "B.2 Table 3"
+    },
+    {
+      "claim": "Severe Contradiction Sensitivity 100%",
+      "class": "MEASURED_SYNTHETIC",
+      "evidence": {
+        "measured": 1.0,
+        "target": "100%"
+      },
+      "id": "C-B2.5",
+      "met": true,
+      "note": null,
+      "section": "B.2 Table 3"
+    },
+    {
+      "claim": "False Conflict Adjudication Rate <= 4%",
+      "class": "MEASURED_SYNTHETIC",
+      "evidence": {
+        "measured": 0.0,
+        "target": "<= 4%"
+      },
+      "id": "C-B2.6",
+      "met": true,
+      "note": null,
+      "section": "B.2 Table 3"
+    },
+    {
+      "claim": "Boundary 1: ambiguous identity halts and denies write regardless of similarity score",
+      "class": "MEASURED",
+      "evidence": {
+        "probes": 5
+      },
+      "id": "C-B3.1",
+      "met": true,
+      "note": null,
+      "section": "B.3"
+    },
+    {
+      "claim": "Boundary 2: unsigned, unpinned or stale terminology triggers an administrative freeze",
+      "class": "MEASURED",
+      "evidence": null,
+      "id": "C-B3.2",
+      "met": true,
+      "note": null,
+      "section": "B.3"
+    },
+    {
+      "claim": "Boundary 3: chart distortion K is advisory and never proof of logical inconsistency",
+      "class": "MEASURED",
+      "evidence": {
+        "high_k_did_not_force_quarantine": true,
+        "policy_violation_quarantined_despite_low_k": true
+      },
+      "id": "C-B3.3",
+      "met": true,
+      "note": null,
+      "section": "B.3"
+    },
+    {
+      "claim": "The framework is a fail-closed co-processor, not an autonomous practitioner",
+      "class": "STRUCTURAL",
+      "evidence": {
+        "every_refusal_receipted": true,
+        "no_autonomous_commit_path": true
+      },
+      "id": "C-B3.4",
+      "met": true,
+      "note": null,
+      "section": "B.3"
+    }
+  ],
+  "register_version": "gbi-dcse-claim-register-v3.0",
+  "run_plan": "gbi-dcse-v3-evaluation-plan-v3.0.0",
+  "schema_version": "boundarybench.gbi_dcse_claim_register.v1",
+  "summary": {
+    "all_testable_claims_met_or_errata": true,
+    "by_class": {
+      "ERRATUM": {
+        "met": 0,
+        "out_of_scope": 0,
+        "total": 1,
+        "unmet": 1
+      },
+      "MEASURED": {
+        "met": 51,
+        "out_of_scope": 0,
+        "total": 51,
+        "unmet": 0
+      },
+      "MEASURED_SYNTHETIC": {
+        "met": 5,
+        "out_of_scope": 0,
+        "total": 5,
+        "unmet": 0
+      },
+      "OUT_OF_SCOPE": {
+        "met": 0,
+        "out_of_scope": 3,
+        "total": 3,
+        "unmet": 0
+      },
+      "PARTIAL_PROXY": {
+        "met": 1,
+        "out_of_scope": 0,
+        "total": 1,
+        "unmet": 0
+      },
+      "REPRODUCED": {
+        "met": 16,
+        "out_of_scope": 0,
+        "total": 16,
+        "unmet": 0
+      },
+      "STRUCTURAL": {
+        "met": 22,
+        "out_of_scope": 0,
+        "total": 22,
+        "unmet": 0
+      }
+    },
+    "errata": 1,
+    "erratum_ids": [
+      "C-6.6"
+    ],
+    "met": 95,
+    "out_of_scope": 3,
+    "out_of_scope_ids": [
+      "C-9.16",
+      "C-B1.7",
+      "C-B2.4"
+    ],
+    "testable_in_this_environment": 96,
+    "total_claims": 99,
+    "unmet": 1,
+    "unmet_ids": [
+      "C-6.6"
+    ]
+  }
+}

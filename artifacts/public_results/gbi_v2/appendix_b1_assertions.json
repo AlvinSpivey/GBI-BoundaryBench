@@ -1,0 +1,408 @@
+{
+  "all_passed": true,
+  "assertion_1": {
+    "assertion": "B.1 Assertion 1 - Boolean algebra stress test",
+    "atom_count": 6,
+    "element_count": 64,
+    "exhaustive_atom_pair_violations": 0,
+    "law_violations": {
+      "absorption": 0,
+      "atom_disjointness": 0,
+      "atom_union_reconstruction": 0,
+      "complement_closure": 0,
+      "complement_involution": 0,
+      "de_morgan": 0,
+      "distributivity": 0,
+      "excluded_middle": 0,
+      "join_closure": 0,
+      "meet_closure": 0,
+      "non_contradiction": 0
+    },
+    "laws_checked_per_operation": 11,
+    "note": "An implementation test, not a proof of the algebraic specification.",
+    "operations_required": 65536,
+    "operations_run": 65536,
+    "passed": true,
+    "requirement": "at least 2^16 randomized join/meet/complement operations",
+    "total_violations": 0
+  },
+  "assertion_2": {
+    "adversarial_probe_count": 512,
+    "assertion": "B.1 Assertion 2 - evidence box numerical conditioning",
+    "condition_number_target_met": true,
+    "corner_count": 16,
+    "corner_rows": [
+      {
+        "alpha": [
+          0.3265,
+          0.3265,
+          0.3265,
+          0.3265
+        ],
+        "condition_number": 1.754477141855445,
+        "kind": "corner",
+        "lambda_min": 5.975558796334492
+      },
+      {
+        "alpha": [
+          0.3265,
+          0.3265,
+          0.3265,
+          20.0
+        ],
+        "condition_number": 5958.76980634042,
+        "kind": "corner",
+        "lambda_min": 0.0017594204271537113
+      },
+      {
+        "alpha": [
+          0.3265,
+          0.3265,
+          20.0,
+          0.3265
+        ],
+        "condition_number": 5958.769806331633,
+        "kind": "corner",
+        "lambda_min": 0.0017594204271563058
+      },
+      {
+        "alpha": [
+          0.3265,
+          0.3265,
+          20.0,
+          20.0
+        ],
+        "condition_number": 8550.395455393429,
+        "kind": "corner",
+        "lambda_min": 0.0012261399338400194
+      },
+      {
+        "alpha": [
+          0.3265,
+          20.0,
+          0.3265,
+          0.3265
+        ],
+        "condition_number": 5958.769806349681,
+        "kind": "corner",
+        "lambda_min": 0.0017594204271509767
+      },
+      {
+        "alpha": [
+          0.3265,
+          20.0,
+          0.3265,
+          20.0
+        ],
+        "condition_number": 8550.395455360604,
+        "kind": "corner",
+        "lambda_min": 0.0012261399338447264
+      },
+      {
+        "alpha": [
+          0.3265,
+          20.0,
+          20.0,
+          0.3265
+        ],
+        "condition_number": 8550.395455365438,
+        "kind": "corner",
+        "lambda_min": 0.0012261399338440331
+      },
+      {
+        "alpha": [
+          0.3265,
+          20.0,
+          20.0,
+          20.0
+        ],
+        "condition_number": 9998.347229258337,
+        "kind": "corner",
+        "lambda_min": 0.0010469077084651291
+      },
+      {
+        "alpha": [
+          20.0,
+          0.3265,
+          0.3265,
+          0.3265
+        ],
+        "condition_number": 5958.769806342922,
+        "kind": "corner",
+        "lambda_min": 0.0017594204271529723
+      },
+      {
+        "alpha": [
+          20.0,
+          0.3265,
+          0.3265,
+          20.0
+        ],
+        "condition_number": 8550.395455382297,
+        "kind": "corner",
+        "lambda_min": 0.0012261399338416156
+      },
+      {
+        "alpha": [
+          20.0,
+          0.3265,
+          20.0,
+          0.3265
+        ],
+        "condition_number": 8550.395455379605,
+        "kind": "corner",
+        "lambda_min": 0.0012261399338420016
+      },
+      {
+        "alpha": [
+          20.0,
+          0.3265,
+          20.0,
+          20.0
+        ],
+        "condition_number": 9998.347229252025,
+        "kind": "corner",
+        "lambda_min": 0.00104690770846579
+      },
+      {
+        "alpha": [
+          20.0,
+          20.0,
+          0.3265,
+          0.3265
+        ],
+        "condition_number": 8550.395455385267,
+        "kind": "corner",
+        "lambda_min": 0.0012261399338411893
+      },
+      {
+        "alpha": [
+          20.0,
+          20.0,
+          0.3265,
+          20.0
+        ],
+        "condition_number": 9998.347229257193,
+        "kind": "corner",
+        "lambda_min": 0.0010469077084652488
+      },
+      {
+        "alpha": [
+          20.0,
+          20.0,
+          20.0,
+          0.3265
+        ],
+        "condition_number": 9998.347229250501,
+        "kind": "corner",
+        "lambda_min": 0.0010469077084659497
+      },
+      {
+        "alpha": [
+          20.0,
+          20.0,
+          20.0,
+          20.0
+        ],
+        "condition_number": 53.57335804689013,
+        "kind": "corner",
+        "lambda_min": 0.0009570208925549886
+      }
+    ],
+    "declared_box": {
+      "ceiling": 20.0,
+      "dimension": 4,
+      "epsilon": 0.3265
+    },
+    "epsilon_star_box_exact": 0.3264723286059484,
+    "epsilon_star_by_ceiling": {
+      "10.0": 0.16179397364334577,
+      "20.0": 0.3264723286059484,
+      "5.0": 0.09300121968048213,
+      "50.0": 0.9189460687169351
+    },
+    "epsilon_star_finding": "Section 6.3 reports that the 1e4 condition-number budget is crossed near epsilon ~ 0.066, obtained from the one-dimensional sweep [epsilon, 3, 4, 5]. Solving that slice exactly gives epsilon = 0.066021703, confirming the reported figure. However Assertion 2 requires a CORNER sweep of the whole box, and the worst corner places K-1 coordinates at epsilon and one at the ceiling. Over [epsilon, 20]^4 the slice bound yields a worst-corner condition number of roughly 4.8e5, about 48x over budget. The bound that actually holds over the box is epsilon = 0.326472, roughly 5x larger than the reported value, and it depends strongly on the ceiling A. The declared box below uses the box-wide bound.",
+    "epsilon_star_slice_exact": 0.06602170317776525,
+    "lambda_min_target_met": true,
+    "manuscript_reproduction": {
+      "interior_2_3_4_5": {
+        "agrees_within_1pct": true,
+        "alpha": [
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ],
+        "condition_number": 20.457038691034644,
+        "manuscript_value": 20.46,
+        "relative_error": 0.00014473650857073752
+      },
+      "near_boundary_0.01_3_4_5": {
+        "agrees_within_1pct": true,
+        "alpha": [
+          0.01,
+          3.0,
+          4.0,
+          5.0
+        ],
+        "condition_number": 454911.15810142376,
+        "manuscript_value": 455000.0,
+        "relative_error": 0.00019525691994778035
+      }
+    },
+    "note": "An engineering criterion, not a theorem following from a finite sample.",
+    "passed": true,
+    "requirement": "sweep corners and adversarial near-boundary cases; require lambda_min(I(alpha)) > 1e-06",
+    "table_3_target": {
+      "measure": "Fisher Matrix Condition Number",
+      "proposed_baseline": "<= 1e+04"
+    },
+    "worst_condition_number": 9998.347229258337,
+    "worst_lambda_min": 0.0009570208925549886
+  },
+  "assertion_3": {
+    "agreement_patterns_checked": 8,
+    "assertion": "B.1 Assertion 3 - mapping-cone Laplacian",
+    "cone_differential_square_violations": 0,
+    "min_spectral_gap": 0.9999999999999989,
+    "passed": true,
+    "precondition": "The manuscript conditions this assertion on an actual mapping-cone Laplacian being constructed. betal.cone builds a genuine cone differential and asserts d^2 = 0, so the precondition holds.",
+    "requirement": "verify symmetry and positive semi-definiteness to numerical tolerance; check trace-based stalk energies under randomized orthogonal basis rotations",
+    "rotations_per_pattern": 256,
+    "rows": [
+      {
+        "disagreeing_axes": [],
+        "max_energy_drift_under_rotation": 0.0,
+        "min_eigenvalue": 0.9999999999999989,
+        "obstruction_dimension": 0,
+        "spectral_gap": 0.9999999999999989,
+        "stalk_energies": {
+          "identity": 0.0,
+          "provenance_temporal": 0.0,
+          "terminology": 0.0
+        },
+        "symmetry_residual": 0.0
+      },
+      {
+        "disagreeing_axes": [
+          "identity"
+        ],
+        "max_energy_drift_under_rotation": 0.0,
+        "min_eigenvalue": -2.6867397195928787e-16,
+        "obstruction_dimension": 1,
+        "spectral_gap": 0.9999999999999989,
+        "stalk_energies": {
+          "identity": 1.0,
+          "provenance_temporal": 0.0,
+          "terminology": 0.0
+        },
+        "symmetry_residual": 0.0
+      },
+      {
+        "disagreeing_axes": [
+          "terminology"
+        ],
+        "max_energy_drift_under_rotation": 0.0,
+        "min_eigenvalue": 0.0,
+        "obstruction_dimension": 1,
+        "spectral_gap": 0.9999999999999989,
+        "stalk_energies": {
+          "identity": 0.0,
+          "provenance_temporal": 0.0,
+          "terminology": 1.0
+        },
+        "symmetry_residual": 0.0
+      },
+      {
+        "disagreeing_axes": [
+          "identity",
+          "terminology"
+        ],
+        "max_energy_drift_under_rotation": 7.771561172376096e-16,
+        "min_eigenvalue": -2.6867397195928787e-16,
+        "obstruction_dimension": 2,
+        "spectral_gap": 0.9999999999999989,
+        "stalk_energies": {
+          "identity": 1.0,
+          "provenance_temporal": 0.0,
+          "terminology": 1.0
+        },
+        "symmetry_residual": 0.0
+      },
+      {
+        "disagreeing_axes": [
+          "provenance_temporal"
+        ],
+        "max_energy_drift_under_rotation": 0.0,
+        "min_eigenvalue": 0.0,
+        "obstruction_dimension": 1,
+        "spectral_gap": 0.9999999999999989,
+        "stalk_energies": {
+          "identity": 0.0,
+          "provenance_temporal": 1.0,
+          "terminology": 0.0
+        },
+        "symmetry_residual": 0.0
+      },
+      {
+        "disagreeing_axes": [
+          "identity",
+          "provenance_temporal"
+        ],
+        "max_energy_drift_under_rotation": 6.661338147750939e-16,
+        "min_eigenvalue": -2.6867397195928787e-16,
+        "obstruction_dimension": 2,
+        "spectral_gap": 0.9999999999999989,
+        "stalk_energies": {
+          "identity": 1.0,
+          "provenance_temporal": 1.0,
+          "terminology": 0.0
+        },
+        "symmetry_residual": 0.0
+      },
+      {
+        "disagreeing_axes": [
+          "provenance_temporal",
+          "terminology"
+        ],
+        "max_energy_drift_under_rotation": 8.881784197001252e-16,
+        "min_eigenvalue": 0.0,
+        "obstruction_dimension": 2,
+        "spectral_gap": 0.9999999999999989,
+        "stalk_energies": {
+          "identity": 0.0,
+          "provenance_temporal": 1.0,
+          "terminology": 1.0
+        },
+        "symmetry_residual": 0.0
+      },
+      {
+        "disagreeing_axes": [
+          "identity",
+          "provenance_temporal",
+          "terminology"
+        ],
+        "max_energy_drift_under_rotation": 1.1102230246251565e-15,
+        "min_eigenvalue": -2.6867397195928787e-16,
+        "obstruction_dimension": 3,
+        "spectral_gap": 0.9999999999999989,
+        "stalk_energies": {
+          "identity": 1.0,
+          "provenance_temporal": 1.0,
+          "terminology": 1.0
+        },
+        "symmetry_residual": 0.0
+      }
+    ],
+    "spectral_gap_target_met": true,
+    "table_3_target": {
+      "measure": "Spectral Gap (lambda_1 - lambda_0) on L_C",
+      "proposed_baseline": ">= 0.15"
+    },
+    "worst_energy_drift_under_rotation": 1.1102230246251565e-15,
+    "worst_min_eigenvalue": -2.6867397195928787e-16,
+    "worst_symmetry_residual": 0.0
+  },
+  "assertions_version": "gbi-v2-appendix-b1-assertions-v1",
+  "schema_version": "boundarybench.gbi_v2_assertions.v1"
+}
