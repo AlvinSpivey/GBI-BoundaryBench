@@ -39,7 +39,7 @@ The mathematical resolution to these questions is found in the Logit-Boundary Ge
 
 ### 2. The GBI Paradigm: From Language Generation to Boundary Semantics
 
-The GBI paradigm shifts clinical AI integration from the interpretation of natural language to the enforcement of a finite "Boundary Algebra". In this framework, the logit layer is treated as a numerical proposal over a finite set of categorical decisions (e.g., $\{\text{exact}, \text{conflict}, \text{unmapped}\}$). This "Logit Boundary" transforms a non-deterministic linguistic problem into a manageable interface for deterministic judgment, ensuring that no free-form clinical assertion can directly become a database update.
+The GBI paradigm shifts clinical AI integration from the interpretation of natural language to the enforcement of a finite "Boundary Algebra". In this framework, the logit layer is treated as a numerical proposal over a finite set of categorical decisions (e.g., $\{\text{exact}, \text{conflict}, \text{unmapped}\}$). This Logit Boundary transforms a non-deterministic linguistic problem into a manageable interface for deterministic judgment, ensuring that no free-form clinical assertion can directly become a database update.
 
 To ensure clinical safety, the GBI factors system failure across four discrete layers:
 
@@ -52,7 +52,7 @@ To ensure clinical safety, the GBI factors system failure across four discrete l
 | **Evidence/Policy Admissibility** | Evaluates whether the proposal is authorized by versioned institutional policy and authoritative witnesses. |
 | **Systems Integrity** | Verifies the control plane, including identity, provenance, and TEE-assisted cryptographic signatures. |
 
-Central to this interface is the Dirichlet Evidence registry. By enforcing a fixed "Evidence Box" where:
+Central to this interface is the Dirichlet Evidence registry. By enforcing a fixed Evidence Box where:
 
 $$\alpha_i \in [\epsilon, A]$$
 
